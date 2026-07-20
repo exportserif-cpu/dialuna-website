@@ -45,17 +45,47 @@
 
   <!-- ====== HERO SLIDER ====== -->
   <section class="hero" id="home">
-    <div class="hero-slider" id="heroSlider">
-      <div class="slide active" style="background-image: url('images/lifestyle/banner-splash.jpg');"></div>
-      <div class="slide" style="background-image: url('images/lifestyle/banner-rustic-table.jpg');"></div>
-      <div class="slide" style="background-image: url('images/lifestyle/banner-factory-line.jpg');"></div>
-      <div class="slide" style="background-image: url('images/lifestyle/banner-farm-display.jpg');"></div>
-          <div class="slide" style="background-image: url('images/lifestyle/slider-rustic-table2.jpg');"></div>
-      <div class="slide" style="background-image: url('images/lifestyle/slider-factory2.jpg');"></div>
-      <div class="slide" style="background-image: url('images/lifestyle/slider-field-jars.jpg');"></div>
-      <div class="slide" style="background-image: url('images/lifestyle/slider-paste-pour.jpg');"></div>
-    </div>
-    <div class="hero-overlay"></div>
+    <style>
+  .hero-slider { position:absolute; inset:0; z-index:0; overflow:hidden; }
+  .hero-slider .slide { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transition:opacity 1.5s ease; }
+  #s1:checked ~ .hero-slider .s1, #s2:checked ~ .hero-slider .s2, #s3:checked ~ .hero-slider .s3,
+  #s4:checked ~ .hero-slider .s4, #s5:checked ~ .hero-slider .s5, #s6:checked ~ .hero-slider .s6,
+  #s7:checked ~ .hero-slider .s7, #s8:checked ~ .hero-slider .s8 { opacity:1; }
+  .slide-dots { position:absolute; bottom:80px; left:50%; transform:translateX(-50%); display:flex; gap:8px; z-index:5; }
+  .slide-dots label { width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,.25); cursor:pointer; transition:all .3s ease; border:1px solid rgba(255,255,255,.1); }
+  #s1:checked ~ .slide-dots .d1, #s2:checked ~ .slide-dots .d2, #s3:checked ~ .slide-dots .d3,
+  #s4:checked ~ .slide-dots .d4, #s5:checked ~ .slide-dots .d5, #s6:checked ~ .slide-dots .d6,
+  #s7:checked ~ .slide-dots .d7, #s8:checked ~ .slide-dots .d8 { background:#E53935; border-color:#E53935; box-shadow:0 0 12px rgba(229,57,53,.4); width:28px; border-radius:5px; }
+</style>
+<input type="radio" name="hero" id="s1" checked style="display:none;">
+<input type="radio" name="hero" id="s2" style="display:none;">
+<input type="radio" name="hero" id="s3" style="display:none;">
+<input type="radio" name="hero" id="s4" style="display:none;">
+<input type="radio" name="hero" id="s5" style="display:none;">
+<input type="radio" name="hero" id="s6" style="display:none;">
+<input type="radio" name="hero" id="s7" style="display:none;">
+<input type="radio" name="hero" id="s8" style="display:none;">
+<div class="hero-slider">
+  <div class="slide s1 active" style="background-image: url('images/lifestyle/banner-splash.jpg');"></div>
+  <div class="slide s2" style="background-image: url('images/lifestyle/banner-rustic-table.jpg');"></div>
+  <div class="slide s3" style="background-image: url('images/lifestyle/banner-factory-line.jpg');"></div>
+  <div class="slide s4" style="background-image: url('images/lifestyle/banner-farm-display.jpg');"></div>
+  <div class="slide s5" style="background-image: url('images/lifestyle/slider-rustic-table2.jpg');"></div>
+  <div class="slide s6" style="background-image: url('images/lifestyle/slider-factory2.jpg');"></div>
+  <div class="slide s7" style="background-image: url('images/lifestyle/slider-field-jars.jpg');"></div>
+  <div class="slide s8" style="background-image: url('images/lifestyle/slider-paste-pour.jpg');"></div>
+</div>
+<div class="slide-dots">
+  <label for="s1" class="d1"></label>
+  <label for="s2" class="d2"></label>
+  <label for="s3" class="d3"></label>
+  <label for="s4" class="d4"></label>
+  <label for="s5" class="d5"></label>
+  <label for="s6" class="d6"></label>
+  <label for="s7" class="d7"></label>
+  <label for="s8" class="d8"></label>
+</div>
+<div class="hero-overlay"></div>
     <div class="hero-particles" id="heroParticles"></div>
     <div class="container hero-content">
       <div class="hero-badge" data-i18n="hero-badge">🌙 Harvested by Moonlight</div>
