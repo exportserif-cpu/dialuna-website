@@ -1604,3 +1604,68 @@ html[dir="ltr"] .nav-menu {
   font-size: inherit;
   font-weight: inherit;
 }
+/* =============================
+   DİA LUNA — Premium Design System
+   ============================= */
+
+/* Typography */
+.premium-heading { font-weight:700; letter-spacing:-0.5px; line-height:1.2; }
+.premium-subtitle { font-weight:300; letter-spacing:2px; text-transform:uppercase; color:#5C5C6E; }
+.section-spacing { padding:120px 0; }
+.section-spacing-sm { padding:80px 0; }
+
+/* Container */
+.container-premium { max-width:1200px; margin:0 auto; padding:0 24px; }
+
+/* Premium Cards */
+.card-premium { background:#fff; border-radius:20px; padding:32px; border:1px solid rgba(0,0,0,.04); transition:all .5s cubic-bezier(.25,.46,.45,.94); }
+.card-premium:hover { transform:translateY(-8px); box-shadow:0 30px 80px rgba(13,27,74,.08); }
+
+/* Section Dividers */
+.divider-gold { width:60px; height:3px; background:linear-gradient(90deg,#C9A84C,#E8D48B); border-radius:2px; margin:16px 0; }
+.divider-center { margin-left:auto; margin-right:auto; }
+
+/* Premium Buttons */
+.btn-premium { display:inline-flex; align-items:center; gap:8px; padding:14px 32px; border-radius:50px; font-weight:600; font-size:14px; text-decoration:none; transition:all .4s ease; }
+.btn-premium-primary { background:linear-gradient(135deg,#1A237E,#0D1442); color:#fff; box-shadow:0 4px 20px rgba(26,35,126,.2); }
+.btn-premium-primary:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(26,35,126,.3); }
+.btn-premium-gold { background:linear-gradient(135deg,#C9A84C,#D4A84C); color:#0D0D1A; box-shadow:0 4px 20px rgba(201,168,76,.3); }
+.btn-premium-gold:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(201,168,76,.4); }
+.btn-premium-outline { border:2px solid rgba(255,255,255,.3); color:#fff; background:transparent; }
+.btn-premium-outline:hover { border-color:#C9A84C; color:#C9A84C; }
+
+/* Stats Premium */
+.stats-premium { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.stat-premium { text-align:center; padding:20px; background:rgba(255,255,255,.08); border-radius:16px; backdrop-filter:blur(10px); }
+.stat-premium .num { display:block; font-size:42px; font-weight:900; color:#C9A84C; font-family:'Playfair Display',serif; line-height:1; }
+.stat-premium .label { font-size:13px; color:rgba(255,255,255,.7); margin-top:6px; }
+
+/* Image Showcase */
+.img-showcase { border-radius:20px; overflow:hidden; position:relative; }
+.img-showcase img { width:100%; display:block; transition:all .6s ease; }
+.img-showcase:hover img { transform:scale(1.03); }
+.img-caption { position:absolute; bottom:0; left:0; right:0; padding:20px; background:linear-gradient(transparent,rgba(0,0,0,.6)); color:#fff; font-size:13px; }
+
+/* Tags/Badges */
+.tag-premium { display:inline-block; padding:4px 14px; border-radius:50px; font-size:12px; font-weight:600; }
+.tag-green { background:rgba(76,175,80,.1); color:#2E7D32; }
+.tag-red { background:rgba(229,57,53,.1); color:#B71C1C; }
+.tag-gold { background:rgba(201,168,76,.1); color:#8B7332; }
+
+/* Hover Lift */
+.hover-lift { transition:all .4s ease; }
+.hover-lift:hover { transform:translateY(-4px); }
+
+/* Gradient Text */
+.gradient-text { background:linear-gradient(135deg,#0D1B4A,#1A237E); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+
+/* Responsive Grid */
+.grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:40px; }
+@media (max-width:768px) { .grid-3, .grid-2 { grid-template-columns:1fr; } }
+
+/* Section Headers Premium */
+.section-premium { text-align:center; margin-bottom:60px; }
+.section-premium .num { font-family:'Playfair Display',serif; font-size:14px; font-weight:400; color:#4CAF50; letter-spacing:4px; margin-bottom:12px; display:block; }
+.section-premium h2 { font-size:clamp(28px,5vw,44px); font-weight:900; color:#0D1B4A; margin-bottom:8px; }
+.section-premium p { font-size:17px; color:#5C5C6E; font-weight:300; max-width:600px; margin:0 auto; }
