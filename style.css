@@ -528,11 +528,11 @@ h1, h2, h3, h4 {
 }
 
 .about-lead {
-  font-size: 20px;
-  font-weight: 600;
-  color: #0D1B4A;
-  margin-bottom: 32px;
-  line-height: 1.8;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  color: #0D1B4A !important;
+  margin-bottom: 32px !important;
+  line-height: 1.8 !important;
 }
 
 .about-details {
@@ -1793,3 +1793,7 @@ html[dir="ltr"] .nav-menu {
 .hero .slide-dots label { color: transparent !important; }
 .hero .btn-outline { border-color: rgba(255,255,255,0.3) !important; }
 .hero .btn-outline:hover { border-color: #C9A84C !important; color: #C9A84C !important; }
+
+/* Force about section to dark blue */
+#about .about-lead { color: #0D1B4A !important; }
+#about .section-subtitle { color: #0D1B4A !important; }
