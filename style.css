@@ -614,7 +614,7 @@ h1, h2, h3, h4 {
 .vision-card h3 {
   font-size: 26px;
   margin-bottom: 16px;
-  color: #C9A84C;
+  color: #FFFFFF;
   font-weight: 700;
   font-family: 'Poppins','Cairo',sans-serif;
   position: relative;
@@ -1763,10 +1763,10 @@ html[dir="ltr"] .nav-menu {
   transform: none !important;
   box-shadow: 0 20px 60px rgba(13,27,74,0.2) !important;
 }
-.vision-card.card-premium h3 { color: #C9A84C !important; }
+.vision-card.card-premium h3 { color: #FFFFFF !important; }
 .vision-card.card-premium p { color: rgba(255,255,255,0.85) !important; }
 .vision-card.card-premium .stat { background: rgba(255,255,255,0.06) !important; border: 1px solid rgba(255,255,255,0.08); }
-.vision-card.card-premium .stat-num { color: #C9A84C !important; }
+.vision-card.card-premium .stat-num { color: #FFFFFF !important; }
 .vision-card.card-premium .stat-label { color: rgba(255,255,255,0.7) !important; }
 
 
