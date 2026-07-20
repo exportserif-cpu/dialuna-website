@@ -1305,8 +1305,8 @@ h1, h2, h3, h4 {
    ============================ */
 
 .footer {
-  background: rgba(26, 35, 126, 0.35);
-  backdrop-filter: blur(8px);
+  background: rgba(26, 35, 126, 0.15);
+  backdrop-filter: blur(2px);
   color: rgba(255,255,255,0.8);
   padding: 60px 0 0;
   position: relative;
@@ -1320,9 +1320,10 @@ h1, h2, h3, h4 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.8;
+  opacity: 1;
   pointer-events: none;
   z-index: 0;
+  mix-blend-mode: screen;
 }
 .footer > * {
   position: relative;
