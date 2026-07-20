@@ -124,55 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ====== HERO SLIDER ======
-  const slider = document.getElementById('heroSlider');
-  if (slider) {
-    const slides = slider.querySelectorAll('.slide');
-    const totalSlides = slides.length;
-    let currentSlide = 0;
-    let slideInterval;
-
-    // Create indicators
-    const indicators = document.createElement('div');
-    indicators.className = 'hero-slider-indicators';
-    for (let i = 0; i < totalSlides; i++) {
-      const dot = document.createElement('span');
-      dot.className = 'dot' + (i === 0 ? ' active' : '');
-      dot.dataset.index = i;
-      dot.addEventListener('click', () => goToSlide(i));
-      indicators.appendChild(dot);
-    }
-    slider.after(indicators);
-
-    function goToSlide(index) {
-      slides.forEach((s, i) => {
-        s.classList.toggle('active', i === index);
-      });
-      indicators.querySelectorAll('.dot').forEach((d, i) => {
-        d.classList.toggle('active', i === index);
-      });
-      currentSlide = index;
-    }
-
-    function nextSlide() {
-      goToSlide((currentSlide + 1) % totalSlides);
-    }
-
-    function startSlider() {
-      slideInterval = setInterval(nextSlide, 5000);
-    }
-
-    function stopSlider() {
-      clearInterval(slideInterval);
-    }
-
-    startSlider();
-
-    // Pause on hover
-    slider.addEventListener('mouseenter', stopSlider);
-    slider.addEventListener('mouseleave', startSlider);
-  }
-
   // ====== COUNTER ANIMATION ======
   const countNumbers = () => {
     const stats = document.querySelectorAll('.stat-num');
@@ -417,17 +368,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// ====== AUTO SLIDER ======
-(function() {
-  const radios = document.querySelectorAll('input[name="hero"]');
-  if (!radios.length) return;
-  let current = 0;
-  setInterval(() => {
-    radios[current].checked = false;
-    current = (current + 1) % radios.length;
-    radios[current].checked = true;
-  }, 5000);
-})();
 
 // ====== BANNER AUTO SLIDER - 5 seconds ======
 (function() {

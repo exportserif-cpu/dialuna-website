@@ -1768,3 +1768,25 @@ html[dir="ltr"] .nav-menu {
 .vision-card.card-premium .stat { background: rgba(255,255,255,0.06) !important; border: 1px solid rgba(255,255,255,0.08); }
 .vision-card.card-premium .stat-num { color: #C9A84C !important; }
 .vision-card.card-premium .stat-label { color: rgba(255,255,255,0.7) !important; }
+
+
+/* =============================
+   CSS-Only Auto Slider Animation
+   ============================= */
+   
+@keyframes slideAnim {
+  0%, 10% { opacity:1; z-index:2; }
+  12%, 100% { opacity:0; z-index:1; }
+}
+.hero-slider .slide {
+  animation: slideAnim 40s infinite !important;
+  animation-fill-mode: forwards !important;
+}
+.hero-slider .s1 { animation-delay: 0s !important; }
+.hero-slider .s2 { animation-delay: 5s !important; }
+.hero-slider .s3 { animation-delay: 10s !important; }
+.hero-slider .s4 { animation-delay: 15s !important; }
+.hero-slider .s5 { animation-delay: 20s !important; }
+.hero-slider .s6 { animation-delay: 25s !important; }
+.hero-slider .s7 { animation-delay: 30s !important; }
+.hero-slider .s8 { animation-delay: 35s !important; }
