@@ -1305,7 +1305,8 @@ h1, h2, h3, h4 {
    ============================ */
 
 .footer {
-  background: #1A237E;
+  background: rgba(26, 35, 126, 0.35);
+  backdrop-filter: blur(8px);
   color: rgba(255,255,255,0.8);
   padding: 60px 0 0;
 }
