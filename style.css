@@ -131,14 +131,15 @@ h1, h2, h3, h4 {
   z-index: 1000;
   padding: 12px 0;
   transition: var(--transition);
-  background: transparent;
+  background: rgba(26, 35, 126, 0.6);
+  backdrop-filter: blur(8px);
 }
 
 .navbar.scrolled {
-  background: rgba(13, 13, 26, 0.95);
-  backdrop-filter: blur(20px);
+  background: rgba(26, 35, 126, 0.85);
+  backdrop-filter: blur(12px);
   padding: 8px 0;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.15);
 }
 
 .nav-container {
