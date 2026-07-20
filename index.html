@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIALUNA PASTE | معجون الطماطم والفليفلة</title>
+  <meta name="description" content="DIALUNA - From Anatolia to the World. Premium tomato and pepper paste crafted with the tradition of night harvest.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">
+        <img src="images/liyakat-logo.png" alt="LİYAKAT INTERNATIONAL" class="nav-logo-img">
+        <span class="nav-logo-divider"></span>
+        <img src="images/dialuna-logo-nav.png" alt="DIALUNA" class="nav-logo-dialuna">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="القائمة">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active" data-i18n="nav-home">الرئيسية</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav-about">عن العلامة</a></li>
+        <li><a href="#story" class="nav-link" data-i18n="nav-story">القصة</a></li>
+        <li><a href="#products" class="nav-link" data-i18n="nav-products">المنتجات</a></li>
+        <li><a href="#gallery" class="nav-link" data-i18n="nav-gallery">المعرض</a></li>
+        <li><a href="#certifications" class="nav-link" data-i18n="nav-certifications">الشهادات</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav-contact">اتصل بنا</a></li>
+      </ul>
+            <a href="https://wa.me/905530641033" target="_blank" class="nav-whatsapp" title="WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:32px;border-radius:8px;background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.3);text-decoration:none;transition:all .4s ease;margin-left:4px;">
+        <svg viewBox="0 0 32 32" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.652.726 5.128 1.984 7.24L2 30l7.048-1.918A13.928 13.928 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm6.646 19.852c-.322.908-1.12 1.624-2.016 1.806-.54.11-1.116.166-1.78.166-2.128 0-3.982-.74-5.496-2.002a12.768 12.768 0 01-3.754-4.69 7.134 7.134 0 01.214-5.754c.36-.76 1.1-1.338 1.938-1.482.446-.076.892-.054 1.28.014.39.068.82.286 1.03.64a20.262 20.262 0 011.08 2.15c.164.356.272.746.15 1.112-.122.366-.418.64-.732.872-.158.116-.33.244-.478.386-.166.162-.34.336-.228.588.644 1.468 1.622 2.698 2.83 3.618.404.308.81.614 1.276.824.352.16.712.12 1.006-.098.16-.118.32-.24.478-.366.296-.24.628-.53 1.002-.672.374-.142.786-.064 1.076.134.534.364 1.052.75 1.544 1.168.346.296.678.608.73.986.068.494-.136 1.016-.304 1.43z" fill="white"/></svg>
+      </a>
+<div class="nav-lang" id="langSwitcher">
+        <a href="" class="lang-btn active">🇸🇦</a>
+        <a href="en.html" class="lang-btn">🇬🇧</a>
+        <a href="tr.html" class="lang-btn">🇹🇷</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====== HERO SLIDER ====== -->
+  <section class="hero" id="home">
+    <div class="hero-slider" id="heroSlider">
+      <div class="slide active" style="background-image: url('images/lifestyle/banner-splash.jpg');"></div>
+      <div class="slide" style="background-image: url('images/lifestyle/banner-rustic-table.jpg');"></div>
+      <div class="slide" style="background-image: url('images/lifestyle/banner-factory-line.jpg');"></div>
+      <div class="slide" style="background-image: url('images/lifestyle/banner-farm-display.jpg');"></div>
+          <div class="slide" style="background-image: url('images/lifestyle/slider-rustic-table2.jpg');"></div>
+      <div class="slide" style="background-image: url('images/lifestyle/slider-factory2.jpg');"></div>
+      <div class="slide" style="background-image: url('images/lifestyle/slider-field-jars.jpg');"></div>
+      <div class="slide" style="background-image: url('images/lifestyle/slider-paste-pour.jpg');"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="container hero-content">
+      <div class="hero-badge" data-i18n="hero-badge">🌙 Harvested by Moonlight</div>
+      <h1 class="hero-title">
+        <span class="hero-sub-brand">LİYAKAT INTERNATIONAL</span>
+        <span class="hero-brand"><span class="hero-gradient-text">DIALUNA</span></span>
+        <span class="hero-tagline">PASTE</span>
+      </h1>
+      <p class="hero-desc" data-i18n="hero-desc">Premium Tomato <p class="hero-desc">Premium Tomato &amp; Pepper Paste<br>معجون الطماطم والفليفلة الفاخر — نكهة الأناضول الخالدة</p>amp; Pepper Paste<br>معجون الطماطم والفليفلة الفاخر — نكهة الأناضول الخالدة</p>
+      <div class="hero-actions">
+        <a href="#story" class="btn btn-primary" data-i18n="hero-btn-story">اكتشف قصتنا</a>
+        <a href="#products" class="btn btn-outline" data-i18n="hero-btn-products">منتجاتنا</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span data-i18n="hero-scroll">انزل لأسفل</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT / COMPANY ====== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number" data-i18n="about-number">01</span>
+        <h2 data-i18n="about-title">LİYAKAT INTERNATIONAL</h2>
+        <p class="section-subtitle" data-i18n="about-subtitle">From Anatolia to the World</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <!-- about-lead --><p class="about-lead" data-i18n="about-lead">Liyakat International — شريكك الموثوق في تصدير المنتجات الغذائية التركية الفاخرة. من الأناضول إلى أكثر من 15 دولة حول العالم، نقدم الجودة التي تبنى عليها الثقة.</p>
+          <div class="about-details">
+            <div class="about-item">
+              <span class="about-icon">🌍</span>
+              <div>
+                <h4 data-i18n="about-item1-title">انتشار عالمي</h4>
+                <p>نعمل مع شركاء موثوقين في أكثر من 15 دولة، نُصدر المنتجات التركية الفاخرة إلى الأسواق العالمية بأعلى معايير الجودة.</p>
+              </div>
+            </div>
+            <div class="about-item">
+              <span class="about-icon">🤝</span>
+              <div>
+                <h4 data-i18n="about-item2-title">ثقة والتزام</h4>
+                <p>أكثر من 13 عاماً من الخبرة في التصدير جعلت منا اسماً موثوقاً في السوق العالمي. كل شحنة تحمل توقيع التزامنا بالجودة.</p>
+              </div>
+            </div>
+            <div class="about-item">
+              <span class="about-icon">🌙</span>
+              <div>
+                <h4 data-i18n="about-item3-title">DIALUNA</h4>
+                <p>علامتنا التجارية الفاخرة التي تحمل عبق الأناضول إلى العالم. كل عبوة تحكي قصة الحصاد الليلي والتقاليد العريقة.</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-quote">
+            <blockquote data-i18n="about-quote">"Quality knows no borders. Trust speaks every language."<br>الجودة لا تعرف الحدود. الثقة تتحدث كل اللغات.</blockquote>
+          </div>
+        </div>
+        <div class="about-vision">
+          <div class="vision-card">
+            <h3 data-i18n="about-vision-title">رؤيتنا</h3>
+            <p>أن نصبح واحداً من أكثر سفراء الطعام التركي ثقة في العالم.</p>
+            <div class="vision-stats">
+              <div class="stat">
+                <span class="stat-num" data-count="15">15</span>
+                <span class="stat-label">دولة</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num" data-count="100">100</span>
+                <span class="stat-label">% جودة</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num" data-count="13">13</span>
+                <span class="stat-label">عام خبرة</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- About hero image -->
+          <div class="about-image about-hero">
+            <img src="images/lifestyle/about-hero.jpg" alt="DIALUNA - طاولة التقديم" loading="lazy">
+            <span class="about-image-caption">DIALUNA — نكهة الأناضول على مائدتك</span>
+          </div>
+          <!-- Liyakat logo and factory -->
+          <div class="about-image">
+            <img src="images/lifestyle/factory-washing.png" alt="مصنع DIALUNA - غسل الفليفلة" loading="lazy">
+            <span class="about-image-caption">من حقول الأناضول إلى مصانعنا الحديثة</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== THE STORY ====== -->
+  <section class="section story" id="story">
+    <div class="story-bg"></div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number" data-i18n="story-number">02</span>
+        <h2 data-i18n="story-title">ديالونا ( كيف بدأت)</h2>
+        <h3 class="section-subtitle-en" data-i18n="story-subtitle">The Night of the Crimson Moon</h3>
+      </div>
+
+      <div class="story-intro">
+        <p class="story-legend" data-i18n="story-legend">"Some secrets are meant to stay with the earth. They're never written down. The soil remembers them..."</p>
+      </div>
+
+      <div class="story-grid">
+        <div class="story-image-wrapper">
+          <img src="images/lifestyle/story-night-harvest.jpg" alt="DIALUNA - حصاد تحت ضوء القمر" loading="lazy">
+        </div>
+        <div class="story-text">
+          <h3>ليلة القمر القرمزي</h3>
+          <p>يقولون إن في بعض الليالي من كل عام، يشرق القمر بشكل مختلف. ينساب ضوءه عبر الحقول كحجاب قرمزي. وفي تلك الليلة... حتى الريح تبطئ من سرعتها.</p>
+          <p>منذ قرون، في سهول سينديرغي الخصبة في باليكسير، عرفت ابنة الأرض سر الحصاد الليلي. "الشمس تمنحها القوة. القمر يحبس النكهة."</p>
+        </div>
+      </div>
+
+      <div class="story-timeline">
+        <div class="story-chapter">
+          <div class="chapter-marker"><span class="moon-icon">🌒</span></div>
+          <div class="chapter-content">
+            <h3>ابنة الأرض</h3>
+            <p>في سهول سينديرغي الخصبة في باليكسير، عاشت شابة عرفت بلغة الأرض. بينما كانت القرية كلها تسرع للحصاد، انتظرت هي بهدوء...</p>
+          </div>
+        </div>
+        <div class="story-chapter">
+          <div class="chapter-marker"><span class="moon-icon">🌕</span></div>
+          <div class="chapter-content">
+            <h3>ليلة البدر القرمزي</h3>
+            <p>في تلك الليلة، ارتدى البدر تاجاً قرمزياً. بردت الأرض، وسكتت الريح. وعند الفجر، تذوق الجميع الحقيقة ذاتها: كانت الطماطم ألمع، والفليفلة أغنى، والنكهة... لا تنسى.</p>
+          </div>
+        </div>
+        <div class="story-chapter">
+          <div class="chapter-marker"><span class="moon-icon">🌙</span></div>
+          <div class="chapter-content highlight">
+            <h3>DIALUNA اليوم</h3>
+            <p>اليوم، هذا الإرث يعيش باسم <strong>DIALUNA</strong>. نحن نحصد طماطمنا في برودة الليل. ننتجها في دفعات صغيرة محدودة. لأن النكهة الحقيقية لا تُستعجل. إنها تُكتسب بالصبر.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PRODUCTS ====== -->
+      <section class="section products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2>منتجاتنا</h2>
+        <p class="section-subtitle">معجون الطماطم والفليفلة — جميع الأحجام والمقاسات</p>
+      </div>
+
+      <h3 style="font-size:24px;color:#0D1B4A;margin-bottom:24px;text-align:center;">🍅 معجون الطماطم — Tomato Paste</h3>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:60px;">
+        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
+          <img src="images/products/raw/tomato-650g.png" alt="Tomato 650g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
+          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">650 <small>g</small></h4>
+          <p style="color:#5C5C6E;font-size:14px;">زجاج — Glass</p>
+          <span style="display:inline-block;padding:4px 12px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-size:11px;font-weight:700;margin-top:8px;">الأكثر مبيعاً</span>
+        </div>
+        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
+          <img src="images/products/raw/tomato-1600g.png" alt="Tomato 1600g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
+          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">1600 <small>g</small></h4>
+          <p style="color:#5C5C6E;font-size:14px;">بلاستيك — Plastic</p>
+        </div>
+        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
+          <img src="images/products/raw/tomato-4200g.png" alt="Tomato 4200g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
+          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">4200 <small>g</small></h4>
+          <p style="color:#5C5C6E;font-size:14px;">بلاستيك — Plastic</p>
+          <span style="display:inline-block;padding:4px 12px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-size:11px;font-weight:700;margin-top:8px;">عائلي</span>
+        </div>
+      </div>
+
+      <h3 style="font-size:24px;color:#0D1B4A;margin-bottom:24px;text-align:center;">🌶️ معجون الفليفلة الحار — Hot Pepper Paste</h3>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:60px;">
+        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
+          <img src="images/products/raw/pepper-650g.png" alt="Pepper 650g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
+          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">650 <small>g</small></h4>
+          <p style="color:#5C5C6E;font-size:14px;">زجاج — Glass</p>
+        </div>
+        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
+          <img src="images/products/raw/pepper-1600g.png" alt="Pepper 1600g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
+          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">1600 <small>g</small></h4>
+          <p style="color:#5C5C6E;font-size:14px;">بلاستيك — Plastic</p>
+          <span style="display:inline-block;padding:4px 12px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-size:11px;font-weight:700;margin-top:8px;">الأكثر مبيعاً</span>
+        </div>
+        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
+          <img src="images/products/raw/pepper-4200g.png" alt="Pepper 4200g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
+          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">4200 <small>g</small></h4>
+          <p style="color:#5C5C6E;font-size:14px;">بلاستيك — Plastic</p>
+          <span style="display:inline-block;padding:4px 12px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-size:11px;font-weight:700;margin-top:8px;">عائلي</span>
+        </div>
+      </div>
+
+      <h3 style="font-size:24px;color:#0D1B4A;margin-bottom:24px;text-align:center;">🫑 معجون الفليفلة البارد — Sweet Pepper Paste</h3>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:40px;">
+        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
+          <img src="images/products/raw/pepper-650g.png" alt="Sweet Pepper 650g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
+          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">650 <small>g</small></h4>
+          <p style="color:#5C5C6E;font-size:14px;">زجاج — Glass</p>
+        </div>
+        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
+          <img src="images/products/raw/pepper-1600g.png" alt="Sweet Pepper 1600g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
+          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">1600 <small>g</small></h4>
+          <p style="color:#5C5C6E;font-size:14px;">بلاستيك — Plastic</p>
+        </div>
+        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
+          <img src="images/products/raw/pepper-4200g.png" alt="Sweet Pepper 4200g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
+          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">4200 <small>g</small></h4>
+          <p style="color:#5C5C6E;font-size:14px;">بلاستيك — Plastic</p>
+          <span style="display:inline-block;padding:4px 12px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-size:11px;font-weight:700;margin-top:8px;">عائلي</span>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:20px;">
+        <p style="font-family:\'Playfair Display\',serif;font-style:italic;font-size:22px;color:#E53935;opacity:.7;">"The sun gives it strength. The moon locks in the flavor."</p>
+      </div>
+    </div>
+  </section>
+<!-- ====== GALLERY ====== -->
+  <section class="section gallery" id="gallery">
+          <div class="container">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2>معرض الصور</h2>
+        <p class="section-subtitle">من الحقل إلى المائدة — رحلة DIALUNA</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/lifestyle/farm-display.png" alt="Farm" loading="lazy">
+          <div class="gallery-overlay"><span>من الحقل إلى العبوة</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/lifestyle/factory-filling.png" alt="Factory" loading="lazy">
+          <div class="gallery-overlay"><span>تعبئة دقيقة</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/lifestyle/pepper-spread.png" alt="Spread" loading="lazy">
+          <div class="gallery-overlay"><span>نكهة لا تُقاوم</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/lifestyle/supermarket-display.png" alt="Supermarket" loading="lazy">
+          <div class="gallery-overlay"><span>متوفر في الأسواق</span></div>
+        </div>
+      </div>
+    </div>
+</section>
+
+  <!-- ====== CONTACT ====== -->
+  <!-- ====== CERTIFICATIONS ====== -->
+  <section class="section certifications" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2 data-i18n="cert-title">الشهادات</h2>
+        <p class="section-subtitle">شهادات الجودة والاعتماد الدولي — Quality Certifications</p>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-image">
+            <img src="images/certifications/halal.jpg" alt="Halal Certified" loading="lazy">
+          </div>
+          <h3>حلال</h3>
+          <p>حاصل على شهادة الحلال المعتمدة دولياً، تضمن التزام منتجاتنا بأحكام الشريعة الإسلامية في جميع مراحل الإنتاج.</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-image">
+            <img src="images/certifications/haccp.jpg" alt="HACCP Certified" loading="lazy">
+          </div>
+          <h3>HACCP</h3>
+          <p>نظام تحليل المخاطر ونقاط التحكم الحرجة لضمان سلامة الغذاء وفق أعلى المعايير العالمية.</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-image">
+            <img src="images/certifications/iso-22000.jpg" alt="ISO 22000:2018" loading="lazy">
+          </div>
+          <h3>ISO 22000:2018</h3>
+          <p>نظام إدارة سلامة الغذاء المعتمد دولياً، يضمن أعلى مستويات الجودة والسلامة في منتجات DIALUNA.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <h2 data-i18n="contact-title">اتصل بنا</h2>
+        <p class="section-subtitle">تواصل معنا للاستفسارات وطلبات الجملة</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">🏢</div>
+            <h3>المكتب الرئيسي</h3>
+            <p class="contact-company">LİYAKAT INTERNATIONAL</p>
+            <p>Karaağaç Mah. Sırtköy Bulvarı<br>Toskana Vadisi No: 30 356<br>Büyükçekmece, İstanbul, TÜRKİYE</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <h3>البريد الإلكتروني</h3>
+            <a href="mailto:export@liyakatinternational.com.tr">export@liyakatinternational.com.tr</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h3>الهاتف</h3>
+            <a href="tel:+902128868600">+90 212 886 86 00</a>
+            <p style="font-size:12px;color:var(--text-light);margin-top:4px;">فاكس: +90 212 886 63 33</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">🌐</div>
+            <h3>مصنع الإنتاج</h3>
+            <p>Osmangazi Mah. 3119. Sokak No:2<br>34522 ESENYURT / İSTANBUL<br>TÜRKİYE</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">🇺🇸</div>
+            <h3>مكتب أمريكا</h3>
+            <p>9480 Main Street Num.1304<br>Fairfax, Virginia 22031<br>USA</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">🌐</div>
+            <h3>العلامة التجارية</h3>
+            <p class="contact-brand">DIALUNA PASTE</p>
+            <p class="contact-tagline">From Anatolia to the World</p>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="الاسم" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" placeholder="الموضوع">
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="5" placeholder="رسالتك..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">إرسال الرسالة</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/liyakat-logo.png" alt="LİYAKAT INTERNATIONAL" class="footer-liyakat-logo">
+          <p style="margin-top:8px;font-size:13px;">From Anatolia to the World</p>
+          <img src="images/dialuna-logo.png" alt="DIALUNA" class="footer-dialuna-logo" style="margin-top:16px;">
+          <p class="footer-tagline">"Quality knows no borders. Trust speaks every language."</p>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer-links-title">روابط سريعة</h4>
+          <ul>
+            <li><a href="#home" data-i18n="nav-home">الرئيسية</a></li>
+            <li><a href="#about" data-i18n="nav-about">عن العلامة</a></li>
+            <li><a href="#story" data-i18n="nav-story">القصة</a></li>
+            <li><a href="#products" data-i18n="nav-products">المنتجات</a></li>
+            <li><a href="#gallery" data-i18n="nav-gallery">المعرض</a></li>
+            <li><a href="#certifications" data-i18n="nav-certifications">الشهادات</a></li>
+          </ul>
+        </div>
+        <div class="footer-company">
+          <img src="images/liyakat-logo.png" alt="LİYAKAT INTERNATIONAL" class="footer-liyakat-logo">
+          <p style="margin-top:12px;">Karaağaç Mah. Sırtköy Bulvarı<br>Toskana Vadisi No: 30 356<br>Büyükçekmece, İstanbul, TÜRKİYE</p>
+          <p style="margin-top:8px;">📍 مصنع: Esenyurt / İSTANBUL<br>📞 +90 212 886 86 00<br>✉️ export@liyakatinternational.com.tr</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 LİYAKAT INTERNATIONAL — DIALUNA. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  
+  
+
+
+</body>
+</html>
