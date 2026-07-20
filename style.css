@@ -513,8 +513,8 @@ h1, h2, h3, h4 {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 60px;
+  grid-template-columns: 1.4fr 1.2fr 1fr;
+  gap: 30px;
   align-items: start;
 }
 
@@ -1404,6 +1404,7 @@ h1, h2, h3, h4 {
   .about-grid {
     grid-template-columns: 1fr;
   }
+  .about-grid .about-vision .vision-card { margin-bottom:0; }
   
   .contact-grid {
     grid-template-columns: 1fr;
