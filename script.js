@@ -428,3 +428,25 @@ document.addEventListener('DOMContentLoaded', () => {
     radios[current].checked = true;
   }, 5000);
 })();
+
+// ====== BANNER AUTO SLIDER - 5 seconds ======
+(function() {
+  function initAutoSlide() {
+    var radios = document.querySelectorAll('input[name="hero"]');
+    if (!radios || radios.length === 0) {
+      setTimeout(initAutoSlide, 500);
+      return;
+    }
+    var current = 0;
+    setInterval(function() {
+      radios[current].checked = false;
+      current = (current + 1) % radios.length;
+      radios[current].checked = true;
+    }, 5000);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAutoSlide);
+  } else {
+    initAutoSlide();
+  }
+})();
