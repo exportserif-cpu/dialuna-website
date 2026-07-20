@@ -1751,3 +1751,20 @@ html[dir="ltr"] .nav-menu {
   transform:translateY(-2px);
   box-shadow:0 8px 30px rgba(26,35,126,0.3);
 }
+
+/* Force vision-card background over card-premium */
+.vision-card.card-premium {
+  background: linear-gradient(135deg, #0D1B4A 0%, #1A237E 40%, #283593 100%) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 20px 60px rgba(13,27,74,0.2) !important;
+}
+.vision-card.card-premium:hover {
+  transform: none !important;
+  box-shadow: 0 20px 60px rgba(13,27,74,0.2) !important;
+}
+.vision-card.card-premium h3 { color: #C9A84C !important; }
+.vision-card.card-premium p { color: rgba(255,255,255,0.85) !important; }
+.vision-card.card-premium .stat { background: rgba(255,255,255,0.06) !important; border: 1px solid rgba(255,255,255,0.08); }
+.vision-card.card-premium .stat-num { color: #C9A84C !important; }
+.vision-card.card-premium .stat-label { color: rgba(255,255,255,0.7) !important; }
