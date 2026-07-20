@@ -1623,10 +1623,7 @@ html[dir="ltr"] .nav-menu {
 }
 
 .hero-gradient-text {
-  background: linear-gradient(90deg, #FFFFFF, #4CAF50);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #FFFFFF;
   display: inline-block;
   font-size: inherit;
   font-weight: inherit;
