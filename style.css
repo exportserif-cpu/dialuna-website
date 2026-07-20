@@ -1787,3 +1787,9 @@ html[dir="ltr"] .nav-menu {
 .hero-slider .s6 { animation-delay: 25s !important; }
 .hero-slider .s7 { animation-delay: 30s !important; }
 .hero-slider .s8 { animation-delay: 35s !important; }
+
+/* FORCE: All hero/banner text to pure white */
+.hero * { color: #FFFFFF !important; }
+.hero .slide-dots label { color: transparent !important; }
+.hero .btn-outline { border-color: rgba(255,255,255,0.3) !important; }
+.hero .btn-outline:hover { border-color: #C9A84C !important; color: #C9A84C !important; }
