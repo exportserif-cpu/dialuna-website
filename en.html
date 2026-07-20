@@ -363,78 +363,145 @@ Or maybe it still lives on in the fields of Sındırgı.</p>
   </section>
 
   <!-- ====== PRODUCTS ====== -->
-      <section class="section products" id="products">
+      
+<section class="section products" id="products">
     <div class="container">
       <div class="section-header">
         <span class="section-number">03</span>
-        <h2>Our Products</h2>
-        <p class="section-subtitle">Tomato &amp; Pepper Paste — All Sizes Available</p>
+        <h2 data-i18n="products-title">Our Products</h2>
+        <p class="section-subtitle">Premium quality from our fields to your table</p>
       </div>
 
-      <h3 style="font-size:24px;color:#0D1B4A;margin-bottom:24px;text-align:center;">🍅 Tomato Paste</h3>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:60px;">
-        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
-          <img src="images/products/tomato-650g-mk.jpg" alt="Tomato 650g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
-          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">650 <small>g</small></h4>
-          <p style="color:#5C5C6E;font-size:14px;">Glass Jar</p>
-          <span style="display:inline-block;padding:4px 12px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-size:11px;font-weight:700;margin-top:8px;">Best Seller</span>
-        </div>
-        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
-          <img src="images/products/tomato-1600g-mk.jpg" alt="Tomato 1600g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
-          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">1600 <small>g</small></h4>
-          <p style="color:#5C5C6E;font-size:14px;">Plastic Jar</p>
-        </div>
-        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
-          <img src="images/products/tomato-4200g-mk.jpg" alt="Tomato 4200g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
-          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">4200 <small>g</small></h4>
-          <p style="color:#5C5C6E;font-size:14px;">Plastic Jar</p>
-          <span style="display:inline-block;padding:4px 12px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-size:11px;font-weight:700;margin-top:8px;">Family Size</span>
-        </div>
-      </div>
+      <style>
+        .product-showcase { max-width:1100px; margin:0 auto; }
+        .product-category { margin-bottom:60px; }
+        .product-category-title { font-size:22px; font-weight:700; color:#0D1B4A; margin-bottom:20px; padding-bottom:12px; border-bottom:3px solid #4CAF50; display:flex; align-items:center; gap:10px; }
+        .product-grid-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+        .product-card-modern { background:#fff; border-radius:16px; overflow:hidden; border:1px solid rgba(0,0,0,.04); transition:all .4s cubic-bezier(.25,.46,.45,.94); position:relative; cursor:pointer; }
+        .product-card-modern:hover { transform:translateY(-8px); box-shadow:0 20px 60px rgba(13,27,74,.1); border-color:rgba(76,175,80,.15); }
+        .product-card-modern .card-img { height:220px; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#F8F9FC,#E8EAF0); padding:20px; position:relative; overflow:hidden; }
+        .product-card-modern .card-img img { max-width:80%; max-height:180px; object-fit:contain; transition:all .6s ease; filter:drop-shadow(0 4px 12px rgba(0,0,0,.08)); }
+        .product-card-modern:hover .card-img img { transform:scale(1.08); }
+        .product-card-modern .card-body { padding:20px; }
+        .product-card-modern .card-title { font-size:16px; font-weight:700; color:#0D1B4A; margin-bottom:8px; }
+        .product-card-modern .card-weight { font-size:22px; font-weight:900; color:#E53935; }
+        .product-card-modern .card-weight small { font-size:14px; font-weight:400; color:#5C5C6E; }
+        .product-card-modern .card-type { font-size:13px; color:#5C5C6E; background:#F0F1F5; display:inline-block; padding:3px 12px; border-radius:50px; margin-top:6px; }
+        .product-badge-natural { display:inline-block; font-size:11px; padding:4px 12px; border-radius:50px; background:rgba(76,175,80,.12); color:#2E7D32; font-weight:700; margin-top:10px; width:100%; text-align:center; }
+        .product-badge-popular { position:absolute; top:10px; left:10px; background:linear-gradient(135deg,#C9A84C,#D4A84C); color:#0D0D1A; font-size:10px; font-weight:800; padding:4px 14px; border-radius:50px; text-transform:uppercase; letter-spacing:1px; box-shadow:0 2px 10px rgba(201,168,76,.3); }
+        .product-badge-family { position:absolute; top:10px; left:10px; background:rgba(13,27,74,.85); color:#fff; font-size:10px; font-weight:800; padding:4px 14px; border-radius:50px; text-transform:uppercase; letter-spacing:1px; }
+        .product-tagline-wrap { text-align:center; margin-top:20px; padding:30px; background:linear-gradient(135deg,#F5F5F9,#EEEFF5); border-radius:20px; }
+        .product-tagline-wrap p { font-family:'Playfair Display',serif; font-style:italic; font-size:20px; color:#E53935; opacity:.7; }
+        @media (max-width:768px) { .product-grid-cards { grid-template-columns:1fr; gap:16px; } }
+      </style>
 
-      <h3 style="font-size:24px;color:#0D1B4A;margin-bottom:24px;text-align:center;">🌶️ Hot Pepper Paste</h3>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:60px;">
-        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
-          <img src="images/products/pepper-650g-mk.jpg" alt="Hot Pepper 650g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
-          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">650 <small>g</small></h4>
-          <p style="color:#5C5C6E;font-size:14px;">Glass Jar</p>
-        </div>
-        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
-          <img src="images/products/pepper-1600g-mk.jpg" alt="Hot Pepper 1600g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
-          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">1600 <small>g</small></h4>
-          <p style="color:#5C5C6E;font-size:14px;">Plastic Jar</p>
-          <span style="display:inline-block;padding:4px 12px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-size:11px;font-weight:700;margin-top:8px;">Best Seller</span>
-        </div>
-        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
-          <img src="images/products/pepper-4200g-mk.jpg" alt="Hot Pepper 4200g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
-          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">4200 <small>g</small></h4>
-          <p style="color:#5C5C6E;font-size:14px;">Plastic Jar</p>
-          <span style="display:inline-block;padding:4px 12px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-size:11px;font-weight:700;margin-top:8px;">Family Size</span>
-        </div>
-      </div>
+      <div class="product-showcase">
 
-      <h3 style="font-size:24px;color:#0D1B4A;margin-bottom:24px;text-align:center;">🫑 Sweet Pepper Paste</h3>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:40px;">
-        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
-          <img src="images/products/pepper-650g-mk.jpg" alt="Sweet Pepper 650g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
-          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">650 <small>g</small></h4>
-          <p style="color:#5C5C6E;font-size:14px;">Glass Jar</p>
+        <!-- Tomato Paste -->
+        <div class="product-category">
+          <h3 class="product-category-title">🍅 Premium Mediterranean Tomato Paste</h3>
+          <div class="product-grid-cards">
+            <div class="product-card-modern">
+              <div class="card-img"><span class="product-badge-popular">Best Seller</span><img src="images/products/tomato-650g-mk.jpg" alt="Tomato 650g" loading="lazy"></div>
+              <div class="card-body">
+                <div class="card-title">Tomato Paste</div>
+                <div class="card-weight">650 <small>g</small></div>
+                <div class="card-type">Glass Jar</div>
+                <div class="product-badge-natural">🌿 🌿 100% Natural · No Preservatives</div>
+              </div>
+            </div>
+            <div class="product-card-modern">
+              <div class="card-img"><img src="images/products/tomato-1600g-mk.jpg" alt="Tomato 1600g" loading="lazy"></div>
+              <div class="card-body">
+                <div class="card-title">Tomato Paste</div>
+                <div class="card-weight">1600 <small>g</small></div>
+                <div class="card-type">Plastic Jar</div>
+                <div class="product-badge-natural">🌿 🌿 100% Natural · No Preservatives</div>
+              </div>
+            </div>
+            <div class="product-card-modern">
+              <div class="card-img"><span class="product-badge-family">Family Size</span><img src="images/products/tomato-4200g-mk.jpg" alt="Tomato 4200g" loading="lazy"></div>
+              <div class="card-body">
+                <div class="card-title">Tomato Paste</div>
+                <div class="card-weight">4200 <small>g</small></div>
+                <div class="card-type">Plastic Jar</div>
+                <div class="product-badge-natural">🌿 🌿 100% Natural · No Preservatives</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
-          <img src="images/products/pepper-1600g-mk.jpg" alt="Sweet Pepper 1600g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
-          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">1600 <small>g</small></h4>
-          <p style="color:#5C5C6E;font-size:14px;">Plastic Jar</p>
-        </div>
-        <div style="background:#F5F5F9;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(0,0,0,.04);">
-          <img src="images/products/pepper-4200g-mk.jpg" alt="Sweet Pepper 4200g" style="width:100%;max-width:280px;height:auto;margin:0 auto;display:block;">
-          <h4 style="font-size:18px;color:#0D1B4A;margin:16px 0 4px;">4200 <small>g</small></h4>
-          <p style="color:#5C5C6E;font-size:14px;">Plastic Jar</p>
-          <span style="display:inline-block;padding:4px 12px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-size:11px;font-weight:700;margin-top:8px;">Family Size</span>
-        </div>
-      </div>
 
-      <div style="text-align:center;margin-top:20px;">
-        <p style="font-family:\'Playfair Display\',serif;font-style:italic;font-size:22px;color:#E53935;opacity:.7;">"The sun gives it strength. The moon locks in the flavor."</p>
+        <!-- Hot Pepper Paste -->
+        <div class="product-category">
+          <h3 class="product-category-title">🌶️ Premium Mediterranean Pepper Paste — Hot</h3>
+          <div class="product-grid-cards">
+            <div class="product-card-modern">
+              <div class="card-img"><img src="images/products/pepper-650g-mk.jpg" alt="Hot Pepper 650g" loading="lazy"></div>
+              <div class="card-body">
+                <div class="card-title">Hot Pepper Paste</div>
+                <div class="card-weight">650 <small>g</small></div>
+                <div class="card-type">Glass Jar</div>
+                <div class="product-badge-natural">🌿 🌿 100% Natural · No Additives</div>
+              </div>
+            </div>
+            <div class="product-card-modern">
+              <div class="card-img"><span class="product-badge-popular">Best Seller</span><img src="images/products/pepper-1600g-mk.jpg" alt="Hot Pepper 1600g" loading="lazy"></div>
+              <div class="card-body">
+                <div class="card-title">Hot Pepper Paste</div>
+                <div class="card-weight">1600 <small>g</small></div>
+                <div class="card-type">Plastic Jar</div>
+                <div class="product-badge-natural">🌿 🌿 100% Natural · No Additives</div>
+              </div>
+            </div>
+            <div class="product-card-modern">
+              <div class="card-img"><span class="product-badge-family">Family Size</span><img src="images/products/pepper-4200g-mk.jpg" alt="Hot Pepper 4200g" loading="lazy"></div>
+              <div class="card-body">
+                <div class="card-title">Hot Pepper Paste</div>
+                <div class="card-weight">4200 <small>g</small></div>
+                <div class="card-type">Plastic Jar</div>
+                <div class="product-badge-natural">🌿 🌿 100% Natural · No Additives</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sweet Pepper Paste -->
+        <div class="product-category">
+          <h3 class="product-category-title">🫑 Premium Mediterranean Pepper Paste — Sweet</h3>
+          <div class="product-grid-cards">
+            <div class="product-card-modern">
+              <div class="card-img"><img src="images/products/pepper-650g-mk.jpg" alt="Sweet Pepper 650g" loading="lazy"></div>
+              <div class="card-body">
+                <div class="card-title">Sweet Pepper Paste</div>
+                <div class="card-weight">650 <small>g</small></div>
+                <div class="card-type">Glass Jar</div>
+                <div class="product-badge-natural">🌿 🌿 100% Natural · No Additives</div>
+              </div>
+            </div>
+            <div class="product-card-modern">
+              <div class="card-img"><img src="images/products/pepper-1600g-mk.jpg" alt="Sweet Pepper 1600g" loading="lazy"></div>
+              <div class="card-body">
+                <div class="card-title">Sweet Pepper Paste</div>
+                <div class="card-weight">1600 <small>g</small></div>
+                <div class="card-type">Plastic Jar</div>
+                <div class="product-badge-natural">🌿 🌿 100% Natural · No Additives</div>
+              </div>
+            </div>
+            <div class="product-card-modern">
+              <div class="card-img"><span class="product-badge-family">Family Size</span><img src="images/products/pepper-4200g-mk.jpg" alt="Sweet Pepper 4200g" loading="lazy"></div>
+              <div class="card-body">
+                <div class="card-title">Sweet Pepper Paste</div>
+                <div class="card-weight">4200 <small>g</small></div>
+                <div class="card-type">Plastic Jar</div>
+                <div class="product-badge-natural">🌿 🌿 100% Natural · No Additives</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-tagline-wrap">
+          <p>"The sun gives it strength. The moon locks in the flavor."</p>
+        </div>
       </div>
     </div>
   </section>
