@@ -156,13 +156,12 @@ h1, h2, h3, h4 {
 }
 
 .nav-logo-img {
-  height: 36px;
   width: auto;
   transition: var(--transition);
 }
 
 .navbar.scrolled .nav-logo-img {
-  height: 30px;
+  height: 34px;
 }
 
 .nav-logo-divider {
@@ -181,15 +180,6 @@ h1, h2, h3, h4 {
 
 .navbar.scrolled .nav-logo-brand {
 
-.nav-logo-dialuna {
-  height: 32px;
-  width: auto;
-  transition: var(--transition);
-}
-
-.navbar.scrolled .nav-logo-dialuna {
-  height: 28px;
-}
   font-size: 14px;
 }
 
