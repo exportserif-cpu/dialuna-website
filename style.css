@@ -1637,7 +1637,7 @@ html[dir="ltr"] .nav-menu {
 
 /* Typography */
 .premium-heading { font-weight:700; letter-spacing:-0.5px; line-height:1.2; }
-.premium-subtitle { font-weight:300; letter-spacing:2px; text-transform:uppercase; color:#5C5C6E; }
+.premium-subtitle { font-weight:300; letter-spacing:2px; text-transform:uppercase; color: #FFFFFF; }
 .section-spacing { padding:120px 0; }
 .section-spacing-sm { padding:80px 0; }
 
@@ -1656,15 +1656,15 @@ html[dir="ltr"] .nav-menu {
 .btn-premium { display:inline-flex; align-items:center; gap:8px; padding:14px 32px; border-radius:50px; font-weight:600; font-size:14px; text-decoration:none; transition:all .4s ease; }
 .btn-premium-primary { background:linear-gradient(135deg,#1A237E,#0D1442); color:#fff; box-shadow:0 4px 20px rgba(26,35,126,.2); }
 .btn-premium-primary:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(26,35,126,.3); }
-.btn-premium-gold { background:linear-gradient(135deg,#C9A84C,#D4A84C); color:#0D0D1A; box-shadow:0 4px 20px rgba(201,168,76,.3); }
+.btn-premium-gold { background:linear-gradient(135deg,#C9A84C,#D4A84C); color: #FFFFFF; box-shadow:0 4px 20px rgba(201,168,76,.3); }
 .btn-premium-gold:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(201,168,76,.4); }
 .btn-premium-outline { border:2px solid rgba(255,255,255,.3); color:#fff; background:transparent; }
-.btn-premium-outline:hover { border-color:#C9A84C; color:#C9A84C; }
+.btn-premium-outline:hover { border-color: #FFFFFF; color: #FFFFFF; }
 
 /* Stats Premium */
 .stats-premium { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
 .stat-premium { text-align:center; padding:20px; background:rgba(255,255,255,.08); border-radius:16px; backdrop-filter:blur(10px); }
-.stat-premium .num { display:block; font-size:42px; font-weight:900; color:#C9A84C; font-family:'Playfair Display',serif; line-height:1; }
+.stat-premium .num { display:block; font-size:42px; font-weight:900; color: #FFFFFF; font-family:'Playfair Display',serif; line-height:1; }
 .stat-premium .label { font-size:13px; color:rgba(255,255,255,.7); margin-top:6px; }
 
 /* Image Showcase */
@@ -1675,9 +1675,9 @@ html[dir="ltr"] .nav-menu {
 
 /* Tags/Badges */
 .tag-premium { display:inline-block; padding:4px 14px; border-radius:50px; font-size:12px; font-weight:600; }
-.tag-green { background:rgba(76,175,80,.1); color:#2E7D32; }
-.tag-red { background:rgba(229,57,53,.1); color:#B71C1C; }
-.tag-gold { background:rgba(201,168,76,.1); color:#8B7332; }
+.tag-green { background:rgba(76,175,80,.1); color: #FFFFFF; }
+.tag-red { background:rgba(229,57,53,.1); color: #FFFFFF; }
+.tag-gold { background:rgba(201,168,76,.1); color: #FFFFFF; }
 
 /* Hover Lift */
 .hover-lift { transition:all .4s ease; }
@@ -1693,9 +1693,9 @@ html[dir="ltr"] .nav-menu {
 
 /* Section Headers Premium */
 .section-premium { text-align:center; margin-bottom:60px; }
-.section-premium .num { font-family:'Playfair Display',serif; font-size:14px; font-weight:400; color:#4CAF50; letter-spacing:4px; margin-bottom:12px; display:block; }
-.section-premium h2 { font-size:clamp(28px,5vw,44px); font-weight:900; color:#0D1B4A; margin-bottom:8px; }
-.section-premium p { font-size:17px; color:#5C5C6E; font-weight:300; max-width:600px; margin:0 auto; }
+.section-premium .num { font-family:'Playfair Display',serif; font-size:14px; font-weight:400; color: #FFFFFF; letter-spacing:4px; margin-bottom:12px; display:block; }
+.section-premium h2 { font-size:clamp(28px,5vw,44px); font-weight:900; color: #FFFFFF; margin-bottom:8px; }
+.section-premium p { font-size:17px; color: #FFFFFF; font-weight:300; max-width:600px; margin:0 auto; }
 
 /* =============================
    Global Popup Modal Styles
@@ -1736,8 +1736,8 @@ html[dir="ltr"] .nav-menu {
   box-shadow:0 4px 15px rgba(229,57,53,0.3);
 }
 .popup-close:hover { transform:rotate(90deg) scale(1.1); box-shadow:0 6px 25px rgba(229,57,53,0.4); }
-.popup-content h3 { color:#0D1B4A; font-size:22px; margin-bottom:12px; font-family:'Poppins',sans-serif; font-weight:700; }
-.popup-content p { font-size:15px; color:#5C5C6E; line-height:1.9; margin-bottom:12px; }
+.popup-content h3 { color: #FFFFFF; font-size:22px; margin-bottom:12px; font-family:'Poppins',sans-serif; font-weight:700; }
+.popup-content p { font-size:15px; color: #FFFFFF; line-height:1.9; margin-bottom:12px; }
 .popup-trigger {
   display:inline-block; padding:12px 28px; margin:4px;
   border-radius:50px;
