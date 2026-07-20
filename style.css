@@ -103,7 +103,7 @@ h1, h2, h3, h4 {
 
 .section-subtitle {
   font-size: 18px;
-  color: var(--text-light);
+  color: #0D1B4A;
   font-weight: 300;
 }
 
@@ -530,7 +530,7 @@ h1, h2, h3, h4 {
 .about-lead {
   font-size: 20px;
   font-weight: 600;
-  color: var(--liyakat-red);
+  color: #0D1B4A;
   margin-bottom: 32px;
   line-height: 1.8;
 }
