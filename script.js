@@ -416,3 +416,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (firstSize) firstSize.classList.add('active');
   });
 });
+
+// ====== AUTO SLIDER ======
+(function() {
+  const radios = document.querySelectorAll('input[name="hero"]');
+  if (!radios.length) return;
+  let current = 0;
+  setInterval(() => {
+    radios[current].checked = false;
+    current = (current + 1) % radios.length;
+    radios[current].checked = true;
+  }, 5000);
+})();
