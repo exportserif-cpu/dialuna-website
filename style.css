@@ -582,24 +582,51 @@ h1, h2, h3, h4 {
 }
 
 .vision-card {
-  background: linear-gradient(135deg, var(--charcoal) 0%, var(--liyakat-red-dark) 100%);
-  color: var(--white);
-  padding: 40px;
-  border-radius: 20px;
+  background: linear-gradient(135deg, #0D1B4A 0%, #1A237E 40%, #283593 100%);
+  color: #fff;
+  padding: 48px;
+  border-radius: 24px;
   margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(13,27,74,0.2);
 }
-
+.vision-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.vision-card::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -20%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(76,175,80,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
 .vision-card h3 {
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 16px;
-  color: var(--liyakat-green);
+  color: #C9A84C;
+  font-weight: 700;
+  font-family: 'Poppins','Cairo',sans-serif;
+  position: relative;
+  z-index: 1;
 }
-
 .vision-card p {
   font-size: 15px;
-  line-height: 1.8;
-  opacity: 0.9;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.85);
   margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
 }
 
 .vision-stats {
