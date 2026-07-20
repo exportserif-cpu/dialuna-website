@@ -114,7 +114,7 @@ h1, h2, h3, h4 {
 .section-subtitle-en {
   font-family: 'Poppins', sans-serif;
   font-style: italic;
-  color: var(--liyakat-green);
+  color: #0D1B4A;
   font-size: 20px;
   font-weight: 400;
 }
@@ -709,7 +709,7 @@ h1, h2, h3, h4 {
   font-family: 'Poppins', sans-serif;
   font-style: italic;
   font-size: 20px;
-  color: var(--liyakat-green);
+  color: #0D1B4A;
   line-height: 1.8;
   opacity: 1;
 }
