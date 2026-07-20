@@ -18,8 +18,8 @@
   --charcoal: #1A1A2E;
   --dark: #0D0D1A;
   --night: #0A0A1A;
-  --text: #0D1B4A;
-  --text-light: #5A6A8A;
+  --text: #FFFFFF;
+  --text-light: #CCCCCC;
   --white: #FFFFFF;
   --section-padding: 100px 0;
   --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -38,7 +38,7 @@ html {
 body {
   font-family: 'Cairo', 'Poppins', sans-serif;
   color: var(--text);
-  background: var(--cream);
+  background: #0D0D1A;
   overflow-x: hidden;
   line-height: 1.8;
   direction: rtl;
@@ -230,7 +230,7 @@ h1, h2, h3, h4 {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--white);
+  background: var(--dark);
   border-radius: 2px;
   transition: var(--transition);
 }
@@ -517,7 +517,7 @@ h1, h2, h3, h4 {
    ============================ */
 
 .about {
-  background: var(--white);
+  background: var(--dark);
 }
 
 .about-grid {
@@ -690,7 +690,7 @@ h1, h2, h3, h4 {
    ============================ */
 
 .story {
-  background: var(--white);
+  background: var(--dark);
   position: relative;
   overflow: hidden;
 }
@@ -726,7 +726,7 @@ h1, h2, h3, h4 {
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid rgba(0,0,0,0.06);
-  background: var(--white);
+  background: var(--dark);
 }
 
 .story-image-wrapper img {
@@ -791,12 +791,12 @@ h1, h2, h3, h4 {
   width: 28px;
   height: 28px;
   font-size: 20px;
-  background: var(--cream);
+  background: #0D0D1A;
   border-radius: 50%;
 }
 
 .chapter-content {
-  background: var(--cream);
+  background: #0D0D1A;
   border: 1px solid rgba(0,0,0,0.06);
   padding: 24px 32px;
   border-radius: 16px;
@@ -849,7 +849,7 @@ h1, h2, h3, h4 {
 .product-tab {
   padding: 12px 28px;
   border: 2px solid rgba(0,0,0,0.08);
-  background: var(--white);
+  background: var(--dark);
   border-radius: 50px;
   font-family: 'Cairo', sans-serif;
   font-size: 15px;
@@ -894,7 +894,7 @@ h1, h2, h3, h4 {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: start;
-  background: var(--cream);
+  background: #0D0D1A;
   border-radius: 24px;
   padding: 40px;
   border: 1px solid rgba(0,0,0,0.04);
@@ -908,7 +908,7 @@ h1, h2, h3, h4 {
 .product-main-img {
   border-radius: 20px;
   overflow: hidden;
-  background: var(--white);
+  background: var(--dark);
   margin-bottom: 16px;
   border: 1px solid rgba(0,0,0,0.04);
   aspect-ratio: 1;
@@ -938,7 +938,7 @@ h1, h2, h3, h4 {
   cursor: pointer;
   border: 2px solid transparent;
   transition: var(--transition);
-  background: var(--white);
+  background: var(--dark);
   padding: 6px;
 }
 
@@ -980,7 +980,7 @@ h1, h2, h3, h4 {
   flex: 1;
   padding: 16px;
   border-radius: 12px;
-  background: var(--white);
+  background: var(--dark);
   border: 2px solid rgba(0,0,0,0.06);
   text-align: center;
   transition: var(--transition);
@@ -1060,7 +1060,7 @@ h1, h2, h3, h4 {
    ============================ */
 
 .gallery {
-  background: var(--white);
+  background: var(--dark);
 }
 
 .gallery-grid {
@@ -1123,7 +1123,7 @@ h1, h2, h3, h4 {
    ============================ */
 
 .certifications {
-  background: var(--cream);
+  background: #0D0D1A;
 }
 
 .cert-grid {
@@ -1135,7 +1135,7 @@ h1, h2, h3, h4 {
 }
 
 .cert-card {
-  background: var(--white);
+  background: var(--dark);
   border-radius: 20px;
   padding: 40px 28px;
   text-align: center;
@@ -1157,7 +1157,7 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: var(--cream);
+  background: #0D0D1A;
   padding: 16px;
   transition: var(--transition);
 }
@@ -1199,7 +1199,7 @@ h1, h2, h3, h4 {
 }
 
 .contact {
-  background: var(--white);
+  background: var(--dark);
 }
 
 .contact-grid {
@@ -1216,7 +1216,7 @@ h1, h2, h3, h4 {
 }
 
 .contact-card {
-  background: var(--cream);
+  background: #0D0D1A;
   padding: 24px;
   border-radius: 16px;
   border: 1px solid rgba(0,0,0,0.04);
@@ -1273,7 +1273,7 @@ h1, h2, h3, h4 {
 }
 
 .contact-form {
-  background: var(--cream);
+  background: #0D0D1A;
   padding: 40px;
   border-radius: 20px;
   border: 1px solid rgba(0,0,0,0.04);
@@ -1289,7 +1289,7 @@ h1, h2, h3, h4 {
   padding: 14px 18px;
   border: 2px solid rgba(0,0,0,0.06);
   border-radius: 12px;
-  background: var(--white);
+  background: var(--dark);
   font-family: 'Cairo', sans-serif;
   font-size: 14px;
   color: var(--text);
