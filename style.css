@@ -1306,14 +1306,8 @@ h1, h2, h3, h4 {
 
 .footer {
   background: #1A237E;
-  background-image: url('images/world-map-footer.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   color: rgba(255,255,255,0.9);
   padding: 60px 0 0;
-  position: relative;
-  overflow: hidden;
 }
 .footer > * {
   position: relative;
