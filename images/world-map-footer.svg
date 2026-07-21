@@ -1,98 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
   <defs>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.06"/>
-      <stop offset="100%" stop-color="#C9A84C" stop-opacity="0"/>
-    </radialGradient>
-    <marker id="arrowGold" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
-      <polygon points="0 0, 7 2.5, 0 5" fill="#C9A84C" opacity="0.5"/>
-    </marker>
-    <marker id="arrowWhite" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="rgba(255,255,255,0.25)"/>
+    <marker id="arrowGold" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#C9A84C" opacity="0.6"/>
     </marker>
   </defs>
   
-  <!-- Globe glow -->
-  <ellipse cx="600" cy="260" rx="380" ry="190" fill="url(#glow)"/>
-  <ellipse cx="600" cy="260" rx="350" ry="175" fill="none" stroke="rgba(201,168,76,0.04)" stroke-width="0.5"/>
-  
-  <!-- Simplified Continent Outlines -->
+  <!-- Continent Borders (thick, clear) -->
   
   <!-- North America -->
-  <path d="M230,115 L250,105 L280,95 L310,92 L325,100 L330,115 L320,130 L300,142 L270,148 L245,145 L235,135 Z" 
-        fill="rgba(201,168,76,0.04)" stroke="rgba(201,168,76,0.12)" stroke-width="0.8"/>
+  <path d="M220,115 L235,100 L260,90 L295,85 L320,92 L340,105 L345,120 L338,135 L320,148 L295,158 L270,162 L245,160 L230,150 L222,135 Z" 
+        fill="rgba(201,168,76,0.05)" stroke="#C9A84C" stroke-width="1.2" opacity="0.5"/>
   
   <!-- South America -->
-  <path d="M260,190 L270,200 L275,220 L273,240 L268,260 L262,275 L255,280 L250,272 L248,255 L250,235 L255,215 L258,200 Z" 
-        fill="rgba(201,168,76,0.03)" stroke="rgba(201,168,76,0.1)" stroke-width="0.8"/>
+  <path d="M265,190 L275,200 L280,220 L282,240 L278,265 L270,285 L262,300 L255,295 L248,278 L245,258 L248,235 L252,215 L258,200 Z" 
+        fill="rgba(201,168,76,0.04)" stroke="#C9A84C" stroke-width="1.2" opacity="0.45"/>
   
   <!-- Europe -->
-  <path d="M450,190 L465,175 L485,168 L505,165 L520,168 L530,175 L528,188 L515,198 L495,205 L478,208 L460,205 L452,198 Z" 
-        fill="rgba(201,168,76,0.05)" stroke="rgba(201,168,76,0.13)" stroke-width="0.8"/>
+  <path d="M440,185 L455,170 L480,158 L505,152 L525,155 L540,162 L548,175 L545,190 L535,205 L515,215 L490,220 L465,218 L448,210 L438,198 Z" 
+        fill="rgba(201,168,76,0.06)" stroke="#C9A84C" stroke-width="1.2" opacity="0.55"/>
   
   <!-- Africa -->
-  <path d="M455,210 L465,225 L470,250 L468,275 L462,295 L455,310 L448,315 L442,308 L440,290 L442,265 L445,235 L448,218 Z" 
-        fill="rgba(201,168,76,0.04)" stroke="rgba(201,168,76,0.1)" stroke-width="0.8"/>
+  <path d="M448,218 L460,235 L470,260 L475,290 L472,320 L465,345 L455,362 L445,368 L435,358 L430,340 L428,315 L432,285 L438,255 L442,232 Z" 
+        fill="rgba(201,168,76,0.04)" stroke="#C9A84C" stroke-width="1.2" opacity="0.45"/>
   
-  <!-- Asia -->
-  <path d="M530,168 L555,155 L585,145 L615,140 L645,142 L665,150 L672,165 L668,180 L655,192 L635,198 L610,200 L580,198 L555,192 L540,185 Z" 
-        fill="rgba(201,168,76,0.05)" stroke="rgba(201,168,76,0.12)" stroke-width="0.8"/>
+  <!-- Asia (large) -->
+  <path d="M545,160 L575,148 L610,138 L645,132 L680,135 L700,145 L710,160 L708,180 L695,198 L670,210 L640,218 L605,220 L570,218 L548,210 L542,195 Z" 
+        fill="rgba(201,168,76,0.05)" stroke="#C9A84C" stroke-width="1.2" opacity="0.5"/>
   
-  <!-- Middle East / India Subcontinent -->
-  <path d="M545,195 L560,205 L575,215 L585,230 L582,245 L572,252 L558,248 L550,235 L545,220 L542,205 Z" 
-        fill="rgba(201,168,76,0.04)" stroke="rgba(201,168,76,0.1)" stroke-width="0.8"/>
+  <!-- India Subcontinent -->
+  <path d="M555,218 L565,230 L575,248 L578,268 L572,280 L560,278 L550,268 L545,252 L542,235 Z" 
+        fill="rgba(201,168,76,0.04)" stroke="#C9A84C" stroke-width="1" opacity="0.4"/>
   
   <!-- Australia -->
-  <path d="M780,275 L795,268 L815,270 L825,280 L822,295 L812,305 L795,308 L782,302 Z" 
-        fill="rgba(201,168,76,0.04)" stroke="rgba(201,168,76,0.1)" stroke-width="0.8"/>
+  <path d="M790,295 L810,285 L835,288 L848,300 L845,320 L830,335 L810,338 L792,330 L785,312 Z" 
+        fill="rgba(201,168,76,0.04)" stroke="#C9A84C" stroke-width="1.2" opacity="0.45"/>
   
-  <!-- Turkey (highlighted starting point) -->
-  <circle cx="540" cy="192" r="5" fill="#C9A84C" opacity="0.9"/>
-  <circle cx="540" cy="192" r="10" fill="none" stroke="#C9A84C" opacity="0.3" stroke-width="1.5"/>
-  <circle cx="540" cy="192" r="18" fill="none" stroke="#C9A84C" opacity="0.1" stroke-width="1"/>
+  <!-- TURKEY (detailed map shape) -->
+  <path d="M525,175 L535,168 L548,165 L558,168 L565,175 L568,185 L565,195 L558,202 L548,205 L538,205 L530,200 L525,192 L522,183 Z" 
+        fill="#C9A84C" fill-opacity="0.15" stroke="#C9A84C" stroke-width="1.5" opacity="0.8"/>
   
-  <!-- TR label -->
-  <text x="538" y="185" font-size="7" fill="#C9A84C" opacity="0.8" font-family="Arial" font-weight="bold" text-anchor="middle">TR</text>
+  <!-- Turkey highlight glow -->
+  <ellipse cx="545" cy="185" rx="30" ry="22" fill="none" stroke="#C9A84C" stroke-width="0.5" opacity="0.3"/>
   
-  <!-- Main Arrows from Turkey to World -->
+  <!-- Turkey label -->
+  <text x="540" y="178" font-size="8" fill="#C9A84C" opacity="0.9" font-family="Arial" font-weight="bold" text-anchor="middle">TÜRKİYE</text>
+  
+  <!-- Main Arrows from Turkey -->
   <!-- To Europe -->
-  <path d="M535,190 Q500,178 470,175" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.5" marker-end="url(#arrowGold)"/>
+  <path d="M538,185 L490,175" fill="none" stroke="#C9A84C" stroke-width="1.2" opacity="0.6" marker-end="url(#arrowGold)"/>
   <!-- To North America -->
-  <path d="M538,188 Q420,150 330,120" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.35" marker-end="url(#arrowGold)"/>
+  <path d="M535,182 L380,130" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.4" marker-end="url(#arrowGold)"/>
   <!-- To South America -->
-  <path d="M542,195 Q480,230 400,260" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.3" marker-end="url(#arrowGold)"/>
+  <path d="M540,190 L460,250" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.35" marker-end="url(#arrowGold)"/>
   <!-- To Africa -->
-  <path d="M540,195 Q520,230 490,270" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.4" marker-end="url(#arrowGold)"/>
+  <path d="M538,190 L505,285" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.45" marker-end="url(#arrowGold)"/>
   <!-- To Asia -->
-  <path d="M542,190 Q590,170 650,155" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.45" marker-end="url(#arrowGold)"/>
+  <path d="M545,182 L630,155" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.5" marker-end="url(#arrowGold)"/>
   <!-- To Australia -->
-  <path d="M545,198 Q640,240 760,285" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.25" marker-end="url(#arrowGold)"/>
+  <path d="M550,192 L720,290" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.3" marker-end="url(#arrowGold)"/>
   <!-- To Middle East -->
-  <path d="M542,193 Q560,210 575,230" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.35" marker-end="url(#arrowGold)"/>
+  <path d="M548,190 L575,230" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.4" marker-end="url(#arrowGold)"/>
   
-  <!-- Secondary Arrows -->
-  <path d="M535,192 Q450,195 380,200" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5" marker-end="url(#arrowWhite)"/>
-  <path d="M540,192 Q600,200 670,210" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="0.5" marker-end="url(#arrowWhite)"/>
+  <!-- Destination country dots -->
+  <circle cx="490" cy="175" r="3" fill="#C9A84C" opacity="0.5"/>
+  <circle cx="380" cy="130" r="3" fill="#C9A84C" opacity="0.35"/>
+  <circle cx="460" cy="250" r="3" fill="#C9A84C" opacity="0.3"/>
+  <circle cx="505" cy="285" r="3" fill="#C9A84C" opacity="0.4"/>
+  <circle cx="630" cy="155" r="3" fill="#C9A84C" opacity="0.45"/>
+  <circle cx="720" cy="290" r="3" fill="#C9A84C" opacity="0.25"/>
+  <circle cx="575" cy="230" r="3" fill="#C9A84C" opacity="0.35"/>
   
-  <!-- Destination Dots -->
-  <circle cx="470" cy="175" r="2.5" fill="#C9A84C" opacity="0.35"/>
-  <circle cx="330" cy="120" r="2.5" fill="#C9A84C" opacity="0.25"/>
-  <circle cx="400" cy="260" r="2.5" fill="#C9A84C" opacity="0.2"/>
-  <circle cx="490" cy="270" r="2.5" fill="#C9A84C" opacity="0.3"/>
-  <circle cx="650" cy="155" r="2.5" fill="#C9A84C" opacity="0.35"/>
-  <circle cx="760" cy="285" r="2.5" fill="#C9A84C" opacity="0.2"/>
-  <circle cx="575" cy="230" r="2.5" fill="#C9A84C" opacity="0.3"/>
+  <!-- Continent Labels -->
+  <text x="300" y="108" font-size="7" fill="rgba(255,255,255,0.3)" font-family="Arial" font-weight="bold" text-anchor="middle">NORTH AMERICA</text>
+  <text x="270" y="270" font-size="7" fill="rgba(255,255,255,0.2)" font-family="Arial" font-weight="bold" text-anchor="middle">SOUTH AMERICA</text>
+  <text x="480" y="340" font-size="7" fill="rgba(255,255,255,0.25)" font-family="Arial" font-weight="bold" text-anchor="middle">AFRICA</text>
+  <text x="640" y="145" font-size="7" fill="rgba(255,255,255,0.3)" font-family="Arial" font-weight="bold" text-anchor="middle">ASIA</text>
+  <text x="825" y="300" font-size="7" fill="rgba(255,255,255,0.2)" font-family="Arial" font-weight="bold" text-anchor="middle">AUSTRALIA</text>
+  <text x="568" y="275" font-size="7" fill="rgba(255,255,255,0.2)" font-family="Arial" font-weight="bold" text-anchor="middle">INDIA</text>
   
-  <!-- Country Labels -->
-  <text x="280" y="100" font-size="5" fill="rgba(255,255,255,0.2)" font-family="Arial" text-anchor="middle">AMERICA</text>
-  <text x="495" y="160" font-size="5" fill="rgba(255,255,255,0.2)" font-family="Arial" text-anchor="middle">EUROPE</text>
-  <text x="470" y="300" font-size="5" fill="rgba(255,255,255,0.15)" font-family="Arial" text-anchor="middle">AFRICA</text>
-  <text x="650" y="135" font-size="5" fill="rgba(255,255,255,0.2)" font-family="Arial" text-anchor="middle">ASIA</text>
-  
-  <!-- Compass Rose (small) -->
-  <g transform="translate(180,320)" opacity="0.15">
-    <line x1="0" y1="-12" x2="0" y2="12" stroke="#FFFFFF" stroke-width="0.5"/>
-    <line x1="-12" y1="0" x2="12" y2="0" stroke="#FFFFFF" stroke-width="0.5"/>
-    <circle cx="0" cy="0" r="2" fill="#FFFFFF"/>
-  </g>
+  <!-- Number of countries text -->
+  <text x="540" y="350" font-size="10" fill="#C9A84C" opacity="0.4" font-family="Arial" text-anchor="middle" font-weight="bold">25+ COUNTRIES WORLDWIDE</text>
 </svg>
