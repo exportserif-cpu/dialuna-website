@@ -621,7 +621,7 @@ h1, h2, h3, h4 {
 .vision-card p {
   font-size: 15px;
   line-height: 1.9;
-  color: rgba(255, 255, 255, 0.85);
+  color: #0D1B4A;
   margin-bottom: 32px;
   position: relative;
   z-index: 1;
