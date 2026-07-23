@@ -585,11 +585,11 @@ h1, h2, h3, h4 {
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
-html[lang="en"] .vision-card,
+html[lang="en"] .vision-card;
 [dir="ltr"] .vision-card {
   background: url('images/lifestyle/Our Vision En.png');
 }
-html[lang="tr"] .vision-card,
+html[lang="tr"] .vision-card;
 [dir="ltr"] .vision-card {
   background: url('images/lifestyle/Our Vision En.png');
 }
