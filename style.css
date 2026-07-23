@@ -572,9 +572,10 @@ h1, h2, h3, h4 {
   line-height: 1.8;
 }
 
-..vision-card {
+.vision-card {
+  /* دمج تدرج أزرق شفاف فوق الصورة للحفاظ على وضوح النصوص البيضاء */
   background: linear-gradient(135deg, rgba(13,27,74,0.85) 0%, rgba(26,35,126,0.85) 40%, rgba(40,53,147,0.85) 100%), 
-              url('images/lifestyle/OurVisionAr.png');
+              url('images/lifestyle/Our%20VisionِAr.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -585,6 +586,7 @@ h1, h2, h3, h4 {
   position: relative;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(13,27,74,0.2);
+}
 }
 }
 .vision-card::before {
