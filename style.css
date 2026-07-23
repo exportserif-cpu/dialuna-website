@@ -573,7 +573,7 @@ h1, h2, h3, h4 {
 }
 
 .vision-card {
-  background: linear-gradient(135deg, rgba(13, 27, 74, 0.85) 0%, rgba(26, 35, 126, 0.85) 40%, rgba(40, 53, 147, 0.85) 100%), url('images/lifestyle/Our Vision AR.png');
+  background: url('images/lifestyle/Our Vision.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -583,7 +583,7 @@ h1, h2, h3, h4 {
   margin-bottom: 24px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(13, 27, 74, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
 
 .vision-card::before {
@@ -681,7 +681,6 @@ h1, h2, h3, h4 {
   width: 100%;
   object-fit: cover;
   border-radius: 16px;
-}
 }
 
 /* ============================
