@@ -573,17 +573,17 @@ h1, h2, h3, h4 {
 }
 
 .vision-card {
-  background: linear-gradient(135deg, rgba(13, 27, 74, 0.85) 0%, rgba(26, 35, 126, 0.85) 40%, rgba(40, 53, 147, 0.85) 100%), url('images/lifestyle/Our Vision.png'));
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #fff;
-  padding: 48px;
-  border-radius: 24px;
-  margin-bottom: 24px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(13, 27, 74, 0.2);
+  background: linear-gradient(135deg, rgba(13, 27, 74, 0.85) 0%, rgba(26, 35, 126, 0.85) 40%, rgba(40, 53, 147, 0.85) 100%), url('images/lifestyle/Our Vision.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 48px;
+  border-radius: 24px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(13, 27, 74, 0.2);
 }
 .vision-card::before {
   content: '';
@@ -678,7 +678,6 @@ h1, h2, h3, h4 {
   object-fit: cover;
   border-radius: 16px;
 }
-
 /* ============================
    STORY
    ============================ */
