@@ -587,11 +587,11 @@ h1, h2, h3, h4 {
 }
 html[lang="en"] .vision-card;
 [dir="ltr"] .vision-card {
-  background: url('images/lifestyle/Our Vision En.png');
+  background: url('images/lifestyle/Our Vision.png');
 }
 html[lang="tr"] .vision-card;
 [dir="ltr"] .vision-card {
-  background: url('images/lifestyle/Our Vision En.png');
+  background: url('images/lifestyle/Our Vision.png');
 }
 .vision-card::before {
   content: '';
