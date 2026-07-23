@@ -574,14 +574,18 @@ h1, h2, h3, h4 {
 
 .vision-card {
   background: linear-gradient(135deg, rgba(13, 27, 74, 0.85) 0%, rgba(26, 35, 126, 0.85) 40%, rgba(40, 53, 147, 0.85) 100%), url('images/lifestyle/Our Vision.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
   padding: 48px;
   border-radius: 24px;
   margin-bottom: 24px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(13,27,74,0.2);
+  box-shadow: 0 20px 60px rgba(13, 27, 74, 0.2);
 }
+
 .vision-card::before {
   content: '';
   position: absolute;
@@ -592,6 +596,7 @@ h1, h2, h3, h4 {
   background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
   pointer-events: none;
 }
+
 .vision-card::after {
   content: '';
   position: absolute;
@@ -602,19 +607,21 @@ h1, h2, h3, h4 {
   background: radial-gradient(circle, rgba(76,175,80,0.05) 0%, transparent 70%);
   pointer-events: none;
 }
+
 .vision-card h3 {
   font-size: 26px;
   margin-bottom: 16px;
   color: #C9A84C;
   font-weight: 700;
-  font-family: 'Poppins','Cairo',sans-serif;
+  font-family: 'Poppins', 'Cairo', sans-serif;
   position: relative;
   z-index: 1;
 }
+
 .vision-card p {
   font-size: 15px;
   line-height: 1.9;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 32px;
   position: relative;
   z-index: 1;
@@ -630,7 +637,7 @@ h1, h2, h3, h4 {
 .stat {
   padding: 16px 8px;
   border-radius: 12px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .stat-num {
@@ -674,6 +681,7 @@ h1, h2, h3, h4 {
   width: 100%;
   object-fit: cover;
   border-radius: 16px;
+}
 }
 
 /* ============================
