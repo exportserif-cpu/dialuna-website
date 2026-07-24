@@ -1334,10 +1334,15 @@ html[lang="tr"] .vision-card {
    ============================ */
 
 .footer {
-  background: #1A237E;
+  background: linear-gradient(rgba(26, 35, 126, 0.90), rgba(26, 35, 126, 0.95)), url('dialuna-website/images/lifestyle/FOOTR.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   color: rgba(255,255,255,0.9);
   padding: 60px 0 0;
+  position: relative;
 }
+
 .footer > * {
   position: relative;
   z-index: 1;
@@ -1414,6 +1419,13 @@ html[lang="tr"] .vision-card {
   opacity: 0.5;
 }
 
+/* التجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
 /* ============================
    ANIMATIONS
    ============================ */
