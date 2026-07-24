@@ -390,49 +390,22 @@ document.addEventListener('DOMContentLoaded', () => {
     initAutoSlide();
   }
 document.addEventListener('DOMContentLoaded', function () {
-    
-    // 1. فتح النافذة المنبثقة عند الضغط على أي زر يحمل الكلاس popup-trigger
     const triggers = document.querySelectorAll('.popup-trigger');
+    console.log("عدد أزرار النوافذ المنبثقة المكتشفة:", triggers.length); // للتأكد في الكونسول
     
     triggers.forEach(trigger => {
         trigger.addEventListener('click', function (e) {
-            e.preventDefault(); // يمنع قفز الصفحة إلى الأعلى تماماً
+            e.preventDefault(); // منع القفز تماماً
+            console.log("تمت إيقاف القفز بنجاح!");
             
-            const targetId = this.getAttribute('href'); // يجلب مثلاً #about-popup
+            const targetId = this.getAttribute('href'); 
             if (targetId && targetId.startsWith('#')) {
                 const modal = document.querySelector(targetId);
                 if (modal) {
-                    modal.style.display = 'block'; // إظهار النافذة
-                    modal.classList.add('active'); // إضافة كلاس التفعيل احتياطياً
-                    document.body.style.overflow = 'hidden'; // تجميد خلفية الصفحة عن التمرير
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
                 }
             }
         });
     });
-
-    // 2. إغلاق النافذة المنبثقة (عند النقر على زر الإغلاق أو أي عنصر إغلاق)
-    const closeElements = document.querySelectorAll('.popup-close, .modal-close, .close-btn');
-    
-    closeElements.forEach(closer => {
-        closer.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            const modal = this.closest('.popup-container, .modal, div[id$="-popup"]');
-            if (modal) {
-                modal.style.display = 'none';
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto'; // إعادة تمرير الصفحة طبيعياً
-            }
-        });
-    });
-
-    // 3. إغلاق النافذة أيضاً عند النقر في أي مكان خارج محتوى النافذة (على الخلفية المعتمة)
-    window.addEventListener('click', function (e) {
-        if (e.target.classList.contains('popup-container') || e.target.classList.contains('modal')) {
-            e.target.style.display = 'none';
-            e.target.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-    });
-
 });
