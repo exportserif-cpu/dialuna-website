@@ -61,7 +61,6 @@
     transform:translateY(-2px);
     box-shadow:0 8px 30px rgba(26,35,126,0.3);
   }
-  /* Backdrop entrance animation */
   @keyframes modalIn {
     from { opacity:0; transform:scale(0.9) translateY(20px); }
     to { opacity:1; transform:scale(1) translateY(0); }
@@ -88,10 +87,10 @@
         <li><a href="#certifications" class="nav-link" data-i18n="nav-certifications">Certifications</a></li>
         <li><a href="#contact" class="nav-link" data-i18n="nav-contact">Contact</a></li>
       </ul>
-            <a href="https://wa.me/905530641033" target="_blank" class="nav-whatsapp" title="WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:32px;border-radius:8px;background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.3);text-decoration:none;transition:all .4s ease;margin-left:4px;">
+      <a href="https://wa.me/905530641033" target="_blank" class="nav-whatsapp" title="WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:32px;border-radius:8px;background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.3);text-decoration:none;transition:all .4s ease;margin-left:4px;">
         <svg viewBox="0 0 32 32" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.652.726 5.128 1.984 7.24L2 30l7.048-1.918A13.928 13.928 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm6.646 19.852c-.322.908-1.12 1.624-2.016 1.806-.54.11-1.116.166-1.78.166-2.128 0-3.982-.74-5.496-2.002a12.768 12.768 0 01-3.754-4.69 7.134 7.134 0 01.214-5.754c.36-.76 1.1-1.338 1.938-1.482.446-.076.892-.054 1.28.014.39.068.82.286 1.03.64a20.262 20.262 0 011.08 2.15c.164.356.272.746.15 1.112-.122.366-.418.64-.732.872-.158.116-.33.244-.478.386-.166.162-.34.336-.228.588.644 1.468 1.622 2.698 2.83 3.618.404.308.81.614 1.276.824.352.16.712.12 1.006-.098.16-.118.32-.24.478-.366.296-.24.628-.53 1.002-.672.374-.142.786-.064 1.076.134.534.364 1.052.75 1.544 1.168.346.296.678.608.73.986.068.494-.136 1.016-.304 1.43z" fill="white"/></svg>
       </a>
-<div class="nav-lang" id="langSwitcher">
+      <div class="nav-lang" id="langSwitcher">
         <a href="index.html" class="lang-btn">🇸🇦</a>
         <a href="en.html" class="lang-btn active">🇬🇧</a>
         <a href="tr.html" class="lang-btn">🇹🇷</a>
@@ -102,47 +101,52 @@
   <!-- ====== HERO SLIDER ====== -->
   <section class="hero" id="home">
     <style>
-  .hero-slider { position:absolute; inset:0; z-index:0; overflow:hidden; }
-  .hero-slider .slide { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transition:opacity 1.5s ease; }
-  #s1:checked ~ .hero-slider .s1, #s2:checked ~ .hero-slider .s2, #s3:checked ~ .hero-slider .s3,
-  #s4:checked ~ .hero-slider .s4, #s5:checked ~ .hero-slider .s5, #s6:checked ~ .hero-slider .s6,
-  #s7:checked ~ .hero-slider .s7, #s8:checked ~ .hero-slider .s8 { opacity:1; }
-  .slide-dots { position:absolute; bottom:80px; left:50%; transform:translateX(-50%); display:flex; gap:8px; z-index:5; }
-  .slide-dots label { width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,.25); cursor:pointer; transition:all .3s ease; border:1px solid rgba(255,255,255,.1); }
-  #s1:checked ~ .slide-dots .d1, #s2:checked ~ .slide-dots .d2, #s3:checked ~ .slide-dots .d3,
-  #s4:checked ~ .slide-dots .d4, #s5:checked ~ .slide-dots .d5, #s6:checked ~ .slide-dots .d6,
-  #s7:checked ~ .slide-dots .d7, #s8:checked ~ .slide-dots .d8 { background:#E53935; border-color:#E53935; box-shadow:0 0 12px rgba(229,57,53,.4); width:28px; border-radius:5px; }
-</style>
-<input type="radio" name="hero" id="s1" checked style="display:none;">
-<input type="radio" name="hero" id="s2" style="display:none;">
-<input type="radio" name="hero" id="s3" style="display:none;">
-<input type="radio" name="hero" id="s4" style="display:none;">
-<input type="radio" name="hero" id="s5" style="display:none;">
-<input type="radio" name="hero" id="s6" style="display:none;">
-<input type="radio" name="hero" id="s7" style="display:none;">
-<input type="radio" name="hero" id="s8" style="display:none;">
-<div class="hero-slider">
-  <div class="slide s1 active" style="background-image: url('images/lifestyle/banner-splash.jpg');"></div>
-  <div class="slide s2" style="background-image: url('images/lifestyle/banner-rustic-table.jpg');"></div>
-  <div class="slide s3" style="background-image: url('images/lifestyle/banner-factory-line.jpg');"></div>
-  <div class="slide s4" style="background-image: url('images/lifestyle/banner-farm-display.jpg');"></div>
-  <div class="slide s5" style="background-image: url('images/lifestyle/slider-rustic-table2.jpg');"></div>
-  <div class="slide s6" style="background-image: url('images/lifestyle/slider-factory2.jpg');"></div>
-  <div class="slide s7" style="background-image: url('images/lifestyle/slider-field-jars.jpg');"></div>
-  <div class="slide s8" style="background-image: url('images/lifestyle/slider-paste-pour.jpg');"></div>
-</div>
-<div class="slide-dots">
-  <label for="s1" class="d1"></label>
-  <label for="s2" class="d2"></label>
-  <label for="s3" class="d3"></label>
-  <label for="s4" class="d4"></label>
-  <label for="s5" class="d5"></label>
-  <label for="s6" class="d6"></label>
-  <label for="s7" class="d7"></label>
-  <label for="s8" class="d8"></label>
-</div>
-<div class="hero-overlay"></div>
+      .hero-slider { position:absolute; inset:0; z-index:0; overflow:hidden; }
+      .hero-slider .slide { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transition:opacity 1.5s ease; }
+      #s1:checked ~ .hero-slider .s1, #s2:checked ~ .hero-slider .s2, #s3:checked ~ .hero-slider .s3,
+      #s4:checked ~ .hero-slider .s4, #s5:checked ~ .hero-slider .s5, #s6:checked ~ .hero-slider .s6,
+      #s7:checked ~ .hero-slider .s7, #s8:checked ~ .hero-slider .s8 { opacity:1; }
+      .slide-dots { position:absolute; bottom:80px; left:50%; transform:translateX(-50%); display:flex; gap:8px; z-index:5; }
+      .slide-dots label { width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,.25); cursor:pointer; transition:all .3s ease; border:1px solid rgba(255,255,255,.1); }
+      #s1:checked ~ .slide-dots .d1, #s2:checked ~ .slide-dots .d2, #s3:checked ~ .slide-dots .d3,
+      #s4:checked ~ .slide-dots .d4, #s5:checked ~ .slide-dots .d5, #s6:checked ~ .slide-dots .d6,
+      #s7:checked ~ .slide-dots .d7, #s8:checked ~ .slide-dots .d8 { background:#E53935; border-color:#E53935; box-shadow:0 0 12px rgba(229,57,53,.4); width:28px; border-radius:5px; }
+    </style>
+    
+    <input type="radio" name="hero" id="s1" checked style="display:none;">
+    <input type="radio" name="hero" id="s2" style="display:none;">
+    <input type="radio" name="hero" id="s3" style="display:none;">
+    <input type="radio" name="hero" id="s4" style="display:none;">
+    <input type="radio" name="hero" id="s5" style="display:none;">
+    <input type="radio" name="hero" id="s6" style="display:none;">
+    <input type="radio" name="hero" id="s7" style="display:none;">
+    <input type="radio" name="hero" id="s8" style="display:none;">
+    
+    <div class="hero-slider">
+      <div class="slide s1 active" style="background-image: url('images/lifestyle/banner-splash.jpg');"></div>
+      <div class="slide s2" style="background-image: url('images/lifestyle/banner-rustic-table.jpg');"></div>
+      <div class="slide s3" style="background-image: url('images/lifestyle/banner-factory-line.jpg');"></div>
+      <div class="slide s4" style="background-image: url('images/lifestyle/banner-farm-display.jpg');"></div>
+      <div class="slide s5" style="background-image: url('images/lifestyle/slider-rustic-table2.jpg');"></div>
+      <div class="slide s6" style="background-image: url('images/lifestyle/slider-factory2.jpg');"></div>
+      <div class="slide s7" style="background-image: url('images/lifestyle/slider-field-jars.jpg');"></div>
+      <div class="slide s8" style="background-image: url('images/lifestyle/slider-paste-pour.jpg');"></div>
+    </div>
+    
+    <div class="slide-dots">
+      <label for="s1" class="d1"></label>
+      <label for="s2" class="d2"></label>
+      <label for="s3" class="d3"></label>
+      <label for="s4" class="d4"></label>
+      <label for="s5" class="d5"></label>
+      <label for="s6" class="d6"></label>
+      <label for="s7" class="d7"></label>
+      <label for="s8" class="d8"></label>
+    </div>
+    
+    <div class="hero-overlay"></div>
     <div class="hero-particles" id="heroParticles"></div>
+    
     <div class="container hero-content">
       <div class="hero-badge" data-i18n="hero-badge">🌙 Harvested by Moonlight</div>
       <h1 class="hero-title">
@@ -150,19 +154,22 @@
         <span class="hero-brand"><span class="hero-gradient-text">DIALUNA</span></span>
         <span class="hero-tagline">PASTE</span>
       </h1>
-      <p class="hero-desc" data-i18n="hero-desc" <p class="hero-desc">Premium Tomato & Pepper Paste<br>Authentic Anatolian Flavor — From Our Fields to Your Table</p> <br>Premium Tomato &amp; Pepper Paste — The Timeless Taste of Anatolia</p>
+      <p class="hero-desc" data-i18n="hero-desc">Premium Tomato &amp; Pepper Paste — Authentic Anatolian Flavor &bull; From Our Fields to Your Table</p>
+      
       <div class="hero-actions">
         <a href="#story" class="btn btn-primary" data-i18n="hero-btn-story">Discover Our Story</a>
         <a href="#products" class="btn btn-outline" data-i18n="hero-btn-products">Our Products</a>
       </div>
     </div>
+    
     <div class="hero-scroll-indicator">
-     
       <div class="scroll-arrow"></div>
     </div>
   </section>
+</body>
+</html>
 
- <!-- ====== ABOUT / COMPANY ====== -->
+<!-- ====== ABOUT / COMPANY ====== -->
   <section class="section about section-spacing" id="about">
     <div class="container">
       <div class="section-premium">
@@ -172,18 +179,18 @@
    
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; margin-bottom: 40px;" class="about-top-layout">
         <div class="about-text">
-          <p class="about-lead" data-i18n="about-lead">Liyakat International — Global Reach With over 13 years of export experience, we connect trusted Turkish manufacturers with partners in more than 25 countries. Trust & Commitment Every shipment reflects our commitment to quality, reliability, and long-term partnerships. DIALUNA Through DIALUNA, inspired by our signature night harvest, we bring the authentic taste of Anatolia to tables around the world.</p>
-          <div style="margin:16px 0;"><a href="#about-popup" class="popup-trigger">📖 About DIALUNA / About Liyakat</a></div>
+          <p class="about-lead" data-i18n="about-lead">Liyakat International — Global Reach: With over 13 years of export experience, we connect trusted Turkish manufacturers with partners in more than 25 countries. Trust &amp; Commitment: Every shipment reflects our commitment to quality, reliability, and long-term partnerships. DIALUNA: Through DIALUNA, inspired by our signature night harvest, we bring the authentic taste of Anatolia to tables around the world.</p>
+          <div style="margin:16px 0;"><a href="#about-popup" class="popup-trigger" data-i18n="about-popup-btn">📖 About DIALUNA / About Liyakat</a></div>
         </div>
         
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
           <div style="border-radius:16px;overflow:hidden;">
             <img src="images/lifestyle/about-hero.jpg" alt="DIALUNA" style="width:100%;height:220px;object-fit:cover;border-radius:16px;" loading="lazy">
-            <span style="display:block;text-align:center;font-size:12px;color:#5C5C6E;margin-top:6px;font-style:italic;">DIALUNA — The Taste of Anatolia on Your Table</span>
+            <span style="display:block;text-align:center;font-size:12px;color:#5C5C6E;margin-top:6px;font-style:italic;" data-i18n="about-img-1">DIALUNA — The Taste of Anatolia on Your Table</span>
           </div>
           <div style="border-radius:16px;overflow:hidden;">
             <img src="images/lifestyle/factory-washing.png" alt="Factory" style="width:100%;height:220px;object-fit:cover;border-radius:16px;" loading="lazy">
-            <span style="display:block;text-align:center;font-size:12px;color:#5C5C6E;margin-top:6px;font-style:italic;">From Anatolian Fields to Our Modern Facilities</span>
+            <span style="display:block;text-align:center;font-size:12px;color:#5C5C6E;margin-top:6px;font-style:italic;" data-i18n="about-img-2">From Anatolian Fields to Our Modern Facilities</span>
           </div>
         </div>
       </div>
@@ -191,14 +198,15 @@
       <div class="about-vision" style="width: 100%;">
         <div class="vision-card">
           <h3 data-i18n="about-vision-title">Our Vision</h3>
-          <p>To become one of the world's most trusted representatives of Turkish food products<br>through quality, trust, and sustainability</p>
-          <h3 data-i18n="about-vision-title">Our Motto</h3>
-          <p>Quality knows no borders. Trust speaks every language. 🌍</p>
+          <p data-i18n="about-vision-desc">To become one of the world's most trusted representatives of Turkish food products<br>through quality, trust, and sustainability</p>
+          <h3 data-i18n="about-motto-title">Our Motto</h3>
+          <p data-i18n="about-motto-desc">Quality knows no borders. Trust speaks every language. 🌍</p>
         </div>
       </div>
 
     </div>
   </section>
+
   <!-- ====== THE STORY ====== -->
   <section class="section story" id="story">
     <div class="story-bg"></div>
@@ -217,106 +225,61 @@
           <img src="images/lifestyle/story-night-harvest.jpg" alt="DIALUNA - Moonlight Harvest" loading="lazy">
         </div>
         <div class="story-text">
-          
-          <p>"An old legend still told in Sındırgı says..."</p>
-          <p>Some secrets are meant to stay with the earth.<br>
-They're never written down.<br>
-The soil remembers them.</p>
-          <p>People say that only a few nights each year, the moon rises differently.<br>
-Its glow drifts across the fields like a crimson veil.<br>
-And on that night...<br>
-even the wind seems to slow down.</p>
-          <p>The old farmers call it The Night of the Crimson Moon.<br>
-Because they believe that, for one quiet moment, nature holds its breath...<br>
-and the moon leaves the earth with a single gift:<br>
-<strong style="font-size:20px;color:#E53935;">Flavor.</strong></p>
+          <p data-i18n="story-p1">"An old legend still told in Sındırgı says..."</p>
+          <p data-i18n="story-p2">Some secrets are meant to stay with the earth.<br>They're never written down.<br>The soil remembers them.</p>
+          <p data-i18n="story-p3">People say that only a few nights each year, the moon rises differently.<br>Its glow drifts across the fields like a crimson veil.<br>And on that night...<br>even the wind seems to slow down.</p>
+          <p data-i18n="story-p4">The old farmers call it The Night of the Crimson Moon.<br>Because they believe that, for one quiet moment, nature holds its breath...<br>and the moon leaves the earth with a single gift:<br><strong style="font-size:20px;color:#E53935;" data-i18n="story-flavor">Flavor.</strong></p>
         </div>
       </div>
 
       <div style="text-align:center;margin:30px 0;">
-        <a href="#story-popup" class="popup-trigger">📖 The Story of DIALUNA</a>
+        <a href="#story-popup" class="popup-trigger" data-i18n="story-popup-btn">📖 The Story of DIALUNA</a>
       </div>
+
       <div id="story-popup" class="popup-overlay">
         <div class="popup-box">
           <a href="#" class="popup-close">&#10006;</a>
-          <div class="popup-content"><div class="story-timeline">
-        <div class="story-chapter">
-          <div class="chapter-marker"><span class="moon-icon">🌒</span></div>
-          <div class="chapter-content">
-            <h3>Daughter of the Earth</h3>
-            <p>Centuries ago, in the fertile plains of Sındırgı, Balıkesir, there lived a young woman.<br>
-Some called her a farmer,Some said she was a healer.<br>
-Others simply knew her as...<br>
-<strong>The Daughter of the Earth.</strong><br>
-She understood the language of the land.<br>
-She could smell the coming season in the rain,read abundance in the direction of the wind,<br>
-and tell the time of year by the warmth of the sun.<br>
-One summer, as the whole village rushed to harvest, she waited.<br>
-"What are you waiting for?" they asked.<br>
-She looked up at the sky.Then she smiled and said,<br>
-<em>"The moon hasn't sealed the tomatoes' secret just yet."</em></p>
+          <div class="popup-content">
+            <div class="story-timeline">
+              <div class="story-chapter">
+                <div class="chapter-marker"><span class="moon-icon">🌒</span></div>
+                <div class="chapter-content">
+                  <h3 data-i18n="story-ch1-title">Daughter of the Earth</h3>
+                  <p data-i18n="story-ch1-desc">Centuries ago, in the fertile plains of Sındırgı, Balıkesir, there lived a young woman.<br>Some called her a farmer, some said she was a healer.<br>Others simply knew her as...<br><strong>The Daughter of the Earth.</strong><br>She understood the language of the land.<br>She could smell the coming season in the rain, read abundance in the direction of the wind,<br>and tell the time of year by the warmth of the sun.<br>One summer, as the whole village rushed to harvest, she waited.<br>"What are you waiting for?" they asked.<br>She looked up at the sky. Then she smiled and said,<br><em>"The moon hasn't sealed the tomatoes' secret just yet."</em></p>
+                </div>
+              </div>
+              <div class="story-chapter">
+                <div class="chapter-marker"><span class="moon-icon">🌕</span></div>
+                <div class="chapter-content">
+                  <h3 data-i18n="story-ch2-title">The Crimson Full Moon</h3>
+                  <p data-i18n="story-ch2-desc1">That night, the full moon rose wearing a crimson crown.<br>The earth cooled. The wind fell silent.<br>By sunrise, everyone tasted the same truth.<br>The tomatoes were brighter. The peppers were richer.<br>And the flavor... was unforgettable.</p>
+                  <p data-i18n="story-ch2-desc2">The Daughter of the Earth simply smiled. Then she said,<br><em>"The sun gives it strength. The moon locks in the flavor."</em></p>
+                  <p data-i18n="story-ch2-desc3">From that day on, the harvest no longer happened under the blazing sun.<br>It began in the cool of the night.</p>
+                  <p data-i18n="story-ch2-desc4">The years passed. Kingdoms rose.<br>Kingdoms fell. Generations came and went.<br>But in Sındırgı, those words were never forgotten.</p>
+                </div>
+              </div>
+              <div class="story-chapter">
+                <div class="chapter-marker"><span class="moon-icon">🌙</span></div>
+                <div class="chapter-content highlight">
+                  <h3 data-i18n="story-ch3-title">DIALUNA Today</h3>
+                  <p data-i18n="story-ch3-desc1">Today, science can explain why that tradition works.<br>We simply know this:<br>Nature doesn't give its greatest gifts to those who rush.<br>It rewards those who know how to wait.<br>That wisdom has been passed down from one generation to the next.<br>Today, that legacy lives on as <strong>DiaLuna</strong>.<br>We harvest our tomatoes in the cool of the night.<br>We produce them in small, limited batches.<br>Because real flavor... isn't rushed. It's earned through patience.</p>
+                  <p data-i18n="story-ch3-desc2">They say...<br>On the nights of the full moon, some farmers pause before the harvest.<br>They don't pray. They don't make a wish.<br>They simply wait. Because they know...<br>The sun grows the fruit.<br>The moon preserves its flavor.</p>
+                  <p style="font-style:italic;color:#4CAF50;" data-i18n="story-ch3-desc3">Maybe the Night of the Crimson Moon is nothing more than a legend.<br>Or maybe it still lives on in the fields of Sındırgı.</p>
+                  <p data-i18n="story-ch3-desc4">No one really knows. But some legends... never disappear. Because the earth still remembers…<br><strong>DiaLuna</strong>.<br><strong>Harvested at Night. Remembered Forever…</strong></p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="story-chapter">
-          <div class="chapter-marker"><span class="moon-icon">🌕</span></div>
-          <div class="chapter-content">
-            <h3>The Crimson Full Moon</h3>
-            <p>That night, the full moon rose wearing a crimson crown.<br>
-The earth cooled.The wind fell silent.<br>
-By sunrise, everyone tasted the same truth.<br>
-The tomatoes were brighter.The peppers were richer.<br>
-And the flavor...<br>
-was unforgettable.</p>
-<p>The Daughter of the Earth simply smiled.Then she said,<br>
-<em>"The sun gives it strength. The moon locks in the flavor."</em></p>
-<p>From that day on, the harvest no longer happened under the blazing sun.<br>
-It began in the cool of the night.</p>
-<p>The years passed.Kingdoms rose.<br>
-Kingdoms fell.Generations came and went.<br>
-But in Sındırgı, those words were never forgotten.</p>
-          </div>
-        </div>
-        <div class="story-chapter">
-          <div class="chapter-marker"><span class="moon-icon">🌙</span></div>
-          <div class="chapter-content highlight">
-            <h3>DIALUNA Today</h3>
-            <p>Today, science can explain why that tradition works.<br>
-We simply know this:<br>
-Nature doesn't give its greatest gifts to those who rush.<br>
-It rewards those who know how to wait.<br>
-That wisdom has been passed down from one generation to the next.<br>
-Today, that legacy lives on as <strong>DiaLuna</strong>.<br>
-We harvest our tomatoes in the cool of the night.<br>
-We produce them in small, limited batches.<br>
-Because real flavor...<br>
-isn't rushed.It's earned through patience.<br>
-<p>They say...<br>
-On the nights of the full moon, some farmers pause before the harvest.<br>
-They don't pray.They don't make a wish.<br>
-They simply wait.Because they know...<br>
-The sun grows the fruit.<br>
-The moon preserves its flavor.</p>
-<p style="font-style:italic;color:#4CAF50;">Maybe the Night of the Crimson Moon is nothing more than a legend.<br>
-Or maybe it still lives on in the fields of Sındırgı.</p>
-No one really knows.But some legends...<br>
-never disappear.Because the earth still remembers…<br>
-<strong>DiaLuna</strong>.<br>
-<strong>Harvested at Night. Remembered Forever…</strong>.
-          </div>
-        </div>
-      </div></div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- ====== PRODUCTS ====== -->
-      
+<!-- ====== PRODUCTS ====== -->
   <section class="section products section-spacing" id="products">
     <div class="container-premium">
       <div class="section-premium">
-        <h2>Our Products</h2>
-        <p>Click on any product to explore details</p>
+        <h2 data-i18n="products-title">Our Products</h2>
+        <p data-i18n="products-subtitle">Click on any product to explore details</p>
       </div>
 
       <style>
@@ -329,8 +292,6 @@ never disappear.Because the earth still remembers…<br>
         .product-tile .tile-title { font-size:15px; font-weight:700; color:#0D1B4A; margin-bottom:4px; }
         .product-tile .tile-sizes { font-size:13px; color:#5C5C6E; }
         .product-tile .tile-badge { display:inline-block; padding:3px 10px; border-radius:50px; font-size:10px; font-weight:700; background:rgba(76,175,80,.1); color:#2E7D32; margin-top:8px; }
-        .tile-popular { position:absolute; top:10px; right:10px; background:linear-gradient(135deg,#C9A84C,#D4A84C); color:#0D0D1A; font-size:9px; font-weight:800; padding:3px 10px; border-radius:50px; }
-        .tile-family { position:absolute; top:10px; right:10px; background:rgba(13,27,74,.85); color:#fff; font-size:9px; font-weight:800; padding:3px 10px; border-radius:50px; }
         @media (max-width:768px) { .product-tiles { grid-template-columns:repeat(2,1fr); } }
         @media (max-width:480px) { .product-tiles { grid-template-columns:1fr; } }
       </style>
@@ -340,25 +301,25 @@ never disappear.Because the earth still remembers…<br>
         <!-- Tomato -->
         <a href="#prod-tomato" class="product-tile">
           <div class="tile-img"><img src="images/products/tomato-650g-mk.jpg" alt="Tomato" loading="lazy"></div>
-          <div class="tile-title">Premium Mediterranean Tomato Paste</div>
+          <div class="tile-title" data-i18n="prod-tomato-title">Premium Mediterranean Tomato Paste</div>
           <div class="tile-sizes">650g · 1600g · 4200g</div>
-          <div class="tile-badge">🌿 Pure Natural</div>
+          <div class="tile-badge" data-i18n="prod-tag-natural">🌿 Pure Natural</div>
         </a>
 
         <!-- Hot Pepper -->
         <a href="#prod-hot" class="product-tile">
           <div class="tile-img"><img src="images/products/pepper-650g-mk.jpg" alt="Hot Pepper" loading="lazy"></div>
-          <div class="tile-title">Premium Mediterranean Pepper Paste — Hot</div>
+          <div class="tile-title" data-i18n="prod-hot-title">Premium Mediterranean Pepper Paste — Hot</div>
           <div class="tile-sizes">650g · 1600g · 4200g</div>
-          <div class="tile-badge">🌶️ Authentic Flavor</div>
+          <div class="tile-badge" data-i18n="prod-tag-authentic">🌶️ Authentic Flavor</div>
         </a>
 
         <!-- Sweet Pepper -->
         <a href="#prod-sweet" class="product-tile">
           <div class="tile-img"><img src="images/products/pepper-650g-mk.jpg" alt="Sweet Pepper" loading="lazy"></div>
-          <div class="tile-title">Premium Mediterranean Pepper Paste — Sweet</div>
+          <div class="tile-title" data-i18n="prod-sweet-title">Premium Mediterranean Pepper Paste — Sweet</div>
           <div class="tile-sizes">650g · 1600g · 4200g</div>
-          <div class="tile-badge">🫑 Mild & Sweet</div>
+          <div class="tile-badge" data-i18n="prod-tag-mild">🫑 Mild &amp; Sweet</div>
         </a>
 
       </div>
@@ -373,30 +334,30 @@ never disappear.Because the earth still remembers…<br>
               <img src="images/products/tomato-1600g-mk.jpg" alt="1600g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
               <img src="images/products/tomato-4200g-mk.jpg" alt="4200g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
             </div>
-            <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;">Premium Mediterranean Tomato Paste</h3>
-            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">100% natural tomato paste from night-harvested tomatoes. Rich flavor, thick texture, vibrant color. No preservatives, no additives — just pure natural goodness.</p>
+            <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;" data-i18n="popup-tomato-heading">Premium Mediterranean Tomato Paste</h3>
+            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;" data-i18n="popup-tomato-desc">100% natural tomato paste from night-harvested tomatoes. Rich flavor, thick texture, vibrant color. No preservatives, no additives — just pure natural goodness.</p>
           </div>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Glass</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Best Seller</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="size-glass">Glass</span>
+              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;" data-i18n="badge-bestseller">Best Seller</span>
             </div>
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastic</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="size-plastic">Plastic</span>
             </div>
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastic</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Family Size</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="size-plastic">Plastic</span>
+              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;" data-i18n="badge-familysize">Family Size</span>
             </div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
-            <span class="tag-premium tag-green">🌙 Night Harvest</span>
-            <span class="tag-premium tag-green">🌿 100% Natural · No Preservatives</span>
-            <span class="tag-premium tag-green">🏺 Limited Batches</span>
-            <span class="tag-premium tag-green">🇹🇷 Turkish Product</span>
+            <span class="tag-premium tag-green" data-i18n="tag-night">🌙 Night Harvest</span>
+            <span class="tag-premium tag-green" data-i18n="tag-natural">🌿 100% Natural · No Preservatives</span>
+            <span class="tag-premium tag-green" data-i18n="tag-limited">🏺 Limited Batches</span>
+            <span class="tag-premium tag-green" data-i18n="tag-turkish">🇹🇷 Turkish Product</span>
           </div>
         </div>
       </div>
@@ -411,30 +372,30 @@ never disappear.Because the earth still remembers…<br>
               <img src="images/products/pepper-1600g-mk.jpg" alt="1600g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
               <img src="images/products/pepper-4200g-mk.jpg" alt="4200g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
             </div>
-            <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;">Premium Mediterranean Pepper Paste — Hot</h3>
-            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">Natural hot red pepper paste, carefully roasted and ground. A rich, smoky, and spicy flavor that adds unmatched depth to your dishes.</p>
+            <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;" data-i18n="popup-hot-heading">Premium Mediterranean Pepper Paste — Hot</h3>
+            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;" data-i18n="popup-hot-desc">Natural hot red pepper paste, carefully roasted and ground. A rich, smoky, and spicy flavor that adds unmatched depth to your dishes.</p>
           </div>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Glass</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="size-glass">Glass</span>
             </div>
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastic</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Best Seller</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="size-plastic">Plastic</span>
+              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;" data-i18n="badge-bestseller">Best Seller</span>
             </div>
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastic</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Family Size</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="size-plastic">Plastic</span>
+              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;" data-i18n="badge-familysize">Family Size</span>
             </div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
-            <span class="tag-premium tag-green">🌙 Night Harvest</span>
-            <span class="tag-premium tag-green">🌿 100% Natural · No Additives</span>
-            <span class="tag-premium tag-green">🏺 Traditional Process</span>
-            <span class="tag-premium tag-red">🔥 Hot Pepper</span>
+            <span class="tag-premium tag-green" data-i18n="tag-night">🌙 Night Harvest</span>
+            <span class="tag-premium tag-green" data-i18n="tag-additives">🌿 100% Natural · No Additives</span>
+            <span class="tag-premium tag-green" data-i18n="tag-traditional">🏺 Traditional Process</span>
+            <span class="tag-premium tag-red" data-i18n="tag-hot">🔥 Hot Pepper</span>
           </div>
         </div>
       </div>
@@ -449,174 +410,191 @@ never disappear.Because the earth still remembers…<br>
               <img src="images/products/pepper-1600g-mk.jpg" alt="1600g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
               <img src="images/products/pepper-4200g-mk.jpg" alt="4200g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
             </div>
-            <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;">Premium Mediterranean Pepper Paste — Sweet</h3>
-            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">Natural sweet red pepper paste, carefully ground for a rich flavor with distinctive natural sweetness. Perfect for soups, sauces, and pastries.</p>
+            <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;" data-i18n="popup-sweet-heading">Premium Mediterranean Pepper Paste — Sweet</h3>
+            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;" data-i18n="popup-sweet-desc">Natural sweet red pepper paste, carefully ground for a rich flavor with distinctive natural sweetness. Perfect for soups, sauces, and pastries.</p>
           </div>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Glass</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="size-glass">Glass</span>
             </div>
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastic</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="size-plastic">Plastic</span>
             </div>
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastic</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Family Size</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="size-plastic">Plastic</span>
+              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;" data-i18n="badge-familysize">Family Size</span>
             </div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
-            <span class="tag-premium tag-green">🌙 Night Harvest</span>
-            <span class="tag-premium tag-green">🌿 100% Natural · No Additives</span>
-            <span class="tag-premium tag-green">🏺 Traditional Process</span>
-            <span class="tag-premium tag-green">🫑 Sweet Pepper</span>
+            <span class="tag-premium tag-green" data-i18n="tag-night">🌙 Night Harvest</span>
+            <span class="tag-premium tag-green" data-i18n="tag-additives">🌿 100% Natural · No Additives</span>
+            <span class="tag-premium tag-green" data-i18n="tag-traditional">🏺 Traditional Process</span>
+            <span class="tag-premium tag-green" data-i18n="tag-sweet">🫑 Sweet Pepper</span>
           </div>
         </div>
       </div>
 
       <div class="product-tagline-wrap">
-        <p>"The sun gives it strength. The moon locks in the flavor."</p>
+        <p data-i18n="product-motto">"The sun gives it strength. The moon locks in the flavor."</p>
       </div>
     </div>
   </section>
-id="gallery">
-          <div class="container">
+
+  <!-- ====== GALLERY ====== -->
+  <section class="section gallery section-spacing" id="gallery">
+    <div class="container">
       <div class="section-premium">
-        <h2>Gallery</h2>
-        <p class="section-subtitle">From Field to Table — The DIALUNA Journey</p>
+        <h2 data-i18n="gallery-title">Gallery</h2>
+        <p class="section-subtitle" data-i18n="gallery-subtitle">From Field to Table — The DIALUNA Journey</p>
       </div>
       <div class="gallery-grid">
         <div class="gallery-item">
           <img src="images/lifestyle/farm-display.png" alt="Farm" loading="lazy">
-          <div class="gallery-overlay"><span>From Field to Jar</span></div>
+          <div class="gallery-overlay"><span data-i18n="gallery-item-1">From Field to Jar</span></div>
         </div>
         <div class="gallery-item">
           <img src="images/lifestyle/factory-filling.png" alt="Factory" loading="lazy">
-          <div class="gallery-overlay"><span>Precision Filling</span></div>
+          <div class="gallery-overlay"><span data-i18n="gallery-item-2">Precision Filling</span></div>
         </div>
         <div class="gallery-item">
           <img src="images/lifestyle/pepper-spread.png" alt="Spread" loading="lazy">
-          <div class="gallery-overlay"><span>Irresistible Flavor</span></div>
+          <div class="gallery-overlay"><span data-i18n="gallery-item-3">Irresistible Flavor</span></div>
         </div>
         <div class="gallery-item">
           <img src="images/lifestyle/supermarket-display.png" alt="Supermarket" loading="lazy">
-          <div class="gallery-overlay"><span>Available in Stores</span></div>
+          <div class="gallery-overlay"><span data-i18n="gallery-item-4">Available in Stores</span></div>
         </div>
       </div>
     </div>
-</section>
-
+  </section>
   <!-- ====== CONTACT ====== -->
-  <!-- ====== CERTIFICATIONS ====== -->
-  <section class="section certifications" id="certifications">
+<!-- ====== CERTIFICATIONS ====== -->
+  <section class="section certifications section-spacing" id="certifications">
     <div class="container">
       <div class="section-premium">
         <h2 data-i18n="cert-title">Certifications</h2>
-        <p class="section-subtitle">Quality Certifications &amp; International Standards</p>
+        <p class="section-subtitle" data-i18n="cert-subtitle">Quality Certifications &amp; International Standards</p>
       </div>
 
       <div class="cert-grid">
+        <!-- Halal -->
         <div class="cert-card">
           <div class="cert-image">
             <img src="images/certifications/halal.jpg" alt="Halal Certified" loading="lazy">
           </div>
-          <h3>Halal</h3>
-          <p>Internationally certified Halal, ensuring our products comply with Islamic law in all production stages.</p>
+          <h3 data-i18n="cert-halal-title">Halal</h3>
+          <p data-i18n="cert-halal-desc">Internationally certified Halal, ensuring our products comply with Islamic law in all production stages.</p>
         </div>
 
+        <!-- HACCP -->
         <div class="cert-card">
           <div class="cert-image">
             <img src="images/certifications/haccp.jpg" alt="HACCP Certified" loading="lazy">
           </div>
-          <h3>HACCP</h3>
-          <p>HACCP system ensuring food safety according to the highest global standards.</p>
+          <h3 data-i18n="cert-haccp-title">HACCP</h3>
+          <p data-i18n="cert-haccp-desc">HACCP system ensuring food safety according to the highest global standards.</p>
         </div>
 
+        <!-- ISO 22000:2018 -->
         <div class="cert-card">
           <div class="cert-image">
             <img src="images/certifications/iso-22000.jpg" alt="ISO 22000:2018" loading="lazy">
           </div>
-          <h3>ISO 22000:2018</h3>
-          <p>Internationally certified Food Safety Management System ensuring the highest quality standards in DIALUNA products.</p>
+          <h3 data-i18n="cert-iso-title">ISO 22000:2018</h3>
+          <p data-i18n="cert-iso-desc">Internationally certified Food Safety Management System ensuring the highest quality standards in DIALUNA products.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ====== CONTACT ====== -->
-  <section class="section contact" id="contact">
+  <section class="section contact section-spacing" id="contact">
     <div class="container">
       <div class="section-premium">
         <h2 data-i18n="contact-title">Contact Us</h2>
-        <p class="section-subtitle">Contact us for inquiries and wholesale orders</p>
+        <p class="section-subtitle" data-i18n="contact-subtitle">Contact us for inquiries and wholesale orders</p>
       </div>
 
       <div class="contact-grid">
         <div class="contact-info">
+          
+          <!-- Head Office -->
           <div class="contact-card">
             <div class="contact-icon">🏢</div>
-            <h3>Head Office</h3>
+            <h3 data-i18n="contact-headoffice-title">Head Office</h3>
             <p class="contact-company">LİYAKAT INTERNATIONAL</p>
             <p>Karaağaç Mah. Sırtköy Bulvarı<br>Toskana Vadisi No: 30 356<br>Büyükçekmece, İstanbul, TÜRKİYE</p>
           </div>
+
+          <!-- Email -->
           <div class="contact-card">
             <div class="contact-icon">📧</div>
-            <h3>Email</h3>
+            <h3 data-i18n="contact-email-title">Email</h3>
             <a href="mailto:export@liyakatinternational.com.tr">export@liyakatinternational.com.tr</a>
           </div>
+
+          <!-- Phone -->
           <div class="contact-card">
             <div class="contact-icon">📞</div>
-            <h3>Phone</h3>
+            <h3 data-i18n="contact-phone-title">Phone</h3>
             <a href="tel:+902128868600">+90 212 886 86 00</a>
-            <p style="font-size:12px;color:var(--text-light);margin-top:4px;">Fax: +90 212 886 63 33</p>
+            <p style="font-size:12px;color:var(--text-light);margin-top:4px;" data-i18n="contact-fax">Fax: +90 212 886 63 33</p>
           </div>
+
+          <!-- Production Facility -->
           <div class="contact-card">
             <div class="contact-icon">🌐</div>
-            <h3>Production Facility</h3>
+            <h3 data-i18n="contact-facility-title">Production Facility</h3>
             <p>Osmangazi Mah. 3119. Sokak No:2<br>34522 ESENYURT / İSTANBUL<br>TÜRKİYE</p>
           </div>
+
+          <!-- USA Office -->
           <div class="contact-card">
             <div class="contact-icon">🇺🇸</div>
-            <h3>USA Office</h3>
+            <h3 data-i18n="contact-usa-title">USA Office</h3>
             <p>9480 Main Street Num.1304<br>Fairfax, Virginia 22031<br>USA</p>
           </div>
+
+          <!-- Brand -->
           <div class="contact-card">
             <div class="contact-icon">🌐</div>
-            <h3>Brand</h3>
+            <h3 data-i18n="contact-brand-title">Brand</h3>
             <p class="contact-brand">DIALUNA PASTE</p>
-            <p class="contact-tagline">From Anatolia to the World</p>
+            <p class="contact-tagline" data-i18n="contact-brand-tagline">From Anatolia to the World</p>
           </div>
+
         </div>
 
+        <!-- Contact Form -->
         <form class="contact-form" id="contactForm">
           <div class="form-group">
-            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="name" placeholder="Name" data-i18n="form-name-placeholder" required>
           </div>
           <div class="form-group">
-            <input type="email" id="email" placeholder="Email" required>
+            <input type="email" id="email" placeholder="Email" data-i18n="form-email-placeholder" required>
           </div>
           <div class="form-group">
-            <input type="text" id="subject" placeholder="Subject">
+            <input type="text" id="subject" placeholder="Subject" data-i18n="form-subject-placeholder">
           </div>
           <div class="form-group">
-            <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
+            <textarea id="message" rows="5" placeholder="Your message..." data-i18n="form-message-placeholder" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="form-submit-btn">Send Message</button>
         </form>
       </div>
     </div>
   </section>
-
   <!-- ====== FOOTER ====== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="images/liyakat-logo.png" alt="LİYAKAT INTERNATIONAL" class="footer-liyakat-logo" style="filter:brightness(0) invert(1);height:50px;">
-          <p style="margin-top:8px;font-size:13px;">From Anatolia to the World</p>
-          <p class="footer-tagline">"Quality knows no borders. Trust speaks every language." &#127758;</p>
+          <p style="margin-top:8px;font-size:13px;" data-i18n="footer-brand-subtitle">From Anatolia to the World</p>
+          <p class="footer-tagline" data-i18n="footer-quote">"Quality knows no borders. Trust speaks every language." &#127758;</p>
         </div>
         <div class="footer-links">
           <h4 data-i18n="footer-links-title">Quick Links</h4>
@@ -627,23 +605,20 @@ id="gallery">
             <li><a href="#products" data-i18n="nav-products">Products</a></li>
             <li><a href="#gallery" data-i18n="nav-gallery">Gallery</a></li>
             <li><a href="#certifications" data-i18n="nav-certifications">Certifications</a></li>
+            <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-company">
           <img src="images/liyakat-logo.png" alt="LİYAKAT INTERNATIONAL" class="footer-liyakat-logo" style="filter:brightness(0) invert(1);height:50px;">
-          <p style="margin-top:12px;">Karaağaç Mah. Sırtköy Bulvarı<br>Toskana Vadisi No: 30 356<br>Büyükçekmece, İstanbul, TÜRKİYE</p>
-          <p style="margin-top:8px;">📍 Factory: Esenyurt / İSTANBUL<br>📞 +90 212 886 86 00<br>✉️ export@liyakatinternational.com.tr</p>
+          <p style="margin-top:12px;" data-i18n="footer-address">Karaağaç Mah. Sırtköy Bulvarı<br>Toskana Vadisi No: 30 356<br>Büyükçekmece, İstanbul, TÜRKİYE</p>
+          <p style="margin-top:8px;" data-i18n="footer-contact-info">📍 Factory: Esenyurt / İSTANBUL<br>📞 +90 212 886 86 00<br>✉️ export@liyakatinternational.com.tr</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 LİYAKAT INTERNATIONAL — DIALUNA. All Rights Reserved.</p>
+        <p data-i18n="footer-copyright">&copy; 2026 LİYAKAT INTERNATIONAL — DIALUNA. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
-
-  
-  
-
 
 </div>
 </body>
