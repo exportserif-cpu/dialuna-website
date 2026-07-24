@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+});
   // ====== ACTIVE SECTION HIGHLIGHTING ======
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -181,8 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   revealElements.forEach(el => revealObserver.observe(el));
-
-  // ====== SMOOTH SCROLL ======
+// ====== SMOOTH SCROLL ======
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const href = anchor.getAttribute('href');
@@ -254,8 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
-
-  // ====== SIZE CARD CLICKING ======
+ // ====== SIZE CARD CLICKING ======
   document.querySelectorAll('.size-card').forEach(card => {
     card.addEventListener('click', () => {
       const showcase = card.closest('.product-showcase');
@@ -384,28 +383,33 @@ document.addEventListener('DOMContentLoaded', () => {
       radios[current].checked = true;
     }, 5000);
   }
+  
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initAutoSlide);
   } else {
     initAutoSlide();
   }
+})();
+
+
+// ====== POPUP TRIGGERS ======
 document.addEventListener('DOMContentLoaded', function () {
-    const triggers = document.querySelectorAll('.popup-trigger');
-    console.log("عدد أزرار النوافذ المنبثقة المكتشفة:", triggers.length); // للتأكد في الكونسول
-    
-    triggers.forEach(trigger => {
-        trigger.addEventListener('click', function (e) {
-            e.preventDefault(); // منع القفز تماماً
-            console.log("تمت إيقاف القفز بنجاح!");
-            
-            const targetId = this.getAttribute('href'); 
-            if (targetId && targetId.startsWith('#')) {
-                const modal = document.querySelector(targetId);
-                if (modal) {
-                    modal.style.display = 'block';
-                    document.body.style.overflow = 'hidden';
-                }
-            }
-        });
+  const triggers = document.querySelectorAll('.popup-trigger');
+  console.log("عدد أزرار النوافذ المنبثقة المكتشفة:", triggers.length);
+  
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      console.log("تمت إيقاف القفز بنجاح!");
+      
+      const targetId = this.getAttribute('href'); 
+      if (targetId && targetId.startsWith('#')) {
+        const modal = document.querySelector(targetId);
+        if (modal) {
+          modal.style.display = 'block';
+          document.body.style.overflow = 'hidden';
+        }
+      }
     });
+  });
 });
