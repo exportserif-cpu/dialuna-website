@@ -571,12 +571,11 @@ h1, h2, h3, h4 {
   color: var(--text);
   line-height: 1.8;
 }
-
 .vision-card {
   background-image: url('images/lifestyle/Our Vision Ar.png');
-  background-size: cover; 
-  background-position: center center; 
-  background-repeat: no-repeat; 
+  background-size: 100% 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
   color: #0D1B4A;
   padding: 48px;
   border-radius: 24px;
@@ -584,27 +583,28 @@ h1, h2, h3, h4 {
   position: relative;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  min-height: 400px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .vision-card h3,
 .vision-card p {
-  max-width: 55%; 
+  max-width: 55%;
 }
 body.lang-en .vision-card,
 html[lang="en"] .vision-card {
   background-image: url('images/lifestyle/Our Vision En.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-   }
-hhtml[lang="tr"] .vision-card {
-  background-image: url('images/lifestyle/Our Vision.png');
-  background-size: cover;
-  background-position: center center;
+  background-size: 100% 100%;
+  background-position: center;
   background-repeat: no-repeat;
 }
-[dir="ltr"] .vision-card:not([lang="ar"]) {
+
+html[lang="tr"] .vision-card {
   background-image: url('images/lifestyle/Our Vision.png');
-  background-size: contain;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .vision-card::before {
   content: '';
