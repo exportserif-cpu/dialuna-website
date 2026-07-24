@@ -1,7 +1,11 @@
 /* ============================
    DİA LUNA — Main Stylesheet
    ============================ */
-
+.popup-overlay.popup-active {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
 :root {
   --liyakat-blue: #FFFFFF;
   --liyakat-blue-dark: #E8E8E8;
