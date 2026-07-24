@@ -1,11 +1,7 @@
 /* ============================
    DİA LUNA — Main Stylesheet
    ============================ */
-.popup-overlay.popup-active {
-  display: flex !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
+
 :root {
   --liyakat-blue: #FFFFFF;
   --liyakat-blue-dark: #E8E8E8;
@@ -28,7 +24,60 @@
   --section-padding: 100px 0;
   --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+/* التصميم الأساسي للنافذة المنبثقة (مخفية افتراضياً) */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 27, 74, 0.85);
+  backdrop-filter: blur(5px);
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: var(--transition);
+}
 
+/* الحالة النشطة لإظهار النافذة في المنتصف */
+.popup-overlay.popup-active {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* محتوى النافذة الداخلي */
+.popup-content {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--gold);
+}
+
+/* زر الإغلاق */
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: var(--dialuna-navy);
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.popup-close:hover {
+  color: var(--liyakat-red);
+}
 * {
   margin: 0;
   padding: 0;
