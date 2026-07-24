@@ -1,242 +1,147 @@
-<!DOCTYPE html>
-<html lang="tr" dir="ltr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIALUNA SALÇA | Premium Domates ve Biber Salçası</title>
-  <meta name="description" content="DIALUNA - From Anatolia to the World. Premium tomato and pepper paste crafted with the tradition of night harvest.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-<style>
-  /* Modern Popup Modal - Premium Design */
-  .popup-overlay {
-    position:fixed; top:0; left:0; width:100%; height:100%;
-    background:rgba(10,10,26,0.7);
-    backdrop-filter:blur(8px);
-    -webkit-backdrop-filter:blur(8px);
-    z-index:9999;
-    opacity:0; visibility:hidden;
-    transition:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
-    display:flex; align-items:center; justify-content:center; padding:20px;
-  }
-  .popup-overlay:target { opacity:1; visibility:visible; }
-  .popup-box {
-    background:linear-gradient(135deg,#FFFFFF,#F5F5FA);
-    max-width:750px; width:100%; max-height:85vh; overflow-y:auto;
-    border-radius:24px; padding:48px;
-    position:relative;
-    transform:scale(0.85) translateY(30px);
-    transition:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
-    box-shadow:0 30px 80px rgba(10,10,26,0.3),0 0 0 1px rgba(255,255,255,0.05);
-  }
-  .popup-overlay:target .popup-box { transform:scale(1) translateY(0); }
-  .popup-box::-webkit-scrollbar { width:6px; }
-  .popup-box::-webkit-scrollbar-track { background:transparent; }
-  .popup-box::-webkit-scrollbar-thumb { background:#C9A84C; border-radius:3px; }
-  .popup-close {
-    position:absolute; top:16px; right:16px;
-    width:40px; height:40px;
-    background:linear-gradient(135deg,#E53935,#B71C1C);
-    color:#fff; border-radius:50%;
-    text-decoration:none; display:flex; align-items:center; justify-content:center;
-    font-size:22px; font-weight:400;
-    transition:all 0.3s ease;
-    box-shadow:0 4px 15px rgba(229,57,53,0.3);
-  }
-  .popup-close:hover { transform:rotate(90deg) scale(1.1); box-shadow:0 6px 25px rgba(229,57,53,0.4); }
-  .popup-content h3 { color:#0D1B4A; font-size:22px; margin-bottom:12px; font-family:'Poppins',sans-serif; font-weight:700; }
-  .popup-content p { font-size:15px; color:#5C5C6E; line-height:1.9; margin-bottom:12px; }
-  .popup-trigger {
-    display:inline-block; padding:12px 28px; margin:4px;
-    border-radius:50px;
-    background:linear-gradient(135deg,#1A237E,#0D1442);
-    color:#fff; text-decoration:none; font-weight:600; font-size:14px;
-    transition:all 0.3s ease;
-    box-shadow:0 4px 20px rgba(26,35,126,0.2);
-    border:none; cursor:pointer;
-  }
-  .popup-trigger:hover {
-    transform:translateY(-2px);
-    box-shadow:0 8px 30px rgba(26,35,126,0.3);
-  }
-  /* Backdrop entrance animation */
-  @keyframes modalIn {
-    from { opacity:0; transform:scale(0.9) translateY(20px); }
-    to { opacity:1; transform:scale(1) translateY(0); }
-  }
-</style>
-</head>
-<body>
-
-  <!-- ====== NAVBAR ====== -->
-  <nav class="navbar" id="navbar">
-    <div class="container nav-container">
-      <a href="#" class="nav-logo">
-        <img src="images/liyakat-logo.png" alt="LİYAKAT INTERNATIONAL" class="nav-logo-img" style="filter:brightness(0) invert(1);height:40px;">
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menü">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#home" class="nav-link active" data-i18n="nav-home">Ana Sayfa</a></li>
-        <li><a href="#about" class="nav-link" data-i18n="nav-about">Hakkımızda</a></li>
-        <li><a href="#story" class="nav-link" data-i18n="nav-story">Hikayemiz</a></li>
-        <li><a href="#products" class="nav-link" data-i18n="nav-products">Ürünler</a></li>
-        <li><a href="#gallery" class="nav-link" data-i18n="nav-gallery">Galeri</a></li>
-        <li><a href="#certifications" class="nav-link" data-i18n="nav-certifications">Sertifikalar</a></li>
-        <li><a href="#contact" class="nav-link" data-i18n="nav-contact">İletişim</a></li>
-      </ul>
-            <a href="https://wa.me/905530641033" target="_blank" class="nav-whatsapp" title="WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:32px;border-radius:8px;background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.3);text-decoration:none;transition:all .4s ease;margin-left:4px;">
-        <svg viewBox="0 0 32 32" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.652.726 5.128 1.984 7.24L2 30l7.048-1.918A13.928 13.928 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm6.646 19.852c-.322.908-1.12 1.624-2.016 1.806-.54.11-1.116.166-1.78.166-2.128 0-3.982-.74-5.496-2.002a12.768 12.768 0 01-3.754-4.69 7.134 7.134 0 01.214-5.754c.36-.76 1.1-1.338 1.938-1.482.446-.076.892-.054 1.28.014.39.068.82.286 1.03.64a20.262 20.262 0 011.08 2.15c.164.356.272.746.15 1.112-.122.366-.418.64-.732.872-.158.116-.33.244-.478.386-.166.162-.34.336-.228.588.644 1.468 1.622 2.698 2.83 3.618.404.308.81.614 1.276.824.352.16.712.12 1.006-.098.16-.118.32-.24.478-.366.296-.24.628-.53 1.002-.672.374-.142.786-.064 1.076.134.534.364 1.052.75 1.544 1.168.346.296.678.608.73.986.068.494-.136 1.016-.304 1.43z" fill="white"/></svg>
-      </a>
-<div class="nav-lang" id="langSwitcher">
-        <a href="index.html" class="lang-btn">🇸🇦</a>
-        <a href="en.html" class="lang-btn">🇬🇧</a>
-        <a href="tr.html" class="lang-btn active">🇹🇷</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ====== HERO SLIDER ====== -->
+<!-- ====== HERO SLIDER ====== -->
   <section class="hero" id="home">
     <style>
-  .hero-slider { position:absolute; inset:0; z-index:0; overflow:hidden; }
-  .hero-slider .slide { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transition:opacity 1.5s ease; }
-  #s1:checked ~ .hero-slider .s1, #s2:checked ~ .hero-slider .s2, #s3:checked ~ .hero-slider .s3,
-  #s4:checked ~ .hero-slider .s4, #s5:checked ~ .hero-slider .s5, #s6:checked ~ .hero-slider .s6,
-  #s7:checked ~ .hero-slider .s7, #s8:checked ~ .hero-slider .s8 { opacity:1; }
-  .slide-dots { position:absolute; bottom:80px; left:50%; transform:translateX(-50%); display:flex; gap:8px; z-index:5; }
-  .slide-dots label { width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,.25); cursor:pointer; transition:all .3s ease; border:1px solid rgba(255,255,255,.1); }
-  #s1:checked ~ .slide-dots .d1, #s2:checked ~ .slide-dots .d2, #s3:checked ~ .slide-dots .d3,
-  #s4:checked ~ .slide-dots .d4, #s5:checked ~ .slide-dots .d5, #s6:checked ~ .slide-dots .d6,
-  #s7:checked ~ .slide-dots .d7, #s8:checked ~ .slide-dots .d8 { background:#E53935; border-color:#E53935; box-shadow:0 0 12px rgba(229,57,53,.4); width:28px; border-radius:5px; }
-</style>
-<input type="radio" name="hero" id="s1" checked style="display:none;">
-<input type="radio" name="hero" id="s2" style="display:none;">
-<input type="radio" name="hero" id="s3" style="display:none;">
-<input type="radio" name="hero" id="s4" style="display:none;">
-<input type="radio" name="hero" id="s5" style="display:none;">
-<input type="radio" name="hero" id="s6" style="display:none;">
-<input type="radio" name="hero" id="s7" style="display:none;">
-<input type="radio" name="hero" id="s8" style="display:none;">
-<div class="hero-slider">
-  <div class="slide s1 active" style="background-image: url('images/lifestyle/banner-splash.jpg');"></div>
-  <div class="slide s2" style="background-image: url('images/lifestyle/banner-rustic-table.jpg');"></div>
-  <div class="slide s3" style="background-image: url('images/lifestyle/banner-factory-line.jpg');"></div>
-  <div class="slide s4" style="background-image: url('images/lifestyle/banner-farm-display.jpg');"></div>
-  <div class="slide s5" style="background-image: url('images/lifestyle/slider-rustic-table2.jpg');"></div>
-  <div class="slide s6" style="background-image: url('images/lifestyle/slider-factory2.jpg');"></div>
-  <div class="slide s7" style="background-image: url('images/lifestyle/slider-field-jars.jpg');"></div>
-  <div class="slide s8" style="background-image: url('images/lifestyle/slider-paste-pour.jpg');"></div>
-</div>
-<div class="slide-dots">
-  <label for="s1" class="d1"></label>
-  <label for="s2" class="d2"></label>
-  <label for="s3" class="d3"></label>
-  <label for="s4" class="d4"></label>
-  <label for="s5" class="d5"></label>
-  <label for="s6" class="d6"></label>
-  <label for="s7" class="d7"></label>
-  <label for="s8" class="d8"></label>
-</div>
-<div class="hero-overlay"></div>
+      .hero-slider { position:absolute; inset:0; z-index:0; overflow:hidden; }
+      .hero-slider .slide { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transition:opacity 1.5s ease; }
+      #s1:checked ~ .hero-slider .s1, #s2:checked ~ .hero-slider .s2, #s3:checked ~ .hero-slider .s3,
+      #s4:checked ~ .hero-slider .s4, #s5:checked ~ .hero-slider .s5, #s6:checked ~ .hero-slider .s6,
+      #s7:checked ~ .hero-slider .s7, #s8:checked ~ .hero-slider .s8 { opacity:1; }
+      .slide-dots { position:absolute; bottom:80px; left:50%; transform:translateX(-50%); display:flex; gap:8px; z-index:5; }
+      .slide-dots label { width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,.25); cursor:pointer; transition:all .3s ease; border:1px solid rgba(255,255,255,.1); }
+      #s1:checked ~ .slide-dots .d1, #s2:checked ~ .slide-dots .d2, #s3:checked ~ .slide-dots .d3,
+      #s4:checked ~ .slide-dots .d4, #s5:checked ~ .slide-dots .d5, #s6:checked ~ .slide-dots .d6,
+      #s7:checked ~ .slide-dots .d7, #s8:checked ~ .slide-dots .d8 { background:#E53935; border-color:#E53935; box-shadow:0 0 12px rgba(229,57,53,.4); width:28px; border-radius:5px; }
+    </style>
+    
+    <input type="radio" name="hero" id="s1" checked style="display:none;">
+    <input type="radio" name="hero" id="s2" style="display:none;">
+    <input type="radio" name="hero" id="s3" style="display:none;">
+    <input type="radio" name="hero" id="s4" style="display:none;">
+    <input type="radio" name="hero" id="s5" style="display:none;">
+    <input type="radio" name="hero" id="s6" style="display:none;">
+    <input type="radio" name="hero" id="s7" style="display:none;">
+    <input type="radio" name="hero" id="s8" style="display:none;">
+
+    <div class="hero-slider">
+      <div class="slide s1 active" style="background-image: url('images/lifestyle/banner-splash.jpg');"></div>
+      <div class="slide s2" style="background-image: url('images/lifestyle/banner-rustic-table.jpg');"></div>
+      <div class="slide s3" style="background-image: url('images/lifestyle/banner-factory-line.jpg');"></div>
+      <div class="slide s4" style="background-image: url('images/lifestyle/banner-farm-display.jpg');"></div>
+      <div class="slide s5" style="background-image: url('images/lifestyle/slider-rustic-table2.jpg');"></div>
+      <div class="slide s6" style="background-image: url('images/lifestyle/slider-factory2.jpg');"></div>
+      <div class="slide s7" style="background-image: url('images/lifestyle/slider-field-jars.jpg');"></div>
+      <div class="slide s8" style="background-image: url('images/lifestyle/slider-paste-pour.jpg');"></div>
+    </div>
+
+    <div class="slide-dots">
+      <label for="s1" class="d1"></label>
+      <label for="s2" class="d2"></label>
+      <label for="s3" class="d3"></label>
+      <label for="s4" class="d4"></label>
+      <label for="s5" class="d5"></label>
+      <label for="s6" class="d6"></label>
+      <label for="s7" class="d7"></label>
+      <label for="s8" class="d8"></label>
+    </div>
+
+    <div class="hero-overlay"></div>
     <div class="hero-particles" id="heroParticles"></div>
+
     <div class="container hero-content">
-      <div class="hero-badge" data-i18n="hero-badge">🌙 Harvested by Moonlight</div>
+      <div class="hero-badge" data-i18n="hero-badge">🌙 Ay Işığında Hasat Edildi</div>
       <h1 class="hero-title">
         <span class="hero-sub-brand">LİYAKAT INTERNATIONAL</span>
         <span class="hero-brand"><span class="hero-gradient-text">DIALUNA</span></span>
-        <span class="hero-tagline">PASTE</span>
+        <span class="hero-tagline">SALÇA</span>
       </h1>
-      <p class="hero-desc" data-i18n="hero-desc">Premium Tomato <p class="hero-desc">Premium Domates &amp; Biber Salçası<br>Otantik Anadolu Lezzeti — Tarlalarımızdan Sofranıza</p> <br>Premium Domates ve Biber Salçası — Anadolu'nun Ölümsüz Lezzeti</p>
+      <p class="hero-desc" data-i18n="hero-desc">
+        Premium Domates ve Biber Salçası — Otantik Anadolu Lezzeti<br>Tarlalarımızdan Sofranıza Gelen Eşsiz Kalite
+      </p>
       <div class="hero-actions">
         <a href="#story" class="btn btn-primary" data-i18n="hero-btn-story">Hikayemizi Keşfedin</a>
         <a href="#products" class="btn btn-outline" data-i18n="hero-btn-products">Ürünlerimiz</a>
       </div>
     </div>
+
     <div class="hero-scroll-indicator">
- 
       <div class="scroll-arrow"></div>
     </div>
   </section>
-
-  <!-- ====== ABOUT / COMPANY ====== -->
+ <!-- ====== ABOUT / COMPANY ====== -->
   <section class="section about section-spacing" id="about">
     <div class="container">
       <div class="section-premium">
-        
         <h2 data-i18n="about-title">LİYAKAT INTERNATIONAL</h2>
         <p class="section-subtitle" data-i18n="about-subtitle">From Anatolia to the World</p>
       </div>
       <div class="about-grid">
         <div class="about-text">
-          <!-- about-lead --><p class="about-lead" data-i18n="about-lead">Liyakat International — Küresel Erişim 13 yılı aşkın ihracat deneyimimizle, güvenilir Türk üreticilerini 25'ten fazla ülkedeki iş ortaklarımızla buluşturuyoruz. Güven & Taahhüt Her sevkiyatımızda kaliteye, güvenilirliğe ve uzun vadeli iş ortaklıklarına olan bağlılığımızı yansıtıyoruz.DIALUNA İmzamız niteliğindeki gece hasadı geleneğinden ilham alan DIALUNA ile Anadolu'nun özgün lezzetlerini dünyanın sofralarına taşıyoruz.</p>
-          <div style="margin:16px 0;"><a href="#about-popup" class="popup-trigger">📖 DIALUNA / Liyakat Hakkında</a></div>
+          <p class="about-lead" data-i18n="about-lead">
+            Liyakat International — Küresel Erişim: 13 yılı aşkın ihracat deneyimimizle, güvenilir Türk üreticilerini 25'ten fazla ülkedeki iş ortaklarımızla buluşturuyoruz. Güven & Taahhüt: Her sevkiyatımızda kaliteye, güvenilirliğe ve uzun vadeli iş ortaklıklarına olan bağlılığımızı yansıtıyoruz. DIALUNA: İmzamız niteliğindeki gece hasadı geleneğinden ilham alan DIALUNA ile Anadolu'nun özgün lezzetlerini dünyanın sofralarına taşıyoruz.
+          </p>
+          <div style="margin:16px 0;">
+            <a href="#about-popup" class="popup-trigger" data-i18n="about-popup-btn">📖 DIALUNA / Liyakat Hakkında</a>
+          </div>
         </div>
         <div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
-          <div style="border-radius:16px;overflow:hidden;">
-            <img src="images/lifestyle/about-hero.jpg" alt="DIALUNA" style="width:100%;height:240px;object-fit:cover;border-radius:16px;" loading="lazy">
-            <span style="display:block;text-align:center;font-size:12px;color:#5C5C6E;margin-top:6px;font-style:italic;">DIALUNA — Anadolu'nun Lezzeti Sofranızda</span>
+            <div style="border-radius:16px;overflow:hidden;">
+              <img src="images/lifestyle/about-hero.jpg" alt="DIALUNA" style="width:100%;height:240px;object-fit:cover;border-radius:16px;" loading="lazy">
+              <span style="display:block;text-align:center;font-size:12px;color:#5C5C6E;margin-top:6px;font-style:italic;" data-i18n="about-img-1">DIALUNA — Anadolu'nun Lezzeti Sofranızda</span>
+            </div>
+            <div style="border-radius:16px;overflow:hidden;">
+              <img src="images/lifestyle/factory-washing.png" alt="Factory" style="width:100%;height:240px;object-fit:cover;border-radius:16px;" loading="lazy">
+              <span style="display:block;text-align:center;font-size:12px;color:#5C5C6E;margin-top:6px;font-style:italic;" data-i18n="about-img-2">Anadolu Tarlalarından Modern Tesislerimize</span>
+            </div>
           </div>
-          <div style="border-radius:16px;overflow:hidden;">
-            <img src="images/lifestyle/factory-washing.png" alt="Factory" style="width:100%;height:240px;object-fit:cover;border-radius:16px;" loading="lazy">
-            <span style="display:block;text-align:center;font-size:12px;color:#5C5C6E;margin-top:6px;font-style:italic;">Anadolu Tarlalarından Modern Tesislerimize</span>
-          </div>
-        </div>
         </div>
         <div class="about-vision">
-               <div class="vision-card">
+          <div class="vision-card">
             <h3 data-i18n="about-vision-title">Vizyonumuz</h3>
-            <p>Türk gıda ürünlerini kalite, güven ve sürdürülebilirlik anlayışıyla dünyanın en güvenilir temsilcilerinden biri olmak.  </p>
-            <h3 data-i18n="about-vision-title">Mottomuz</h3>
-            <p>Kalite sınır tanımaz. Güven ise her dilde aynıdır.  </p>
-            <div class="vision-stats">
-              <div class="stat">
-              </div>
-              <div class="stat">
-             </div>
-        </div>
-      </div></div>
+            <p data-i18n="about-vision-desc">Türk gıda ürünlerini kalite, güven ve sürdürülebilirlik anlayışıyla dünyanın en güvenilir temsilcilerinden biri olmak.</p>
+            <h3 data-i18n="about-motto-title" style="margin-top:16px;">Mottomuz</h3>
+            <p data-i18n="about-motto-desc">Kalite sınır tanımaz. Güven ise her dilde aynıdır.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-        <div id="about-popup" class="popup-overlay">
-        <div class="popup-box">
-          <a href="#" class="popup-close">&#10006;</a>
-          <div class="popup-content">
-            <h2 style="color:#1A237E;margin-bottom:16px;">LİYAKAT INTERNATIONAL</h2>
-            <h3 style="color:#C9A84C;margin-bottom:12px;">Güvenilir İhracat Ortağınız</h3>
-            <p style="line-height:1.8;margin-bottom:12px;">Liyakat International, Küresel Erişim 13 yılı aşkın ihracat deneyimimizle, güvenilir Türk üreticilerini 25'ten fazla ülkedeki iş ortaklarımızla buluşturuyoruz.</p>
-            <p style="line-height:1.8;margin-bottom:12px;">Liyakat, . Güven & Taahhüt Her sevkiyatımızda kaliteye, güvenilirliğe ve uzun vadeli iş ortaklıklarına olan bağlılığımızı yansıtıyoruz.</p>
-            <p style="line-height:1.8;margin-bottom:12px;">Liyakat, ürünlerini <strong>DIALUNA</strong>  İmzamız niteliğindeki gece hasadı geleneğinden ilham alan DIALUNA ile Anadolu'nun özgün lezzetlerini dünyanın sofralarına taşıyoruz.</p>
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:20px;">
-              <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-                <span style="font-size:24px;color:#1A237E;font-weight:bold;">25+</span>
-                <p style="font-size:12px;color:#5C5C6E;">Ülke</p>
-              </div>
-              <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-                <span style="font-size:24px;color:#1A237E;font-weight:bold;">100%</span>
-                <p style="font-size:12px;color:#5C5C6E;">Kalite</p>
-              </div>
-              <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-                <span style="font-size:24px;color:#1A237E;font-weight:bold;">13+</span>
-                <p style="font-size:12px;color:#5C5C6E;">Yıl Tecrübe</p>
-              </div>
-            </div>
+
+  <!-- ====== ABOUT POPUP ====== -->
+  <div id="about-popup" class="popup-overlay">
+    <div class="popup-box">
+      <a href="#" class="popup-close">&#10006;</a>
+      <div class="popup-content">
+        <h2 style="color:#1A237E;margin-bottom:16px;" data-i18n="popup-about-heading">LİYAKAT INTERNATIONAL</h2>
+        <h3 style="color:#C9A84C;margin-bottom:12px;" data-i18n="popup-about-subheading">Güvenilir İhracat Ortağınız</h3>
+        <p style="line-height:1.8;margin-bottom:12px;" data-i18n="popup-about-text1">Liyakat International, 13 yılı aşkın ihracat deneyimiyle, güvenilir Türk üreticilerini 25'ten fazla ülkedeki iş ortaklarıyla buluşturmaktadır.</p>
+        <p style="line-height:1.8;margin-bottom:12px;" data-i18n="popup-about-text2">Her sevkiyatımızda kaliteye, güvenilirliğe ve uzun vadeli iş ortaklıklarına olan bağlılığımızı yansıtıyoruz.</p>
+        <p style="line-height:1.8;margin-bottom:12px;" data-i18n="popup-about-text3">İmzamız niteliğindeki gece hasadı geleneğinden ilham alan <strong>DIALUNA</strong> ile Anadolu'nun özgün lezzetlerini dünyanın sofralarına taşıyoruz.</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px;">
+          <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+            <span style="font-size:24px;color:#1A237E;font-weight:bold;">25+</span>
+            <p style="font-size:12px;color:#5C5C6E;" data-i18n="stat-countries">Ülke</p>
+          </div>
+          <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+            <span style="font-size:24px;color:#1A237E;font-weight:bold;">100%</span>
+            <p style="font-size:12px;color:#5C5C6E;" data-i18n="stat-quality">Kalite</p>
+          </div>
+          <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+            <span style="font-size:24px;color:#1A237E;font-weight:bold;">13+</span>
+            <p style="font-size:12px;color:#5C5C6E;" data-i18n="stat-experience">Yıl Tecrübe</p>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
   <!-- ====== THE STORY ====== -->
-  <section class="section story" id="story">
+  <section class="section story section-spacing" id="story">
     <div class="story-bg"></div>
     <div class="container">
       <div class="section-premium">
         <h2 data-i18n="story-title">DiaLuna</h2>
-        <h3 class="section-subtitle-en" data-i18n="story-subtitle">The Night of the Crimson Moon</h3>
+        <p class="section-subtitle" data-i18n="story-subtitle">The Night of the Crimson Moon</p>
       </div>
 
       <div class="story-intro">
@@ -248,92 +153,82 @@
           <img src="images/lifestyle/story-night-harvest.jpg" alt="DIALUNA - Ay Işığında Hasat" loading="lazy">
         </div>
         <div class="story-text">
-          
-          <p style="font-family:'Poppins',sans-serif;font-style:italic;color:#4CAF50;font-size:18px;margin-bottom:16px;">Gece Hasadımızın Ardındaki Efsane</p>
-          <p>"Sındırgı'da hâlâ anlatılan eski bir efsaneye göre..."</p>
-          <p>Bazı sırlar yalnızca toprağa emanet edilir. Onlar yazılmaz. Toprak onları hatırlar.</p>
-          <p>Derler ki her yıl yalnızca birkaç gece, Ay farklı doğar. Işığı toprağın üzerinde kızıl bir örtü gibi dolaşır. Ve o gece, rüzgâr bile daha yavaş eser.</p>
-          <p>Yaşlı çiftçiler o geceye Kızıl Ay Gecesi adını verir. Çünkü inanırlar ki doğa o an nefesini tutar ve Ay, toprağa tek bir armağan bırakır.</p>
-          <p style="font-size:20px;font-weight:700;color:#E53935;">Lezzet.</p>
+          <p style="font-family:'Poppins',sans-serif;font-style:italic;color:#4CAF50;font-size:18px;margin-bottom:16px;" data-i18n="story-lead-title">Gece Hasadımızın Ardındaki Efsane</p>
+          <p data-i18n="story-p1">"Sındırgı'da hâlâ anlatılan eski bir efsaneye göre..."</p>
+          <p data-i18n="story-p2">Bazı sırlar yalnızca toprağa emanet edilir. Onlar yazılmaz. Toprak onları hatırlar.</p>
+          <p data-i18n="story-p3">Derler ki her yıl yalnızca birkaç gece, Ay farklı doğar. Işığı toprağın üzerinde kızıl bir örtü gibi dolaşır. Ve o gece, rüzgâr bile daha yavaş eser.</p>
+          <p data-i18n="story-p4">Yaşlı çiftçiler o geceye Kızıl Ay Gecesi adını verir. Çünkü inanırlar ki doğa o an nefesini tutar ve Ay, toprağa tek bir armağan bırakır.</p>
+          <p style="font-size:20px;font-weight:700;color:#E53935;" data-i18n="story-highlight">Lezzet.</p>
         </div>
       </div>
 
       <div style="text-align:center;margin:30px 0;">
-        <a href="#story-popup" class="popup-trigger">📖 DIALUNA Hikayesi</a>
+        <a href="#story-popup" class="popup-trigger" data-i18n="story-popup-btn">📖 DIALUNA Hikayesi</a>
       </div>
+
+      <!-- ====== STORY POPUP ====== -->
       <div id="story-popup" class="popup-overlay">
         <div class="popup-box">
           <a href="#" class="popup-close">&#10006;</a>
-          <div class="popup-content"><div class="story-timeline" style="max-height:70vh;overflow-y:auto;padding-right:8px;">
-        <div class="story-chapter">
-          <div class="chapter-content">
-            <p>Yüzyıllar önce, Balıkesir'in Sındırgı ovasında yaşayan genç bir kadın vardı.<br>
-Kimileri ona çiftçi dedi.Kimileri şifacı.Kimileri ise yalnızca...<br>
-Toprağın Kızı.Toprağın dilini bilirdi.<br>
-Yağmurun kokusundan mevsimi,rüzgârın yönünden bereketi,güneşin sıcaklığından zamanı anlardı.<br>
-Bir yaz, bütün köy hasada hazırlanırken o bekledi.<br>
-"Neyi bekliyorsun?" diye sordular.<br>
-Gökyüzüne baktı.Ve yalnızca şu sözleri söyledi:<br>
-"Ay henüz domateslerin sırrını mühürlemedi."</p>
+          <div class="popup-content">
+            <div class="story-timeline" style="max-height:70vh;overflow-y:auto;padding-right:8px;">
+              <div class="story-chapter">
+                <div class="chapter-content">
+                  <p data-i18n="story-popup-c1">
+                    Yüzyıllar önce, Balıkesir'in Sındırgı ovasında yaşayan genç bir kadın vardı.<br>
+                    Kimileri ona çiftçi dedi. Kimileri şifacı. Kimileri ise yalnızca...<br>
+                    Toprağın Kızı. Toprağın dilini bilirdi.<br>
+                    Yağmurun kokusundan mevsimi, rüzgârın yönünden bereketi, güneşin sıcaklığından zamanı anlardı.<br>
+                    Bir yaz, bütün köy hasada hazırlanırken o bekledi.<br>
+                    "Neyi bekliyorsun?" diye sordular.<br>
+                    Gökyüzüne baktı. Ve yalnızca şu sözleri söyledi:<br>
+                    "Ay henüz domateslerin sırrını mühürlemedi."
+                  </p>
+                </div>
+              </div>
+              <hr style="border:none;border-top:1px solid rgba(201,168,76,0.2);margin:20px 0;">
+              <div class="story-chapter">
+                <div class="chapter-content">
+                  <p data-i18n="story-popup-c2">
+                    O gece dolunay kızıl bir taç gibi yükseldi.<br>
+                    Toprak serinledi. Rüzgâr dindi.<br>
+                    Sabah olduğunda herkes aynı gerçeği tattı.<br>
+                    Domates daha canlıydı. Biber daha zengin aromalıydı.<br>
+                    Lezzet ise hafızalarda kaldı.<br>
+                    Toprağın Kızı gülümsedi. Ve yalnızca bir cümle söyledi.<br>
+                    "Güneş gücü verir. Ay lezzeti korur."<br>
+                    O günden sonra hasat, güneşin altında değil; gecenin serinliğinde yapılmaya başlandı.
+                  </p>
+                </div>
+              </div>
+              <hr style="border:none;border-top:1px solid rgba(201,168,76,0.2);margin:20px 0;">
+              <div class="story-chapter">
+                <div class="chapter-content">
+                  <p data-i18n="story-popup-c3">
+                    Yıllar geçti. Krallıklar kuruldu. Krallıklar yıkıldı. Nesiller değişti.<br>
+                    Ama Sındırgı'da o söz hiç unutulmadı.<br>
+                    Bugün bilim, bu geleneğin neden işe yaradığını açıklıyor.<br>
+                    Biz ise yalnızca şunu biliyoruz: Doğa, en güzel armağanlarını acele edenlere değil; beklemeyi bilenlere sunar.<br>
+                    Ve kuşaktan kuşağa aktarılan bir üretim kültürüdür.<br>
+                    İşte DiaLuna bu mirasın bugünkü adıdır.<br>
+                    Ürünlerimizi gecenin serinliğinde hasat ediyor, üretimimizi sınırlı partiler hâlinde gerçekleştiriyoruz.<br>
+                    Çünkü gerçek lezzet, aceleyle değil, sabırla doğar.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <hr style="border:none;border-top:1px solid rgba(201,168,76,0.2);margin:20px 0;">
-        <div class="story-chapter">
-          <div class="chapter-content">
-            <p>O gece dolunay kızıl bir taç gibi yükseldi.<br>
-Toprak serinledi.Rüzgâr dindi.<br>
-Sabah olduğunda herkes aynı gerçeği tattı.<br>
-Domates daha canlıydı.Biber daha zengin aromalıydı.<br>
-Lezzet ise hafızalarda kaldı.<br>
-Toprağın Kızı gülümsedi.Ve yalnızca bir cümle söyledi.<br>
-"Güneş gücü verir. Ay lezzeti korur."<br>
-O günden sonra hasat, güneşin altında değil; gecenin serinliğinde yapılmaya başlandı.</p>
-          </div>
-        </div>
-        <hr style="border:none;border-top:1px solid rgba(201,168,76,0.2);margin:20px 0;">
-        <div class="story-chapter">
-          <div class="chapter-content">
-            <p>Yıllar geçti.<br>
-Krallıklar kuruldu.Krallıklar yıkıldı.Nesiller değişti.<br>
-Ama Sındırgı'da o söz hiç unutulmadı.<br>
-Bugün bilim, bu geleneğin neden işe yaradığını açıklıyor.<br>
-Biz ise yalnızca şunu biliyoruz:<br>
-Doğa, en güzel armağanlarını acele edenlere değil; beklemeyi bilenlere sunar.<br>
-Ve kuşaktan kuşağa aktarılan bir üretim kültürüdür.<br>
-İşte DiaLuna bu mirasın bugünkü adıdır.<br>
-Ürünlerimizi gecenin serinliğinde hasat ediyor,<br>
-üretimimizi sınırlı partiler hâlinde gerçekleştiriyoruz.<br>
-Çünkü gerçek lezzet,aceleyle değil, sabırla doğar.<br>
-          </div>
-        </div>
-        <hr style="border:none;border-top:1px solid rgba(201,168,76,0.2);margin:20px 0;">
-        <div class="story-chapter">
-          <div class="chapter-content">
-            <p>DIALUNA BUGÜN...<br>
-Yıllar geçti. Krallıklar kuruldu. Krallıklar yıkıldı. Nesiller değişti.<br>
-Ama Sındırgı'da o söz hiç unutulmadı.<br>
-Bugün bilim, bu geleneğin neden işe yaradığını açıklıyor.<br>
-Biz ise yalnızca şunu biliyoruz: Doğa,<br>
-en güzel armağanlarını acele edenlere değil; beklemeyi bilenlere sunar.<br>
-Ve kuşaktan kuşağa aktarılan bir üretim kültürüdür.<br>
-İşte DiaLuna bu mirasın bugünkü adıdır.<br>
-Ürünlerimizi gecenin serinliğinde hasat ediyor, üretimimizi sınırlı partiler hâlinde gerçekleştiriyoruz.<br>
-Çünkü gerçek lezzet, aceleyle değil, sabırla doğar.<br>
-          </div>
-        </div>
-      </div></div>
         </div>
       </div>
+
     </div>
   </section>
-
-  <!-- ====== PRODUCTS ====== -->
-      
+<!-- ====== PRODUCTS ====== -->
   <section class="section products section-spacing" id="products">
     <div class="container-premium">
       <div class="section-premium">
-        <h2>Ürünlerimiz</h2>
-        <p>Detayları görmek için bir ürüne tıklayın</p>
+        <h2 data-i18n="products-title">Ürünlerimiz</h2>
+        <p data-i18n="products-subtitle">Detayları görmek için bir ürüne tıklayın</p>
       </div>
 
       <style>
@@ -346,8 +241,6 @@ Ve kuşaktan kuşağa aktarılan bir üretim kültürüdür.<br>
         .product-tile .tile-title { font-size:15px; font-weight:700; color:#0D1B4A; margin-bottom:4px; }
         .product-tile .tile-sizes { font-size:13px; color:#5C5C6E; }
         .product-tile .tile-badge { display:inline-block; padding:3px 10px; border-radius:50px; font-size:10px; font-weight:700; background:rgba(76,175,80,.1); color:#2E7D32; margin-top:8px; }
-        .tile-popular { position:absolute; top:10px; right:10px; background:linear-gradient(135deg,#C9A84C,#D4A84C); color:#0D0D1A; font-size:9px; font-weight:800; padding:3px 10px; border-radius:50px; }
-        .tile-family { position:absolute; top:10px; right:10px; background:rgba(13,27,74,.85); color:#fff; font-size:9px; font-weight:800; padding:3px 10px; border-radius:50px; }
         @media (max-width:768px) { .product-tiles { grid-template-columns:repeat(2,1fr); } }
         @media (max-width:480px) { .product-tiles { grid-template-columns:1fr; } }
       </style>
@@ -357,25 +250,25 @@ Ve kuşaktan kuşağa aktarılan bir üretim kültürüdür.<br>
         <!-- Tomato -->
         <a href="#prod-tomato" class="product-tile">
           <div class="tile-img"><img src="images/products/tomato-650g-mk.jpg" alt="Tomato" loading="lazy"></div>
-          <div class="tile-title">Premium Akdeniz Domates Salçası</div>
+          <div class="tile-title" data-i18n="prod-tomato-title">Premium Akdeniz Domates Salçası</div>
           <div class="tile-sizes">650g · 1600g · 4200g</div>
-          <div class="tile-badge">🌿 Pure Natural</div>
+          <div class="tile-badge" data-i18n="prod-badge-pure">🌿 Pure Natural</div>
         </a>
 
         <!-- Hot Pepper -->
         <a href="#prod-hot" class="product-tile">
           <div class="tile-img"><img src="images/products/pepper-650g-mk.jpg" alt="Hot Pepper" loading="lazy"></div>
-          <div class="tile-title">Premium Akdeniz Biber Salçası — Acı</div>
+          <div class="tile-title" data-i18n="prod-hot-title">Premium Akdeniz Biber Salçası — Acı</div>
           <div class="tile-sizes">650g · 1600g · 4200g</div>
-          <div class="tile-badge">🌶️ Authentic Flavor</div>
+          <div class="tile-badge" data-i18n="prod-badge-authentic">🌶️ Authentic Flavor</div>
         </a>
 
         <!-- Sweet Pepper -->
         <a href="#prod-sweet" class="product-tile">
           <div class="tile-img"><img src="images/products/pepper-650g-mk.jpg" alt="Sweet Pepper" loading="lazy"></div>
-          <div class="tile-title">Premium Akdeniz Biber Salçası — Tatlı</div>
+          <div class="tile-title" data-i18n="prod-sweet-title">Premium Akdeniz Biber Salçası — Tatlı</div>
           <div class="tile-sizes">650g · 1600g · 4200g</div>
-          <div class="tile-badge">🫑 Mild & Sweet</div>
+          <div class="tile-badge" data-i18n="prod-badge-mild">🫑 Mild & Sweet</div>
         </a>
 
       </div>
@@ -390,30 +283,30 @@ Ve kuşaktan kuşağa aktarılan bir üretim kültürüdür.<br>
               <img src="images/products/tomato-1600g-mk.jpg" alt="1600g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
               <img src="images/products/tomato-4200g-mk.jpg" alt="4200g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
             </div>
-            <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;">Premium Akdeniz Domates Salçası</h3>
-            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">%100 doğal domates salçası, gece hasadı domateslerden. Zengin lezzet, yoğun kıvam, canlı renk. Koruyucu yok, katkısız — sadece doğal lezzet.</p>
+            <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;" data-i18n="popup-tomato-title">Premium Akdeniz Domates Salçası</h3>
+            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;" data-i18n="popup-tomato-desc">%100 doğal domates salçası, gece hasadı domateslerden. Zengin lezzet, yoğun kıvam, canlı renk. Koruyucu yok, katkısız — sadece doğal lezzet.</p>
           </div>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Cam</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Çok Satan</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="pack-glass">Cam</span>
+              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;" data-i18n="pack-bestseller">Çok Satan</span>
             </div>
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="pack-plastic">Plastik</span>
             </div>
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Aile Boy</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="pack-plastic">Plastik</span>
+              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;" data-i18n="pack-family">Aile Boy</span>
             </div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
-            <span class="tag-premium tag-green">🌙 Night Harvest</span>
-            <span class="tag-premium tag-green">🌿 %100 Doğal · Koruyucu Yok</span>
-            <span class="tag-premium tag-green">🏺 Limited Batches</span>
-            <span class="tag-premium tag-green">🇹🇷 Turkish Product</span>
+            <span class="tag-premium tag-green" data-i18n="tag-nightharvest">🌙 Night Harvest</span>
+            <span class="tag-premium tag-green" data-i18n="tag-natural">🌿 %100 Doğal · Koruyucu Yok</span>
+            <span class="tag-premium tag-green" data-i18n="tag-limited">🏺 Limited Batches</span>
+            <span class="tag-premium tag-green" data-i18n="tag-turkish">🇹🇷 Turkish Product</span>
           </div>
         </div>
       </div>
@@ -428,30 +321,30 @@ Ve kuşaktan kuşağa aktarılan bir üretim kültürüdür.<br>
               <img src="images/products/pepper-1600g-mk.jpg" alt="1600g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
               <img src="images/products/pepper-4200g-mk.jpg" alt="4200g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
             </div>
-            <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;">Premium Akdeniz Biber Salçası — Acı</h3>
-            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">Doğal acı kırmızı biber salçası, özenle kavrulup öğütülür. Yemeklerinize eşsiz derinlik katan zengin, dumanlı ve acı lezzet.</p>
+            <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;" data-i18n="popup-hot-title">Premium Akdeniz Biber Salçası — Acı</h3>
+            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;" data-i18n="popup-hot-desc">Doğal acı kırmızı biber salçası, özenle kavrulup öğütülür. Yemeklerinize eşsiz derinlik katan zengin, dumanlı ve acı lezzet.</p>
           </div>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Cam</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="pack-glass">Cam</span>
             </div>
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Çok Satan</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="pack-plastic">Plastik</span>
+              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;" data-i18n="pack-bestseller">Çok Satan</span>
             </div>
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Aile Boy</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="pack-plastic">Plastik</span>
+              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;" data-i18n="pack-family">Aile Boy</span>
             </div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
-            <span class="tag-premium tag-green">🌙 Night Harvest</span>
-            <span class="tag-premium tag-green">🌿 %100 Doğal · Katkısız</span>
-            <span class="tag-premium tag-green">🏺 Traditional Process</span>
-            <span class="tag-premium tag-red">🔥 Hot Pepper</span>
+            <span class="tag-premium tag-green" data-i18n="tag-nightharvest">🌙 Night Harvest</span>
+            <span class="tag-premium tag-green" data-i18n="tag-additivefree">🌿 %100 Doğal · Katkısız</span>
+            <span class="tag-premium tag-green" data-i18n="tag-traditional">🏺 Traditional Process</span>
+            <span class="tag-premium tag-red" data-i18n="tag-hotpepper">🔥 Hot Pepper</span>
           </div>
         </div>
       </div>
@@ -466,171 +359,171 @@ Ve kuşaktan kuşağa aktarılan bir üretim kültürüdür.<br>
               <img src="images/products/pepper-1600g-mk.jpg" alt="1600g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
               <img src="images/products/pepper-4200g-mk.jpg" alt="4200g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
             </div>
-            <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;">Premium Akdeniz Biber Salçası — Tatlı</h3>
-            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">Doğal tatlı kırmızı biber salçası, zengin lezzet ve doğal tatlılık için özenle öğütülür. Çorbalar, soslar ve hamur işleri için mükemmel.</p>
+            <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;" data-i18n="popup-sweet-title">Premium Akdeniz Biber Salçası — Tatlı</h3>
+            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;" data-i18n="popup-sweet-desc">Doğal tatlı kırmızı biber salçası, zengin lezzet ve doğal tatlılık için özenle öğütülür. Çorbalar, soslar ve hamur işleri için mükemmel.</p>
           </div>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Cam</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="pack-glass">Cam</span>
             </div>
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="pack-plastic">Plastik</span>
             </div>
             <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
               <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Aile Boy</span>
+              <span style="font-size:13px;color:#5C5C6E;" data-i18n="pack-plastic">Plastik</span>
+              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;" data-i18n="pack-family">Aile Boy</span>
             </div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
-            <span class="tag-premium tag-green">🌙 Night Harvest</span>
-            <span class="tag-premium tag-green">🌿 %100 Doğal · Katkısız</span>
-            <span class="tag-premium tag-green">🏺 Traditional Process</span>
-            <span class="tag-premium tag-green">🫑 Sweet Pepper</span>
+            <span class="tag-premium tag-green" data-i18n="tag-nightharvest">🌙 Night Harvest</span>
+            <span class="tag-premium tag-green" data-i18n="tag-additivefree">🌿 %100 Doğal · Katkısız</span>
+            <span class="tag-premium tag-green" data-i18n="tag-traditional">🏺 Traditional Process</span>
+            <span class="tag-premium tag-green" data-i18n="tag-sweetpepper">🫑 Sweet Pepper</span>
           </div>
         </div>
       </div>
 
       <div class="product-tagline-wrap">
-        <p>"The sun gives it strength. The moon locks in the flavor."</p>
+        <p data-i18n="product-tagline">"The sun gives it strength. The moon locks in the flavor."</p>
       </div>
     </div>
   </section>
-          <div class="container">
+
+  <!-- ====== GALLERY ====== -->
+  <section class="section gallery section-spacing" id="gallery">
+    <div class="container">
       <div class="section-premium">
-        <h2>Galeri</h2>
-        <p class="section-subtitle">Tarladan Sofraya — DIALUNA Yolculuğu</p>
+        <h2 data-i18n="gallery-title">Galeri</h2>
+        <p class="section-subtitle" data-i18n="gallery-subtitle">Tarladan Sofraya — DIALUNA Yolculuğu</p>
       </div>
       <div class="gallery-grid">
         <div class="gallery-item">
           <img src="images/lifestyle/farm-display.png" alt="Farm" loading="lazy">
-          <div class="gallery-overlay"><span>Tarladan Kavanoza</span></div>
+          <div class="gallery-overlay"><span data-i18n="gallery-item1">Tarladan Kavanoza</span></div>
         </div>
         <div class="gallery-item">
           <img src="images/lifestyle/factory-filling.png" alt="Factory" loading="lazy">
-          <div class="gallery-overlay"><span>Hassas Dolum</span></div>
+          <div class="gallery-overlay"><span data-i18n="gallery-item2">Hassas Dolum</span></div>
         </div>
         <div class="gallery-item">
           <img src="images/lifestyle/pepper-spread.png" alt="Spread" loading="lazy">
-          <div class="gallery-overlay"><span>Karşı Konulmaz Lezzet</span></div>
+          <div class="gallery-overlay"><span data-i18n="gallery-item3">Karşı Konulmaz Lezzet</span></div>
         </div>
         <div class="gallery-item">
           <img src="images/lifestyle/supermarket-display.png" alt="Supermarket" loading="lazy">
-          <div class="gallery-overlay"><span>Mağazalarda Mevcut</span></div>
+          <div class="gallery-overlay"><span data-i18n="gallery-item4">Mağazalarda Mevcut</span></div>
         </div>
       </div>
     </div>
-</section>
-
+  </section>
   <!-- ====== CONTACT ====== -->
-  <!-- ====== CERTIFICATIONS ====== -->
-  <section class="section certifications" id="certifications">
+<!-- ====== CERTIFICATIONS ====== -->
+  <section class="section certifications section-spacing" id="certifications">
     <div class="container">
       <div class="section-premium">
         <h2 data-i18n="cert-title">Sertifikalar</h2>
-        <p class="section-subtitle">Kalite Sertifikaları — Quality Certifications</p>
+        <p class="section-subtitle" data-i18n="cert-subtitle">Kalite Sertifikaları — Quality Certifications</p>
       </div>
       <div class="cert-grid">
         <div class="cert-card">
           <div class="cert-image">
             <img src="images/certifications/halal.jpg" alt="Halal Certified" loading="lazy">
           </div>
-          <h3>Helal</h3>
-          <p>Uluslararası Helal sertifikalı, ürünlerimizin tüm üretim aşamalarında İslam hukukuna uygunluğunu sağlar.</p>
+          <h3 data-i18n="cert-halal-title">Helal</h3>
+          <p data-i18n="cert-halal-desc">Uluslararası Helal sertifikalı, ürünlerimizin tüm üretim aşamalarında İslam hukukuna uygunluğunu sağlar.</p>
         </div>
         <div class="cert-card">
           <div class="cert-image">
             <img src="images/certifications/haccp.jpg" alt="HACCP Certified" loading="lazy">
           </div>
-          <h3>HACCP</h3>
-          <p>En yüksek küresel standartlara göre gıda güvenliğini sağlayan HACCP sistemi.</p>
+          <h3 data-i18n="cert-haccp-title">HACCP</h3>
+          <p data-i18n="cert-haccp-desc">En yüksek küresel standartlara göre gıda güvenliğini sağlayan HACCP sistemi.</p>
         </div>
-
         <div class="cert-card">
           <div class="cert-image">
             <img src="images/certifications/iso-22000.jpg" alt="ISO 22000:2018" loading="lazy">
           </div>
-          <h3>ISO 22000:2018</h3>
-          <p>DIALUNA ürünlerinde en yüksek kalite ve güvenlik standartlarını sağlayan uluslararası sertifikalı Gıda Güvenliği Yönetim Sistemi.</p>
+          <h3 data-i18n="cert-iso-title">ISO 22000:2018</h3>
+          <p data-i18n="cert-iso-desc">DIALUNA ürünlerinde en yüksek kalite ve güvenlik standartlarını sağlayan uluslararası sertifikalı Gıda Güvenliği Yönetim Sistemi.</p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- ====== CONTACT ====== -->
-  <section class="section contact" id="contact">
+ <!-- ====== CONTACT ====== -->
+  <section class="section contact section-spacing" id="contact">
     <div class="container">
       <div class="section-premium">
         <h2 data-i18n="contact-title">İletişim</h2>
-        <p class="section-subtitle">Sorularınız ve toptan siparişler için iletişime geçin</p>
+        <p class="section-subtitle" data-i18n="contact-subtitle">Sorularınız ve toptan siparişler için iletişime geçin</p>
       </div>
 
       <div class="contact-grid">
         <div class="contact-info">
           <div class="contact-card">
             <div class="contact-icon">🏢</div>
-            <h3>Merkez Ofis</h3>
+            <h3 data-i18n="contact-hq-title">Merkez Ofis</h3>
             <p class="contact-company">LİYAKAT INTERNATIONAL</p>
             <p>Karaağaç Mah. Sırtköy Bulvarı<br>Toskana Vadisi No: 30 356<br>Büyükçekmece, İstanbul, TÜRKİYE</p>
           </div>
           <div class="contact-card">
             <div class="contact-icon">📧</div>
-            <h3>E-posta</h3>
+            <h3 data-i18n="contact-email-title">E-posta</h3>
             <a href="mailto:export@liyakatinternational.com.tr">export@liyakatinternational.com.tr</a>
           </div>
           <div class="contact-card">
             <div class="contact-icon">📞</div>
-            <h3>Telefon</h3>
+            <h3 data-i18n="contact-phone-title">Telefon</h3>
             <a href="tel:+902128868600">+90 212 886 86 00</a>
-            <p style="font-size:12px;color:var(--text-light);margin-top:4px;">Faks: +90 212 886 63 33</p>
+            <p style="font-size:12px;color:var(--text-light);margin-top:4px;" data-i18n="contact-fax">Faks: +90 212 886 63 33</p>
           </div>
           <div class="contact-card">
             <div class="contact-icon">🌐</div>
-            <h3>Üretim Tesisi</h3>
+            <h3 data-i18n="contact-plant-title">Üretim Tesisi</h3>
             <p>Osmangazi Mah. 3119. Sokak No:2<br>34522 ESENYURT / İSTANBUL<br>TÜRKİYE</p>
           </div>
           <div class="contact-card">
             <div class="contact-icon">🇺🇸</div>
-            <h3>ABD Ofisi</h3>
+            <h3 data-i18n="contact-usoffice-title">ABD Ofisi</h3>
             <p>9480 Main Street Num.1304<br>Fairfax, Virginia 22031<br>USA</p>
           </div>
           <div class="contact-card">
             <div class="contact-icon">🌐</div>
-            <h3>Marka</h3>
+            <h3 data-i18n="contact-brand-title">Marka</h3>
             <p class="contact-brand">DIALUNA PASTE</p>
-            <p class="contact-tagline">From Anatolia to the World</p>
+            <p class="contact-tagline" data-i18n="contact-tagline">From Anatolia to the World</p>
           </div>
         </div>
 
         <form class="contact-form" id="contactForm">
           <div class="form-group">
-            <input type="text" id="name" placeholder="Adınız" required>
+            <input type="text" id="name" placeholder="Adınız" data-i18n="form-name" required>
           </div>
           <div class="form-group">
-            <input type="email" id="email" placeholder="E-posta" required>
+            <input type="email" id="email" placeholder="E-posta" data-i18n="form-email" required>
           </div>
           <div class="form-group">
-            <input type="text" id="subject" placeholder="Konu">
+            <input type="text" id="subject" placeholder="Konu" data-i18n="form-subject">
           </div>
           <div class="form-group">
-            <textarea id="message" rows="5" placeholder="Mesajınız..." required></textarea>
+            <textarea id="message" rows="5" placeholder="Mesajınız..." data-i18n="form-message" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-block">Mesaj Gönder</button>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="form-submit">Mesaj Gönder</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- ====== FOOTER ====== -->
+<!-- ====== FOOTER ====== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="images/liyakat-logo.png" alt="LİYAKAT INTERNATIONAL" class="footer-liyakat-logo" style="filter:brightness(0) invert(1);height:50px;">
-          <p style="margin-top:8px;font-size:13px;">From Anatolia to the World</p>
-          <p class="footer-tagline">"Quality knows no borders. Trust speaks every language."</p>
+          <p style="margin-top:8px;font-size:13px;" data-i18n="footer-subtitle">From Anatolia to the World</p>
+          <p class="footer-tagline" data-i18n="footer-tagline">"Quality knows no borders. Trust speaks every language."</p>
         </div>
         <div class="footer-links">
           <h4 data-i18n="footer-links-title">Hızlı Linkler</h4>
@@ -646,18 +539,14 @@ Ve kuşaktan kuşağa aktarılan bir üretim kültürüdür.<br>
         <div class="footer-company">
           <img src="images/liyakat-logo.png" alt="LİYAKAT INTERNATIONAL" class="footer-liyakat-logo" style="filter:brightness(0) invert(1);height:50px;">
           <p style="margin-top:12px;">Karaağaç Mah. Sırtköy Bulvarı<br>Toskana Vadisi No: 30 356<br>Büyükçekmece, İstanbul, TÜRKİYE</p>
-          <p style="margin-top:8px;">📍 Fabrika: Esenyurt / İSTANBUL<br>📞 +90 212 886 86 00<br>✉️ export@liyakatinternational.com.tr</p>
+          <p style="margin-top:8px;">📍 <span data-i18n="footer-factory">Fabrika</span>: Esenyurt / İSTANBUL<br>📞 +90 212 886 86 00<br>✉️ export@liyakatinternational.com.tr</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 LİYAKAT INTERNATIONAL — DIALUNA. Tüm Hakları Saklıdır.</p>
+        <p data-i18n="footer-rights">&copy; 2026 LİYAKAT INTERNATIONAL — DIALUNA. Tüm Hakları Saklıdır.</p>
       </div>
     </div>
   </footer>
-
-  
-  
-
 
 </div>
 </body>
