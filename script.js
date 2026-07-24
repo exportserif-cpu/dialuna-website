@@ -389,38 +389,3 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     initAutoSlide();
   }
-// ===== معالجة النوافذ المنبثقة ومنع القفز لأعلى الصفحة =====
-document.addEventListener('DOMContentLoaded', function() {
-  
-  // 1. عند النقر على زر فتح النافذة المنبثقة
-  const popupTriggers = document.querySelectorAll('.popup-trigger');
-  popupTriggers.forEach(trigger => {
-    trigger.addEventListener('click', function(e) {
-      e.preventDefault(); // يمنع المتصفح من إعادة توجيه الصفحة للأعلى
-      
-      const targetId = this.getAttribute('href');
-      if (targetId && targetId.startsWith('#')) {
-        const targetModal = document.querySelector(targetId);
-        if (targetModal) {
-          targetModal.style.display = 'block';
-          document.body.style.overflow = 'hidden'; // تثبيت الخلفية
-        }
-      }
-    });
-  });
-
-  // 2. عند النقر على زر الإغلاق أو الخلفية المعتمة لإغلاق النافذة
-  const popupCloseElements = document.querySelectorAll('.popup-close, .modal-close, .popup-overlay');
-  popupCloseElements.forEach(closer => {
-    closer.addEventListener('click', function(e) {
-      e.preventDefault(); // يمنع القفز لأعلى الصفحة
-      
-      const modal = this.closest('.popup-container, .modal');
-      if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // إعادة تفعيل التمرير للصفحة
-      }
-    });
-  });
-
-});
