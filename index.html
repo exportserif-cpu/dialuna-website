@@ -115,8 +115,7 @@
         <div class="about-text">
           <!-- about-lead --><p class="about-lead" data-i18n="about-lead">Liyakat International — شريكك الموثوق في تصدير المنتجات الغذائية التركية الفاخرة. من الأناضول إلى أكثر من 15 دولة حول العالم، نقدم الجودة التي تبنى عليها الثقة.</p>
  <div style="margin:16px 0;">
-<a href="javascript:void(0);" class="popup-trigger" onclick="document.getElementById('about-popup').style.setProperty('display', 'flex', 'important'); document.body.style.overflow='hidden'; return false;">📖 عن DIALUNA</a>
-</div>
+<a href="javascript:void(0);" class="popup-trigger" onclick="openPopup('about-popup'); return false;">📖 عن DIALUNA</a>
         </div>
         <div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
@@ -151,7 +150,7 @@
     </div>
         <div id="about-popup" class="popup-overlay">
         <div class="popup-box">
-          <a href="javascript:void(0);" class="popup-close" onclick="this.closest('.popup-overlay').style.setProperty('display', 'none', 'important'); document.body.style.overflow='auto'; return false;">&#10006;</a>
+         <a href="javascript:void(0);" class="popup-trigger" onclick="openPopup('story-popup'); return false;">📖 اقرأ القصة كاملة</a>
           <div class="popup-content">
             <h2 style="color:#1A237E;margin-bottom:16px;">LİYAKAT INTERNATIONAL</h2>
             <h3 style="color:#C9A84C;margin-bottom:12px;">شريكك الموثوق في التصدير</h3>
@@ -270,7 +269,7 @@
         </a>
 
         <!-- Hot Pepper -->
-      <a href="javascript:void(0);" class="product-tile" onclick="document.getElementById('prod-hot').style.display='flex'; document.body.style.overflow='hidden'; return false;">
+  <a href="javascript:void(0);" class="product-tile" onclick="openPopup('prod-hot'); return false;">
           <div class="tile-img"><img src="images/products/pepper-650g-mk.jpg" alt="Hot Pepper" loading="lazy"></div>
           <div class="tile-title">معجون الفليفلة الحار الفاخر</div>
           <div class="tile-sizes">650g · 1600g · 4200g</div>
@@ -278,7 +277,7 @@
         </a>
 
         <!-- Sweet Pepper -->
-      <a href="javascript:void(0);" class="product-tile" onclick="document.getElementById('prod-sweet').style.display='flex'; document.body.style.overflow='hidden'; return false;">
+     <a href="javascript:void(0);" class="product-tile" onclick="openPopup('prod-sweet'); return false;">
           <div class="tile-img"><img src="images/products/pepper-650g-mk.jpg" alt="Sweet Pepper" loading="lazy"></div>
           <div class="tile-title">معجون الفليفلة البارد الفاخر</div>
           <div class="tile-sizes">650g · 1600g · 4200g</div>
@@ -290,7 +289,7 @@
       <!-- ====== POPUP: Tomato ====== -->
       <div id="prod-tomato" class="popup-overlay">
         <div class="popup-box">
-        <a href="javascript:void(0);" class="popup-close" onclick="this.closest('.popup-overlay').style.display='none'; document.body.style.overflow='auto'; return false;">&#10006;</a>
+        <a href="javascript:void(0);" class="popup-close" onclick="this.closest('.popup-overlay').style.setProperty('display', 'none', 'important'); document.body.style.overflow='auto'; return false;">&#10006;</a>
           <div style="text-align:center;margin-bottom:24px;">
             <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
               <img src="images/products/tomato-650g-mk.jpg" alt="650g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
@@ -567,6 +566,22 @@ id="gallery">
   </div<!-- ضع هذا السطر قبل إغلاق وسم body مباشرة -->
     <script src="script.js"></script>
  </div>
+  <script>
+  function openPopup(id) {
+    const el = document.getElementById(id);
+    if(el) {
+      el.style.setProperty('display', 'flex', 'important');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+  function closePopup(btn) {
+    const overlay = btn.closest('.popup-overlay');
+    if(overlay) {
+      overlay.style.setProperty('display', 'none', 'important');
+      document.body.style.overflow = 'auto';
+    }
+  }
+</script>
 </body>
 </html>
   
