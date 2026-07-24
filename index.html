@@ -564,13 +564,11 @@ id="gallery">
     </div>
   </footer>
   </div>
- <script>
+<script>
   function openPopup(id) {
     const el = document.getElementById(id);
     if (el) {
-      el.style.setProperty('display', 'flex', 'important');
-      el.style.setProperty('opacity', '1', 'important');
-      el.style.setProperty('visibility', 'visible', 'important');
+      el.classList.add('popup-active');
       document.body.style.overflow = 'hidden';
     }
   }
@@ -578,9 +576,7 @@ id="gallery">
   function closePopup(btn) {
     const overlay = btn.closest('.popup-overlay');
     if (overlay) {
-      overlay.style.setProperty('display', 'none', 'important');
-      overlay.style.setProperty('opacity', '0', 'important');
-      overlay.style.setProperty('visibility', 'hidden', 'important');
+      overlay.classList.remove('popup-active');
       document.body.style.overflow = 'auto';
     }
   }
