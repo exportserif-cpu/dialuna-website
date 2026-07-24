@@ -589,7 +589,7 @@ body.lang-en .vision-card {
   background: url('images/lifestyle/Our Vision En.png');
 }
 
-html[lang="tr"] .vision-card;
+html[lang="tr"] .vision-card,
 [dir="ltr"] .vision-card {
   background: url('images/lifestyle/Our Vision.png');
 }
