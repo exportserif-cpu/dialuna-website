@@ -114,15 +114,17 @@
       <div class="about-grid">
         <div class="about-text">
           <!-- about-lead --><p class="about-lead" data-i18n="about-lead">Liyakat International — شريكك الموثوق في تصدير المنتجات الغذائية التركية الفاخرة. من الأناضول إلى أكثر من 15 دولة حول العالم، نقدم الجودة التي تبنى عليها الثقة.</p>
- <div style="margin:16px 0;">
-<a href="javascript:void(0);" class="popup-trigger" onclick="document.getElementById('about-popup').style.display='flex'; document.body.style.overflow='hidden'; return false;">📖 عن DIALUNA</a>
-        </div>
-        <div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
-          <div style="border-radius:16px;overflow:hidden;">
-            <img src="images/lifestyle/about-hero.jpg" alt="DIALUNA" style="width:100%;height:240px;object-fit:cover;border-radius:16px;" loading="lazy">
-            <span style="display:block;text-align:center;font-size:12px;color:#5C5C6E;margin-top:6px;font-style:italic;">DIALUNA — نكهة الأناضول على مائدتك</span>
-          </div>
+<div style="margin:16px 0;">
+  <a href="javascript:void(0);" class="popup-trigger" onclick="openPopup('about-popup'); return false;">📖 عن DIALUNA</a>
+</div>
+<div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
+    <div style="border-radius:16px;overflow:hidden;">
+      <img src="images/lifestyle/about-hero.jpg" alt="DIALUNA" style="width:100%;height:240px;object-fit:cover;border-radius:16px;" loading="lazy">
+      <span style="display:block;text-align:center;font-size:12px;color:#5C5C6E;margin-top:6px;font-style:italic;">DIALUNA — نكهة الأناضول على مائدتك</span>
+    </div>
+  </div>
+</div>
           <div style="border-radius:16px;overflow:hidden;">
             <img src="images/lifestyle/factory-washing.png" alt="Factory" style="width:100%;height:240px;object-fit:cover;border-radius:16px;" loading="lazy">
             <span style="display:block;text-align:center;font-size:12px;color:#5C5C6E;margin-top:6px;font-style:italic;">من حقول الأناضول إلى مصانعنا الحديثة</span>
@@ -148,10 +150,10 @@
       </div>
     </div>
     </div>
-        <div id="about-popup" class="popup-overlay">
-        <div class="popup-box">
-        <a href="javascript:void(0);" class="popup-trigger" onclick="document.getElementById('story-popup').style.display='flex'; document.body.style.overflow='hidden'; return false;">📖 اقرأ القصة كاملة</a>
-          <div class="popup-content">
+       <div id="about-popup" class="popup-overlay">
+    <div class="popup-box">
+        <a href="javascript:void(0);" class="popup-trigger" onclick="openPopup('story-popup'); return false;">📖 اقرأ القصة كاملة</a>
+        <div class="popup-content"> 
             <h2 style="color:#1A237E;margin-bottom:16px;">LİYAKAT INTERNATIONAL</h2>
             <h3 style="color:#C9A84C;margin-bottom:12px;">شريكك الموثوق في التصدير</h3>
             <p style="line-height:1.8;margin-bottom:12px;">Liyakat International هي شركة رائدة في تصدير المنتجات الغذائية التركية الفاخرة. منذ تأسيسها، التزمت liyakat بتقديم أفضل ما تنتجه الأناضول من طماطم وفليفلة إلى العالم.</p>
@@ -200,15 +202,18 @@
       </div>
 
       <div style="text-align:center;margin:30px 0;">
-       <a href="javascript:void(0);" class="popup-trigger" onclick="document.getElementById('story-popup').style.display='flex'; document.body.style.overflow='hidden'; return false;">📖 اقرأ القصة كاملة</a>
-      </div>
-      <div id="story-popup" class="popup-overlay">
-        <div class="popup-box">
-          <a href="javascript:void(0);" class="popup-close" onclick="this.closest('.popup-overlay').style.setProperty('display', 'none', 'important'); document.body.style.overflow='auto'; return false;">&#10006;</a>
-          <div class="popup-content"><div class="story-timeline">
-        <div class="story-chapter">
-          <div class="chapter-marker"><span class="moon-icon">🌒</span></div>
-          <div class="chapter-content">
+    <a href="javascript:void(0);" class="popup-trigger" onclick="openPopup('story-popup'); return false;">📖 اقرأ القصة كاملة</a>
+</div>
+     <div style="text-align:center;margin:30px 0;">
+    <a href="javascript:void(0);" class="popup-trigger" onclick="openPopup('story-popup'); return false;">📖 اقرأ القصة كاملة</a>
+</div>
+<div id="story-popup" class="popup-overlay">
+    <div class="popup-content">
+        <a href="javascript:void(0);" class="popup-close" onclick="closePopup(this); return false;">&#10006;</a>
+        <div class="story-timeline">
+            <div class="story-chapter">
+                <div class="chapter-marker"><span class="moon-icon">🌒</span></div>
+                <div class="chapter-content">
             <h3>ابنة الأرض</h3>
             <p>في سهول سينديرغي الخصبة في باليكسير، عاشت شابة عرفت بلغة الأرض. بينما كانت القرية كلها تسرع للحصاد، انتظرت هي بهدوء...</p>
           </div>
@@ -261,150 +266,149 @@
       <div class="product-tiles">
 
         <!-- Tomato -->
-   <a href="javascript:void(0);" class="product-tile" onclick="document.getElementById('prod-tomato').style.display='flex'; document.body.style.overflow='hidden'; return false;">
-          <div class="tile-img"><img src="images/products/tomato-650g-mk.jpg" alt="Tomato" loading="lazy"></div>
-          <div class="tile-title">معجون الطماطم الفاخر</div>
-          <div class="tile-sizes">650g · 1600g · 4200g</div>
-          <div class="tile-badge">🌿 Pure Natural</div>
-        </a>
+   <a href="javascript:void(0);" class="product-tile" onclick="openPopup('prod-tomato'); return false;">
+  <div class="tile-img"><img src="images/products/tomato-650g-mk.jpg" alt="Tomato" loading="lazy"></div>
+  <div class="tile-title">معجون الطماطم الفاخر</div>
+  <div class="tile-sizes">650g · 1600g · 4200g</div>
+  <div class="tile-badge">🌿 Pure Natural</div>
+</a>
 
         <!-- Hot Pepper -->
- <a href="javascript:void(0);" class="product-tile" onclick="document.getElementById('prod-hot').style.display='flex'; document.body.style.overflow='hidden'; return false;">
-          <div class="tile-img"><img src="images/products/pepper-650g-mk.jpg" alt="Hot Pepper" loading="lazy"></div>
-          <div class="tile-title">معجون الفليفلة الحار الفاخر</div>
-          <div class="tile-sizes">650g · 1600g · 4200g</div>
-          <div class="tile-badge">🌶️ Authentic Flavor</div>
-        </a>
+<a href="javascript:void(0);" class="product-tile" onclick="openPopup('prod-hot'); return false;">
+  <div class="tile-img"><img src="images/products/pepper-650g-mk.jpg" alt="Hot Pepper" loading="lazy"></div>
+  <div class="tile-title">معجون الفليفلة الحار الفاخر</div>
+  <div class="tile-sizes">650g · 1600g · 4200g</div>
+  <div class="tile-badge">🌶️ Authentic Flavor</div>
+</a>
 
         <!-- Sweet Pepper -->
-    <a href="javascript:void(0);" class="product-tile" onclick="document.getElementById('prod-sweet').style.display='flex'; document.body.style.overflow='hidden'; return false;">
-          <div class="tile-img"><img src="images/products/pepper-650g-mk.jpg" alt="Sweet Pepper" loading="lazy"></div>
-          <div class="tile-title">معجون الفليفلة البارد الفاخر</div>
-          <div class="tile-sizes">650g · 1600g · 4200g</div>
-          <div class="tile-badge">🫑 Mild & Sweet</div>
-        </a>
+   <a href="javascript:void(0);" class="product-tile" onclick="openPopup('prod-sweet'); return false;">
+  <div class="tile-img"><img src="images/products/pepper-650g-mk.jpg" alt="Sweet Pepper" loading="lazy"></div>
+  <div class="tile-title">معجون الفليفلة البارد الفاخر</div>
+  <div class="tile-sizes">650g · 1600g · 4200g</div>
+  <div class="tile-badge">🫑 Mild & Sweet</div>
+</a>
 
-      </div>
-
+</div>
       <!-- ====== POPUP: Tomato ====== -->
-      <div id="prod-tomato" class="popup-overlay">
-        <div class="popup-box">
-  <a href="javascript:void(0);" class="popup-close" onclick="this.closest('.popup-overlay').style.display='none'; document.body.style.overflow='auto'; return false;">&#10006;</a>
-          <div style="text-align:center;margin-bottom:24px;">
-            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
-              <img src="images/products/tomato-650g-mk.jpg" alt="650g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-              <img src="images/products/tomato-1600g-mk.jpg" alt="1600g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-              <img src="images/products/tomato-4200g-mk.jpg" alt="4200g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-            </div>
-            <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;">معجون الطماطم الفاخر</h3>
-            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">معجون طماطم طبيعي 100%، من طماطم الحصاد الليلي. نكهة غنية، قوام كثيف، لون زاهٍ. بدون مواد حافظة أو إضافات — نكهة طبيعية نقية.</p>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">زجاج</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">الأكثر مبيعاً</span>
-            </div>
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">بلاستيك</span>
-            </div>
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">بلاستيك</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">عائلي</span>
-            </div>
-          </div>
-          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
-            <span class="tag-premium tag-green">🌙 Night Harvest</span>
-            <span class="tag-premium tag-green">🌿 طبيعي 100% · بدون مواد حافظة</span>
-            <span class="tag-premium tag-green">🏺 Limited Batches</span>
-            <span class="tag-premium tag-green">🇹🇷 Turkish Product</span>
-          </div>
-        </div>
+   <div id="prod-tomato" class="popup-overlay">
+  <div class="popup-content">
+    <a href="javascript:void(0);" class="popup-close" onclick="closePopup(this); return false;">&#10006;</a>
+    <div style="text-align:center;margin-bottom:24px;">
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
+        <img src="images/products/tomato-650g-mk.jpg" alt="650g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
+        <img src="images/products/tomato-1600g-mk.jpg" alt="1600g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
+        <img src="images/products/tomato-4200g-mk.jpg" alt="4200g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
       </div>
+      <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;">معجون الطماطم الفاخر</h3>
+      <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">معجون طماطم طبيعي 100%، من طماطم الحصاد الليلي. نكهة غنية، قوام كثيف، لون زاهٍ. بدون مواد حافظة أو إضافات — نكهة طبيعية نقية.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
+      <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+        <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
+        <span style="font-size:13px;color:#5C5C6E;">زجاج</span>
+        <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">الأكثر مبيعاً</span>
+      </div>
+      <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+        <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
+        <span style="font-size:13px;color:#5C5C6E;">بلاستيك</span>
+      </div>
+      <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+        <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
+        <span style="font-size:13px;color:#5C5C6E;">بلاستيك</span>
+        <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">عائلي</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+      <span class="tag-premium tag-green">🌙 Night Harvest</span>
+      <span class="tag-premium tag-green">🌿 طبيعي 100% · بدون مواد حافظة</span>
+      <span class="tag-premium tag-green">🏺 Limited Batches</span>
+      <span class="tag-premium tag-green">🇹🇷 Turkish Product</span>
+    </div>
+  </div>
+</div>
 
       <!-- ====== POPUP: Hot Pepper ====== -->
       <div id="prod-hot" class="popup-overlay">
-        <div class="popup-box">
-         <a href="javascript:void(0);" class="popup-close" onclick="this.closest('.popup-overlay').style.setProperty('display', 'none', 'important'); document.body.style.overflow='auto'; return false;">&#10006;</a>
-          <div style="text-align:center;margin-bottom:24px;">
-            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
-              <img src="images/products/pepper-650g-mk.jpg" alt="650g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-              <img src="images/products/pepper-1600g-mk.jpg" alt="1600g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-              <img src="images/products/pepper-4200g-mk.jpg" alt="4200g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-            </div>
-            <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;">معجون الفليفلة الحار الفاخر</h3>
-            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">معجون فليفلة حمراء حارة طبيعية، محمصة ومطحونة بعناية. نكهة غنية مدخنة وحرّاقة تضفي عمقاً لا يضاهى على أطباقك.</p>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">زجاج</span>
-            </div>
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">بلاستيك</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">الأكثر مبيعاً</span>
-            </div>
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">بلاستيك</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">عائلي</span>
-            </div>
-          </div>
-          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
-            <span class="tag-premium tag-green">🌙 Night Harvest</span>
-            <span class="tag-premium tag-green">🌿 طبيعي 100% · بدون إضافات</span>
-            <span class="tag-premium tag-green">🏺 Traditional Process</span>
-            <span class="tag-premium tag-red">🔥 Hot Pepper</span>
-          </div>
-        </div>
+  <div class="popup-content">
+    <a href="javascript:void(0);" class="popup-close" onclick="closePopup(this); return false;">&#10006;</a>
+    <div style="text-align:center;margin-bottom:24px;">
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
+        <img src="images/products/pepper-650g-mk.jpg" alt="650g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
+        <img src="images/products/pepper-1600g-mk.jpg" alt="1600g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
+        <img src="images/products/pepper-4200g-mk.jpg" alt="4200g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
       </div>
+      <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;">معجون الفليفلة الحار الفاخر</h3>
+      <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">معجون فليفلة حمراء حارة طبيعية، محمصة ومطحونة بعناية. نكهة غنية مدخنة وحرّاقة تضفي عمقاً لا يضاهى على أطباقك.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
+      <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+        <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
+        <span style="font-size:13px;color:#5C5C6E;">زجاج</span>
+      </div>
+      <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+        <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
+        <span style="font-size:13px;color:#5C5C6E;">بلاستيك</span>
+        <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">الأكثر مبيعاً</span>
+      </div>
+      <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+        <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
+        <span style="font-size:13px;color:#5C5C6E;">بلاستيك</span>
+        <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">عائلي</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+      <span class="tag-premium tag-green">🌙 Night Harvest</span>
+      <span class="tag-premium tag-green">🌿 طبيعي 100% · بدون إضافات</span>
+      <span class="tag-premium tag-green">🏺 Traditional Process</span>
+      <span class="tag-premium tag-red">🔥 Hot Pepper</span>
+    </div>
+  </div>
+</div>
 
       <!-- ====== POPUP: Sweet Pepper ====== -->
-      <div id="prod-sweet" class="popup-overlay">
-        <div class="popup-box">
-         <a href="javascript:void(0);" class="popup-close" onclick="this.closest('.popup-overlay').style.setProperty('display', 'none', 'important'); document.body.style.overflow='auto'; return false;">&#10006;</a>
-          <div style="text-align:center;margin-bottom:24px;">
-            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
-              <img src="images/products/pepper-650g-mk.jpg" alt="650g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-              <img src="images/products/pepper-1600g-mk.jpg" alt="1600g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-              <img src="images/products/pepper-4200g-mk.jpg" alt="4200g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-            </div>
-            <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;">معجون الفليفلة البارد الفاخر</h3>
-            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">معجون فليفلة حمراء حلوة طبيعية، مطحونة بعناية لنكهة غنية وحلاوة طبيعية مميزة. مثالية للشوربات، الصلصات، والمعجنات.</p>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">زجاج</span>
-            </div>
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">بلاستيك</span>
-            </div>
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">بلاستيك</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">عائلي</span>
-            </div>
-          </div>
-          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
-            <span class="tag-premium tag-green">🌙 Night Harvest</span>
-            <span class="tag-premium tag-green">🌿 طبيعي 100% · بدون إضافات</span>
-            <span class="tag-premium tag-green">🏺 Traditional Process</span>
-            <span class="tag-premium tag-green">🫑 Sweet Pepper</span>
-          </div>
-        </div>
+  <div id="prod-sweet" class="popup-overlay">
+  <div class="popup-content">
+    <a href="javascript:void(0);" class="popup-close" onclick="closePopup(this); return false;">&#10006;</a>
+    <div style="text-align:center;margin-bottom:24px;">
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
+        <img src="images/products/pepper-650g-mk.jpg" alt="650g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
+        <img src="images/products/pepper-1600g-mk.jpg" alt="1600g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
+        <img src="images/products/pepper-4200g-mk.jpg" alt="4200g" style="height:140px;width:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
       </div>
+      <h3 style="font-size:24px;color:#0D1B4A;font-weight:700;">معجون الفليفلة البارد الفاخر</h3>
+      <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">معجون فليفلة حمراء حلوة طبيعية، مطحونة بعناية لنكهة غنية وحلاوة طبيعية مميزة. مثالية للشوربات، الصلصات، والمعجنات.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
+      <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+        <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
+        <span style="font-size:13px;color:#5C5C6E;">زجاج</span>
+      </div>
+      <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+        <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
+        <span style="font-size:13px;color:#5C5C6E;">بلاستيك</span>
+      </div>
+      <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+        <span style="font-size:22px;font-weight:900;color:#0D1B4A;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
+        <span style="font-size:13px;color:#5C5C6E;">بلاستيك</span>
+        <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">عائلي</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+      <span class="tag-premium tag-green">🌙 Night Harvest</span>
+      <span class="tag-premium tag-green">🌿 طبيعي 100% · بدون إضافات</span>
+      <span class="tag-premium tag-green">🏺 Traditional Process</span>
+      <span class="tag-premium tag-green">🫑 Sweet Pepper</span>
+    </div>
+  </div>
+</div>
 
       <div class="product-tagline-wrap">
         <p>"The sun gives it strength. The moon locks in the flavor."</p>
       </div>
     </div>
   </section>
-id="gallery">
+
           <div class="container">
       <div class="section-premium">
         <h2>معرض الصور</h2>
