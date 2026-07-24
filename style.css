@@ -573,7 +573,7 @@ h1, h2, h3, h4 {
 }
 
 .vision-card {
-  background: url('images/lifestyle/Our Vision Ar.png');
+  background-image: url('images/lifestyle/Our Vision Ar.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -585,13 +585,15 @@ h1, h2, h3, h4 {
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
-body.lang-en .vision-card {
-  background: url('images/lifestyle/Our Vision En.png');
+body.lang-en .vision-card,
+html[lang="en"] .vision-card {
+  background-image: url('images/lifestyle/Our Vision En.png');
 }
-
-html[lang="tr"] .vision-card,
-[dir="ltr"] .vision-card {
-  background: url('images/lifestyle/Our Vision.png');
+html[lang="tr"] .vision-card {
+  background-image: url('images/lifestyle/Our Vision.png');
+}
+[dir="ltr"] .vision-card:not([lang="ar"]) {
+  background-image: url('images/lifestyle/Our Vision.png');
 }
 .vision-card::before {
   content: '';
