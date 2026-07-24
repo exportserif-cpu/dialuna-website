@@ -389,7 +389,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     initAutoSlide();
   }
-})();
 // ===== معالجة النوافذ المنبثقة ومنع القفز لأعلى الصفحة =====
 document.addEventListener('DOMContentLoaded', function() {
   
