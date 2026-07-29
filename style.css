@@ -1837,3 +1837,8 @@ a[href="#story-popup"].popup-trigger:hover {
 #about h2[data-i18n="about-title"] {
   color: #2E7D32 !important;
 }
+
+/* Story section heading - green */
+#story h2[data-i18n="story-title"] {
+  color: #2E7D32 !important;
+}
