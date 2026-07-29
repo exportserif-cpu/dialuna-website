@@ -1861,3 +1861,8 @@ a[href="#about-popup"].popup-trigger:hover {
   background: #2E7D32;
   color: #FFFFFF !important;
 }
+
+/* Products section heading - green */
+#products h2 {
+  color: #2E7D32 !important;
+}
