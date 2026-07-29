@@ -1222,6 +1222,14 @@ h1, h2, h3, h4 {
 .contact-icon {
   font-size: 28px;
   margin-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(46,125,50,0.1);
+  color: #2E7D32;
 }
 
 .contact-card h3 {
