@@ -1820,3 +1820,15 @@ a[href="#story-popup"].popup-trigger:hover {
   background: #2E7D32;
   color: #FFFFFF !important;
 }
+
+/* Hero banner "Discover Our Story" button - green */
+.hero-actions a[href="#story"] {
+  background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 20px rgba(46,125,50,0.3) !important;
+  border-color: #2E7D32 !important;
+}
+.hero-actions a[href="#story"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(46,125,50,0.4) !important;
+}
