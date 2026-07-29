@@ -1871,3 +1871,13 @@ a[href="#about-popup"].popup-trigger:hover {
 #gallery h2 {
   color: #2E7D32 !important;
 }
+
+/* Certifications section heading - green */
+#certifications h2 {
+  color: #2E7D32 !important;
+}
+
+/* Contact section heading - green */
+#contact h2 {
+  color: #2E7D32 !important;
+}
