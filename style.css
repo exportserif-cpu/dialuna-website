@@ -20,7 +20,7 @@
   --night: #0A0A1A;
   --text: #7A1515;
   --text-light: #5A6A8A;
-  --white: #FFFFFF;
+  --white: #C0C0C0;
   --section-padding: 100px 0;
   --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -192,7 +192,7 @@ h1, h2, h3, h4 {
 
 .nav-link {
   text-decoration: none;
-  color: rgba(255,255,255,0.8);
+  color: rgba(192,192,192,0.8);
   font-size: 14px;
   font-weight: 600;
   padding: 8px 16px;
@@ -1314,7 +1314,7 @@ h1, h2, h3, h4 {
 
 .footer {
   background: #A31D1D;
-  color: rgba(255,255,255,0.9);
+  color: rgba(192,192,192,0.9);
   padding: 60px 0 0;
 }
 .footer > * {
