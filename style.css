@@ -18,8 +18,8 @@
   --charcoal: #1A1A2E;
   --dark: #0D0D1A;
   --night: #0A0A1A;
-  --text: #C0C0C0;
-  --text-light: #A0A0B0;
+  --text: #FFFFFF;
+  --text-light: #B0B0C0;
   --white: #FFFFFF;
   --section-padding: 100px 0;
   --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -1805,7 +1805,7 @@ html[dir="ltr"] .nav-menu {
 .hero .btn-outline:hover { border-color: #C9A84C !important; color: #C9A84C !important; }
 
 /* Force about section to dark blue */
-#about .about-lead { color: #000000 !important; }
+#about .about-lead { color: #333333 !important; }
 #about .section-subtitle { color: #7A1515 !important; }
 
 /* Story popup trigger - green icon #2E7D32 */
