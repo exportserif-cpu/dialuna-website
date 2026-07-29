@@ -22,20 +22,11 @@
     display:flex; align-items:center; justify-content:center; padding:20px;
   }
   
-/* Checkbox popup system - no scroll on close */
-#chk-about:checked ~ #about-popup,
-#chk-story:checked ~ #story-popup,
-#chk-tomato:checked ~ #prod-tomato,
-#chk-hot:checked ~ #prod-hot,
-#chk-sweet:checked ~ #prod-sweet {
+.popup-overlay:target {
   opacity: 1 !important;
   visibility: visible !important;
 }
-#chk-about:checked ~ #about-popup .popup-box,
-#chk-story:checked ~ #story-popup .popup-box,
-#chk-tomato:checked ~ #prod-tomato .popup-box,
-#chk-hot:checked ~ #prod-hot .popup-box,
-#chk-sweet:checked ~ #prod-sweet .popup-box {
+.popup-overlay:target .popup-box {
   transform: scale(1) translateY(0) !important;
 }
 
