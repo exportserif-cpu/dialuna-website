@@ -1799,7 +1799,7 @@ html[dir="ltr"] .nav-menu {
 .hero .btn-outline:hover { border-color: #C9A84C !important; color: #C9A84C !important; }
 
 /* Force about section to dark blue */
-#about .about-lead { color: #7A1515 !important; }
+#about .about-lead { color: #000000 !important; }
 #about .section-subtitle { color: #7A1515 !important; }
 
 /* Story popup trigger - green icon #2E7D32 */
