@@ -21,7 +21,7 @@
   --text: #FFFFFF;
   --text-light: #B0B0C0;
   --white: #FFFFFF;
-  --section-padding: 100px 0;
+  --section-padding: 60px 0;
   --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -1641,7 +1641,7 @@ html[dir="ltr"] .nav-menu {
 /* Typography */
 .premium-heading { font-weight:700; letter-spacing:-0.5px; line-height:1.2; }
 .premium-subtitle { font-weight:300; letter-spacing:2px; text-transform:uppercase; color:#5C5C6E; }
-.section-spacing { padding:120px 0; }
+.section-spacing { padding:80px 0; }
 .section-spacing-sm { padding:80px 0; }
 
 /* Container */
@@ -1695,7 +1695,7 @@ html[dir="ltr"] .nav-menu {
 @media (max-width:768px) { .grid-3, .grid-2 { grid-template-columns:1fr; } }
 
 /* Section Headers Premium */
-.section-premium { text-align:center; margin-bottom:60px; }
+.section-premium { text-align:center; margin-bottom:40px; }
 .section-premium .num { font-family:'Playfair Display',serif; font-size:14px; font-weight:400; color:#4CAF50; letter-spacing:4px; margin-bottom:12px; display:block; }
 .section-premium h2 { font-size:clamp(28px,5vw,44px); font-weight:900; color:#7A1515; margin-bottom:8px; }
 .section-premium p { font-size:17px; color:#5C5C6E; font-weight:300; max-width:600px; margin:0 auto; }
