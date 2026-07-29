@@ -1801,3 +1801,22 @@ html[dir="ltr"] .nav-menu {
 /* Force about section to dark blue */
 #about .about-lead { color: #7A1515 !important; }
 #about .section-subtitle { color: #7A1515 !important; }
+
+/* Story popup trigger - green icon #2E7D32 */
+a[href="#story-popup"].popup-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #2E7D32 !important;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 24px;
+  border: 2px solid #2E7D32;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+a[href="#story-popup"].popup-trigger:hover {
+  background: #2E7D32;
+  color: #FFFFFF !important;
+}
