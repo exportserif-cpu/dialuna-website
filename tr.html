@@ -21,7 +21,24 @@
     transition:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
     display:flex; align-items:center; justify-content:center; padding:20px;
   }
-  .popup-overlay:target { opacity:1; visibility:visible; }
+  
+/* Checkbox popup system - no scroll on close */
+#chk-about:checked ~ #about-popup,
+#chk-story:checked ~ #story-popup,
+#chk-tomato:checked ~ #prod-tomato,
+#chk-hot:checked ~ #prod-hot,
+#chk-sweet:checked ~ #prod-sweet {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+#chk-about:checked ~ #about-popup .popup-box,
+#chk-story:checked ~ #story-popup .popup-box,
+#chk-tomato:checked ~ #prod-tomato .popup-box,
+#chk-hot:checked ~ #prod-hot .popup-box,
+#chk-sweet:checked ~ #prod-sweet .popup-box {
+  transform: scale(1) translateY(0) !important;
+}
+
   .popup-box {
     background:linear-gradient(135deg,#FFFFFF,#F5F5FA);
     max-width:750px; width:100%; max-height:85vh; overflow-y:auto;
@@ -31,7 +48,7 @@
     transition:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
     box-shadow:0 30px 80px rgba(10,10,26,0.3),0 0 0 1px rgba(255,255,255,0.05);
   }
-  .popup-overlay:target .popup-box { transform:scale(1) translateY(0); }
+  
   .popup-box::-webkit-scrollbar { width:6px; }
   .popup-box::-webkit-scrollbar-track { background:transparent; }
   .popup-box::-webkit-scrollbar-thumb { background:#C9A84C; border-radius:3px; }
@@ -69,9 +86,228 @@
 </style>
 </head>
 <body>
-<div id="popup-close" style="position:absolute;top:0;left:0;width:0;height:0;opacity:0;overflow:hidden;"></div>
+<input type="checkbox" id="chk-about" hidden style="display:none!important;">
+<input type="checkbox" id="chk-hot" hidden style="display:none!important;">
+<input type="checkbox" id="chk-story" hidden style="display:none!important;">
+<input type="checkbox" id="chk-sweet" hidden style="display:none!important;">
+<input type="checkbox" id="chk-tomato" hidden style="display:none!important;">
 
-  <!-- ====== NAVBAR ====== -->
+
+
+  <div id="about-popup" class="popup-overlay">
+        <div class="popup-box">
+          <a href="#popup-close" class="popup-close">&#10006;</a>
+          <div class="popup-content">
+            <h2 style="color:#A31D1D;margin-bottom:16px;">LİYAKAT INTERNATIONAL</h2>
+            <h3 style="color:#C9A84C;margin-bottom:12px;">Güvenilir İhracat Ortağınız</h3>
+            <p style="line-height:1.8;margin-bottom:12px;">Liyakat International, premium Türk gıda ürünlerinin lider ihracatçısıdır. Kuruluşundan bu yana liyakat, Anadolu'nun en iyi domateslerini ve biberlerini dünyaya ulaştırmayı kendine görev edinmiştir.</p>
+            <p style="line-height:1.8;margin-bottom:12px;">Liyakat, İstanbul Esenyurt'ta en son üretim ve sterilizasyon teknolojileriyle donatılmış modern fabrikalarda üretim yapmakta, en yüksek kalite ve gıda güvenliği standartlarını sağlamaktadır.</p>
+            <p style="line-height:1.8;margin-bottom:12px;">Liyakat, ürünlerini <strong>DIALUNA</strong> markasıyla dünya çapında 15'ten fazla ülkeye ihraç etmektedir — Anadolu'nun lezzeti sofranıza ulaşıyor.</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:20px;">
+              <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+                <span style="font-size:24px;color:#A31D1D;font-weight:bold;">15+</span>
+                <p style="font-size:12px;color:#5C5C6E;">Ülke</p>
+              </div>
+              <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+                <span style="font-size:24px;color:#A31D1D;font-weight:bold;">100%</span>
+                <p style="font-size:12px;color:#5C5C6E;">Kalite</p>
+              </div>
+              <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+                <span style="font-size:24px;color:#A31D1D;font-weight:bold;">13+</span>
+                <p style="font-size:12px;color:#5C5C6E;">Yıl Tecrübe</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<div id="story-popup" class="popup-overlay">
+        <div class="popup-box">
+          <a href="#popup-close" class="popup-close">&#10006;</a>
+          <div class="popup-content"><div class="story-timeline" style="max-height:70vh;overflow-y:auto;padding-right:8px;">
+        <div class="story-chapter">
+          <div class="chapter-content">
+            <p>Yüzyıllar önce, Balıkesir'in Sındırgı ovasında yaşayan genç bir kadın vardı.<br>
+Kimileri ona çiftçi dedi.<br>
+Kimileri şifacı.<br>
+Kimileri ise yalnızca...<br>
+Toprağın Kızı.<br>
+Toprağın dilini bilirdi.<br>
+Yağmurun kokusundan mevsimi,<br>
+rüzgârın yönünden bereketi,<br>
+güneşin sıcaklığından zamanı anlardı.<br>
+Bir yaz, bütün köy hasada hazırlanırken o bekledi.<br>
+"Neyi bekliyorsun?" diye sordular.<br>
+Gökyüzüne baktı.<br>
+Ve yalnızca şu sözleri söyledi:<br>
+"Ay henüz domateslerin sırrını mühürlemedi."</p>
+          </div>
+        </div>
+        <hr style="border:none;border-top:1px solid rgba(201,168,76,0.2);margin:20px 0;">
+        <div class="story-chapter">
+          <div class="chapter-content">
+            <p>O gece dolunay kızıl bir taç gibi yükseldi.<br>
+Toprak serinledi.<br>
+Rüzgâr dindi.<br>
+Sabah olduğunda herkes aynı gerçeği tattı.<br>
+Domates daha canlıydı.<br>
+Biber daha zengin aromalıydı.<br>
+Lezzet ise hafızalarda kaldı.<br>
+Toprağın Kızı gülümsedi.<br>
+Ve yalnızca bir cümle söyledi.<br>
+"Güneş gücü verir. Ay lezzeti korur."<br>
+O günden sonra hasat, güneşin altında değil; gecenin serinliğinde yapılmaya başlandı.</p>
+          </div>
+        </div>
+        <hr style="border:none;border-top:1px solid rgba(201,168,76,0.2);margin:20px 0;">
+        <div class="story-chapter">
+          <div class="chapter-content">
+            <p>Yıllar geçti.<br>
+Krallıklar kuruldu.<br>
+Krallıklar yıkıldı.<br>
+Nesiller değişti.<br>
+Ama Sındırgı'da o söz hiç unutulmadı.<br>
+Bugün bilim, bu geleneğin neden işe yaradığını açıklıyor.<br>
+Biz ise yalnızca şunu biliyoruz:<br>
+Doğa, en güzel armağanlarını acele edenlere değil; beklemeyi bilenlere sunar.<br>
+Ve kuşaktan kuşağa aktarılan bir üretim kültürüdür.<br>
+İşte DiaLuna bu mirasın bugünkü adıdır.<br>
+Ürünlerimizi gecenin serinliğinde hasat ediyor,<br>
+üretimimizi sınırlı partiler hâlinde gerçekleştiriyoruz.<br>
+Çünkü gerçek lezzet,<br>
+aceleyle değil, sabırla doğar.</p>
+          </div>
+        </div>
+        <hr style="border:none;border-top:1px solid rgba(201,168,76,0.2);margin:20px 0;">
+        <div class="story-chapter">
+          <div class="chapter-content">
+            <p>Derler ki...<br>
+Dolunay gecelerinde bazı çiftçiler hasada başlamadan önce sessizce gökyüzüne bakar.<br>
+Ne bir dua ederler.<br>
+Ne de bir dilek tutarlar.<br>
+Sadece beklerler.<br>
+Çünkü bilirler...<br>
+Güneş ürünü büyütür.<br>
+Ay lezzeti korur.<br>
+Belki Kızıl Ay Gecesi yalnızca bir efsanedir.<br>
+Belki de hâlâ Sındırgı ovalarında yaşamaktadır.<br>
+Bunu kimse bilemez.<br>
+Ama bazı efsaneler...<br>
+Hiç kaybolmaz.<br>
+Toprak onları hâlâ hatırlar.</p>
+          </div>
+        </div>
+      </div></div>
+        </div>
+      </div>
+<div id="prod-tomato" class="popup-overlay">
+        <div class="popup-box">
+          <a href="#popup-close" class="popup-close">&#10006;</a>
+          <div style="text-align:center;margin-bottom:24px;">
+            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
+              <img src="images/products/tomato-650g-mk.jpg" alt="650g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
+              <img src="images/products/tomato-1600g-mk.jpg" alt="1600g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
+              <img src="images/products/tomato-4200g-mk.jpg" alt="4200g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
+            </div>
+            <h3 style="font-size:24px;color:#7A1515;font-weight:700;">Premium Akdeniz Domates Salçası</h3>
+            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">%100 doğal domates salçası, gece hasadı domateslerden. Zengin lezzet, yoğun kıvam, canlı renk. Koruyucu yok, katkısız — sadece doğal lezzet.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
+            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
+              <span style="font-size:13px;color:#5C5C6E;">Cam</span>
+              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Çok Satan</span>
+            </div>
+            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
+              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
+            </div>
+            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
+              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
+              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Aile Boy</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+            <span class="tag-premium tag-green">🌙 Night Harvest</span>
+            <span class="tag-premium tag-green">🌿 %100 Doğal · Koruyucu Yok</span>
+            <span class="tag-premium tag-green">🏺 Limited Batches</span>
+            <span class="tag-premium tag-green">🇹🇷 Turkish Product</span>
+          </div>
+        </div>
+      </div>
+<div id="prod-hot" class="popup-overlay">
+        <div class="popup-box">
+          <a href="#popup-close" class="popup-close">&#10006;</a>
+          <div style="text-align:center;margin-bottom:24px;">
+            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
+              <img src="images/products/pepper-650g-mk.jpg" alt="650g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
+              <img src="images/products/pepper-1600g-mk.jpg" alt="1600g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
+              <img src="images/products/pepper-4200g-mk.jpg" alt="4200g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
+            </div>
+            <h3 style="font-size:24px;color:#7A1515;font-weight:700;">Premium Akdeniz Biber Salçası — Acı</h3>
+            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">Doğal acı kırmızı biber salçası, özenle kavrulup öğütülür. Yemeklerinize eşsiz derinlik katan zengin, dumanlı ve acı lezzet.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
+            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
+              <span style="font-size:13px;color:#5C5C6E;">Cam</span>
+            </div>
+            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
+              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
+              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Çok Satan</span>
+            </div>
+            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
+              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
+              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Aile Boy</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+            <span class="tag-premium tag-green">🌙 Night Harvest</span>
+            <span class="tag-premium tag-green">🌿 %100 Doğal · Katkısız</span>
+            <span class="tag-premium tag-green">🏺 Traditional Process</span>
+            <span class="tag-premium tag-red">🔥 Hot Pepper</span>
+          </div>
+        </div>
+      </div>
+<div id="prod-sweet" class="popup-overlay">
+        <div class="popup-box">
+          <a href="#popup-close" class="popup-close">&#10006;</a>
+          <div style="text-align:center;margin-bottom:24px;">
+            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
+              <img src="images/products/pepper-650g-mk.jpg" alt="650g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
+              <img src="images/products/pepper-1600g-mk.jpg" alt="1600g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
+              <img src="images/products/pepper-4200g-mk.jpg" alt="4200g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
+            </div>
+            <h3 style="font-size:24px;color:#7A1515;font-weight:700;">Premium Akdeniz Biber Salçası — Tatlı</h3>
+            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">Doğal tatlı kırmızı biber salçası, zengin lezzet ve doğal tatlılık için özenle öğütülür. Çorbalar, soslar ve hamur işleri için mükemmel.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
+            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
+              <span style="font-size:13px;color:#5C5C6E;">Cam</span>
+            </div>
+            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
+              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
+            </div>
+            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
+              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
+              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
+              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Aile Boy</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+            <span class="tag-premium tag-green">🌙 Night Harvest</span>
+            <span class="tag-premium tag-green">🌿 %100 Doğal · Katkısız</span>
+            <span class="tag-premium tag-green">🏺 Traditional Process</span>
+            <span class="tag-premium tag-green">🫑 Sweet Pepper</span>
+          </div>
+        </div>
+      </div>
+
+<!-- ====== NAVBAR ====== -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#" class="nav-logo">
@@ -173,7 +409,7 @@
       <div class="about-grid">
         <div class="about-text">
           <!-- about-lead --><p class="about-lead" data-i18n="about-lead">Liyakat International — premium Türk gıda ürünlerinin ihracatında güvenilir ortağınız. Anadolu'dan 15'ten fazla ülkeye, güven üzerine inşa edilmiş kalite sunuyoruz.</p>
-          <div style="margin:16px 0;"><a href="#about-popup" class="popup-trigger">📖 DIALUNA / Liyakat Hakkında</a></div>
+          <div style="margin:16px 0;"><label for="chk-about" class="popup-trigger" style="cursor:pointer;">📖 DIALUNA / Liyakat Hakkında</label></div>
         </div>
         <div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
@@ -208,32 +444,7 @@
       </div>
     </div>
     </div>
-        <div id="about-popup" class="popup-overlay">
-        <div class="popup-box">
-          <a href="#popup-close" class="popup-close">&#10006;</a>
-          <div class="popup-content">
-            <h2 style="color:#A31D1D;margin-bottom:16px;">LİYAKAT INTERNATIONAL</h2>
-            <h3 style="color:#C9A84C;margin-bottom:12px;">Güvenilir İhracat Ortağınız</h3>
-            <p style="line-height:1.8;margin-bottom:12px;">Liyakat International, premium Türk gıda ürünlerinin lider ihracatçısıdır. Kuruluşundan bu yana liyakat, Anadolu'nun en iyi domateslerini ve biberlerini dünyaya ulaştırmayı kendine görev edinmiştir.</p>
-            <p style="line-height:1.8;margin-bottom:12px;">Liyakat, İstanbul Esenyurt'ta en son üretim ve sterilizasyon teknolojileriyle donatılmış modern fabrikalarda üretim yapmakta, en yüksek kalite ve gıda güvenliği standartlarını sağlamaktadır.</p>
-            <p style="line-height:1.8;margin-bottom:12px;">Liyakat, ürünlerini <strong>DIALUNA</strong> markasıyla dünya çapında 15'ten fazla ülkeye ihraç etmektedir — Anadolu'nun lezzeti sofranıza ulaşıyor.</p>
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:20px;">
-              <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-                <span style="font-size:24px;color:#A31D1D;font-weight:bold;">15+</span>
-                <p style="font-size:12px;color:#5C5C6E;">Ülke</p>
-              </div>
-              <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-                <span style="font-size:24px;color:#A31D1D;font-weight:bold;">100%</span>
-                <p style="font-size:12px;color:#5C5C6E;">Kalite</p>
-              </div>
-              <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-                <span style="font-size:24px;color:#A31D1D;font-weight:bold;">13+</span>
-                <p style="font-size:12px;color:#5C5C6E;">Yıl Tecrübe</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        
   <!-- ====== THE STORY ====== -->
   <section class="section story" id="story">
     <div class="story-bg"></div>
@@ -263,87 +474,9 @@
       </div>
 
       <div style="text-align:center;margin:30px 0;">
-        <a href="#story-popup" class="popup-trigger">📖 DIALUNA Hikayesi</a>
+        <label for="chk-story" class="popup-trigger" style="cursor:pointer;">📖 DIALUNA Hikayesi</label>
       </div>
-      <div id="story-popup" class="popup-overlay">
-        <div class="popup-box">
-          <a href="#popup-close" class="popup-close">&#10006;</a>
-          <div class="popup-content"><div class="story-timeline" style="max-height:70vh;overflow-y:auto;padding-right:8px;">
-        <div class="story-chapter">
-          <div class="chapter-content">
-            <p>Yüzyıllar önce, Balıkesir'in Sındırgı ovasında yaşayan genç bir kadın vardı.<br>
-Kimileri ona çiftçi dedi.<br>
-Kimileri şifacı.<br>
-Kimileri ise yalnızca...<br>
-Toprağın Kızı.<br>
-Toprağın dilini bilirdi.<br>
-Yağmurun kokusundan mevsimi,<br>
-rüzgârın yönünden bereketi,<br>
-güneşin sıcaklığından zamanı anlardı.<br>
-Bir yaz, bütün köy hasada hazırlanırken o bekledi.<br>
-"Neyi bekliyorsun?" diye sordular.<br>
-Gökyüzüne baktı.<br>
-Ve yalnızca şu sözleri söyledi:<br>
-"Ay henüz domateslerin sırrını mühürlemedi."</p>
-          </div>
-        </div>
-        <hr style="border:none;border-top:1px solid rgba(201,168,76,0.2);margin:20px 0;">
-        <div class="story-chapter">
-          <div class="chapter-content">
-            <p>O gece dolunay kızıl bir taç gibi yükseldi.<br>
-Toprak serinledi.<br>
-Rüzgâr dindi.<br>
-Sabah olduğunda herkes aynı gerçeği tattı.<br>
-Domates daha canlıydı.<br>
-Biber daha zengin aromalıydı.<br>
-Lezzet ise hafızalarda kaldı.<br>
-Toprağın Kızı gülümsedi.<br>
-Ve yalnızca bir cümle söyledi.<br>
-"Güneş gücü verir. Ay lezzeti korur."<br>
-O günden sonra hasat, güneşin altında değil; gecenin serinliğinde yapılmaya başlandı.</p>
-          </div>
-        </div>
-        <hr style="border:none;border-top:1px solid rgba(201,168,76,0.2);margin:20px 0;">
-        <div class="story-chapter">
-          <div class="chapter-content">
-            <p>Yıllar geçti.<br>
-Krallıklar kuruldu.<br>
-Krallıklar yıkıldı.<br>
-Nesiller değişti.<br>
-Ama Sındırgı'da o söz hiç unutulmadı.<br>
-Bugün bilim, bu geleneğin neden işe yaradığını açıklıyor.<br>
-Biz ise yalnızca şunu biliyoruz:<br>
-Doğa, en güzel armağanlarını acele edenlere değil; beklemeyi bilenlere sunar.<br>
-Ve kuşaktan kuşağa aktarılan bir üretim kültürüdür.<br>
-İşte DiaLuna bu mirasın bugünkü adıdır.<br>
-Ürünlerimizi gecenin serinliğinde hasat ediyor,<br>
-üretimimizi sınırlı partiler hâlinde gerçekleştiriyoruz.<br>
-Çünkü gerçek lezzet,<br>
-aceleyle değil, sabırla doğar.</p>
-          </div>
-        </div>
-        <hr style="border:none;border-top:1px solid rgba(201,168,76,0.2);margin:20px 0;">
-        <div class="story-chapter">
-          <div class="chapter-content">
-            <p>Derler ki...<br>
-Dolunay gecelerinde bazı çiftçiler hasada başlamadan önce sessizce gökyüzüne bakar.<br>
-Ne bir dua ederler.<br>
-Ne de bir dilek tutarlar.<br>
-Sadece beklerler.<br>
-Çünkü bilirler...<br>
-Güneş ürünü büyütür.<br>
-Ay lezzeti korur.<br>
-Belki Kızıl Ay Gecesi yalnızca bir efsanedir.<br>
-Belki de hâlâ Sındırgı ovalarında yaşamaktadır.<br>
-Bunu kimse bilemez.<br>
-Ama bazı efsaneler...<br>
-Hiç kaybolmaz.<br>
-Toprak onları hâlâ hatırlar.</p>
-          </div>
-        </div>
-      </div></div>
-        </div>
-      </div>
+      
     </div>
   </section>
 
@@ -375,143 +508,39 @@ Toprak onları hâlâ hatırlar.</p>
       <div class="product-tiles">
 
         <!-- Tomato -->
-        <a href="#prod-tomato" class="product-tile">
+        <label for="chk-tomato" class="product-tile" style="cursor:pointer;">
           <div class="tile-img"><img src="images/products/tomato-650g-mk.jpg" alt="Tomato" loading="lazy"></div>
           <div class="tile-title">Premium Akdeniz Domates Salçası</div>
           <div class="tile-sizes">650g · 1600g · 4200g</div>
           <div class="tile-badge">🌿 Pure Natural</div>
-        </a>
+        </label>
 
         <!-- Hot Pepper -->
-        <a href="#prod-hot" class="product-tile">
+        <label for="chk-hot" class="product-tile" style="cursor:pointer;">
           <div class="tile-img"><img src="images/products/pepper-650g-mk.jpg" alt="Hot Pepper" loading="lazy"></div>
           <div class="tile-title">Premium Akdeniz Biber Salçası — Acı</div>
           <div class="tile-sizes">650g · 1600g · 4200g</div>
           <div class="tile-badge">🌶️ Authentic Flavor</div>
-        </a>
+        </label>
 
         <!-- Sweet Pepper -->
-        <a href="#prod-sweet" class="product-tile">
+        <label for="chk-sweet" class="product-tile" style="cursor:pointer;">
           <div class="tile-img"><img src="images/products/pepper-650g-mk.jpg" alt="Sweet Pepper" loading="lazy"></div>
           <div class="tile-title">Premium Akdeniz Biber Salçası — Tatlı</div>
           <div class="tile-sizes">650g · 1600g · 4200g</div>
           <div class="tile-badge">🫑 Mild & Sweet</div>
-        </a>
+        </label>
 
       </div>
 
       <!-- ====== POPUP: Tomato ====== -->
-      <div id="prod-tomato" class="popup-overlay">
-        <div class="popup-box">
-          <a href="#popup-close" class="popup-close">&#10006;</a>
-          <div style="text-align:center;margin-bottom:24px;">
-            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
-              <img src="images/products/tomato-650g-mk.jpg" alt="650g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-              <img src="images/products/tomato-1600g-mk.jpg" alt="1600g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-              <img src="images/products/tomato-4200g-mk.jpg" alt="4200g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-            </div>
-            <h3 style="font-size:24px;color:#7A1515;font-weight:700;">Premium Akdeniz Domates Salçası</h3>
-            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">%100 doğal domates salçası, gece hasadı domateslerden. Zengin lezzet, yoğun kıvam, canlı renk. Koruyucu yok, katkısız — sadece doğal lezzet.</p>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Cam</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Çok Satan</span>
-            </div>
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
-            </div>
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Aile Boy</span>
-            </div>
-          </div>
-          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
-            <span class="tag-premium tag-green">🌙 Night Harvest</span>
-            <span class="tag-premium tag-green">🌿 %100 Doğal · Koruyucu Yok</span>
-            <span class="tag-premium tag-green">🏺 Limited Batches</span>
-            <span class="tag-premium tag-green">🇹🇷 Turkish Product</span>
-          </div>
-        </div>
-      </div>
+      
 
       <!-- ====== POPUP: Hot Pepper ====== -->
-      <div id="prod-hot" class="popup-overlay">
-        <div class="popup-box">
-          <a href="#popup-close" class="popup-close">&#10006;</a>
-          <div style="text-align:center;margin-bottom:24px;">
-            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
-              <img src="images/products/pepper-650g-mk.jpg" alt="650g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-              <img src="images/products/pepper-1600g-mk.jpg" alt="1600g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-              <img src="images/products/pepper-4200g-mk.jpg" alt="4200g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-            </div>
-            <h3 style="font-size:24px;color:#7A1515;font-weight:700;">Premium Akdeniz Biber Salçası — Acı</h3>
-            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">Doğal acı kırmızı biber salçası, özenle kavrulup öğütülür. Yemeklerinize eşsiz derinlik katan zengin, dumanlı ve acı lezzet.</p>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Cam</span>
-            </div>
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Çok Satan</span>
-            </div>
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Aile Boy</span>
-            </div>
-          </div>
-          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
-            <span class="tag-premium tag-green">🌙 Night Harvest</span>
-            <span class="tag-premium tag-green">🌿 %100 Doğal · Katkısız</span>
-            <span class="tag-premium tag-green">🏺 Traditional Process</span>
-            <span class="tag-premium tag-red">🔥 Hot Pepper</span>
-          </div>
-        </div>
-      </div>
+      
 
       <!-- ====== POPUP: Sweet Pepper ====== -->
-      <div id="prod-sweet" class="popup-overlay">
-        <div class="popup-box">
-          <a href="#popup-close" class="popup-close">&#10006;</a>
-          <div style="text-align:center;margin-bottom:24px;">
-            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
-              <img src="images/products/pepper-650g-mk.jpg" alt="650g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-              <img src="images/products/pepper-1600g-mk.jpg" alt="1600g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-              <img src="images/products/pepper-4200g-mk.jpg" alt="4200g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
-            </div>
-            <h3 style="font-size:24px;color:#7A1515;font-weight:700;">Premium Akdeniz Biber Salçası — Tatlı</h3>
-            <p style="font-size:14px;color:#5C5C6E;line-height:1.8;margin-bottom:20px;">Doğal tatlı kırmızı biber salçası, zengin lezzet ve doğal tatlılık için özenle öğütülür. Çorbalar, soslar ve hamur işleri için mükemmel.</p>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">650 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Cam</span>
-            </div>
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">1600 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
-            </div>
-            <div style="background:#F5F5F9;padding:16px;border-radius:12px;text-align:center;">
-              <span style="font-size:22px;font-weight:900;color:#7A1515;display:block;">4200 <small style="font-size:14px;font-weight:400;">g</small></span>
-              <span style="font-size:13px;color:#5C5C6E;">Plastik</span>
-              <span style="display:block;font-size:10px;padding:2px 10px;border-radius:50px;background:#C9A84C;color:#0D0D1A;font-weight:700;margin-top:6px;">Aile Boy</span>
-            </div>
-          </div>
-          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
-            <span class="tag-premium tag-green">🌙 Night Harvest</span>
-            <span class="tag-premium tag-green">🌿 %100 Doğal · Katkısız</span>
-            <span class="tag-premium tag-green">🏺 Traditional Process</span>
-            <span class="tag-premium tag-green">🫑 Sweet Pepper</span>
-          </div>
-        </div>
-      </div>
+      
 
       <div class="product-tagline-wrap">
         <p>"The sun gives it strength. The moon locks in the flavor."</p>
