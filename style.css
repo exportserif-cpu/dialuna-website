@@ -1759,6 +1759,9 @@ html[dir="ltr"] .nav-menu {
   color: #fff !important;
   border: none !important;
   box-shadow: 0 20px 60px rgba(122,21,21,0.2) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 .vision-card.card-premium:hover {
   transform: none !important;
