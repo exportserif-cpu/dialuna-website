@@ -86,17 +86,12 @@
 </style>
 </head>
 <body>
-<input type="checkbox" id="chk-about" hidden style="display:none!important;">
-<input type="checkbox" id="chk-hot" hidden style="display:none!important;">
-<input type="checkbox" id="chk-story" hidden style="display:none!important;">
-<input type="checkbox" id="chk-sweet" hidden style="display:none!important;">
-<input type="checkbox" id="chk-tomato" hidden style="display:none!important;">
 
 
 
   <div id="about-popup" class="popup-overlay">
         <div class="popup-box">
-          <label for="chk-about" class="popup-close" style="cursor:pointer;">&#10006;</label>
+          <a href="#close-bottom" class="popup-close">&#10006;</a>
           <div class="popup-content">
             <h2 style="color:#A31D1D;margin-bottom:16px;">LİYAKAT INTERNATIONAL</h2>
             <h3 style="color:#C9A84C;margin-bottom:12px;">Güvenilir İhracat Ortağınız</h3>
@@ -122,7 +117,7 @@
       </div>
 <div id="story-popup" class="popup-overlay">
         <div class="popup-box">
-          <label for="chk-about" class="popup-close" style="cursor:pointer;">&#10006;</label>
+          <a href="#close-bottom" class="popup-close">&#10006;</a>
           <div class="popup-content"><div class="story-timeline" style="max-height:70vh;overflow-y:auto;padding-right:8px;">
         <div class="story-chapter">
           <div class="chapter-content">
@@ -201,7 +196,7 @@ Toprak onları hâlâ hatırlar.</p>
       </div>
 <div id="prod-tomato" class="popup-overlay">
         <div class="popup-box">
-          <label for="chk-about" class="popup-close" style="cursor:pointer;">&#10006;</label>
+          <a href="#close-bottom" class="popup-close">&#10006;</a>
           <div style="text-align:center;margin-bottom:24px;">
             <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
               <img src="images/products/tomato-650g-mk.jpg" alt="650g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
@@ -237,7 +232,7 @@ Toprak onları hâlâ hatırlar.</p>
       </div>
 <div id="prod-hot" class="popup-overlay">
         <div class="popup-box">
-          <label for="chk-about" class="popup-close" style="cursor:pointer;">&#10006;</label>
+          <a href="#close-bottom" class="popup-close">&#10006;</a>
           <div style="text-align:center;margin-bottom:24px;">
             <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
               <img src="images/products/pepper-650g-mk.jpg" alt="650g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
@@ -273,7 +268,7 @@ Toprak onları hâlâ hatırlar.</p>
       </div>
 <div id="prod-sweet" class="popup-overlay">
         <div class="popup-box">
-          <label for="chk-about" class="popup-close" style="cursor:pointer;">&#10006;</label>
+          <a href="#close-bottom" class="popup-close">&#10006;</a>
           <div style="text-align:center;margin-bottom:24px;">
             <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;">
               <img src="images/products/pepper-650g-mk.jpg" alt="650g" style="height:240px;width:auto;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.08);">
@@ -409,7 +404,7 @@ Toprak onları hâlâ hatırlar.</p>
       <div class="about-grid">
         <div class="about-text">
           <!-- about-lead --><p class="about-lead" data-i18n="about-lead">Liyakat International — premium Türk gıda ürünlerinin ihracatında güvenilir ortağınız. Anadolu'dan 15'ten fazla ülkeye, güven üzerine inşa edilmiş kalite sunuyoruz.</p>
-          <div style="margin:16px 0;"><label for="chk-about" class="popup-trigger" style="cursor:pointer;">📖 DIALUNA / Liyakat Hakkında</label></div>
+          <div style="margin:16px 0;"><a href="#about-popup" class="popup-trigger">📖 DIALUNA / Liyakat Hakkında</a></div>
         </div>
         <div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
@@ -474,7 +469,7 @@ Toprak onları hâlâ hatırlar.</p>
       </div>
 
       <div style="text-align:center;margin:30px 0;">
-        <label for="chk-story" class="popup-trigger" style="cursor:pointer;">📖 DIALUNA Hikayesi</label>
+        <a href="#story-popup" class="popup-trigger">📖 DIALUNA Hikayesi</label>
       </div>
       
     </div>
@@ -508,7 +503,7 @@ Toprak onları hâlâ hatırlar.</p>
       <div class="product-tiles">
 
         <!-- Tomato -->
-        <label for="chk-tomato" class="product-tile" style="cursor:pointer;">
+        <a href="#prod-tomato" class="product-tile">
           <div class="tile-img"><img src="images/products/tomato-650g-mk.jpg" alt="Tomato" loading="lazy"></div>
           <div class="tile-title">Premium Akdeniz Domates Salçası</div>
           <div class="tile-sizes">650g · 1600g · 4200g</div>
@@ -516,7 +511,7 @@ Toprak onları hâlâ hatırlar.</p>
         </label>
 
         <!-- Hot Pepper -->
-        <label for="chk-hot" class="product-tile" style="cursor:pointer;">
+        <a href="#prod-hot" class="product-tile">
           <div class="tile-img"><img src="images/products/pepper-650g-mk.jpg" alt="Hot Pepper" loading="lazy"></div>
           <div class="tile-title">Premium Akdeniz Biber Salçası — Acı</div>
           <div class="tile-sizes">650g · 1600g · 4200g</div>
@@ -524,7 +519,7 @@ Toprak onları hâlâ hatırlar.</p>
         </label>
 
         <!-- Sweet Pepper -->
-        <label for="chk-sweet" class="product-tile" style="cursor:pointer;">
+        <a href="#prod-sweet" class="product-tile">
           <div class="tile-img"><img src="images/products/pepper-650g-mk.jpg" alt="Sweet Pepper" loading="lazy"></div>
           <div class="tile-title">Premium Akdeniz Biber Salçası — Tatlı</div>
           <div class="tile-sizes">650g · 1600g · 4200g</div>
@@ -712,5 +707,6 @@ Toprak onları hâlâ hatırlar.</p>
 
 
 </div>
+<div id="close-bottom" style="position:absolute;bottom:0;"></div>
 </body>
 </html>
